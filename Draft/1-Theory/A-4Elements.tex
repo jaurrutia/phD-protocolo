@@ -1,0 +1,33 @@
+
+
+\begin{frame}{Elementos finitos$^{1,2}$}
+{Sistema real, de referencia y ejemplos \hyperlink{fr:Apoyo}{\beamerreturnbutton{}}}\small
+
+\begin{columns}
+\column{.4\textwidth}
+$$
+    \pdv{r_i} = \pdv{\xi_i}{r_j} \pdv{\xi_j}
+    \qquad
+    \dd{\Omega_k} \to \det[\mathbbm{J}]\dd{\Omega_k}
+$$
+ \begin{figure}\centering    \fontsize{4}{5} \selectfont
+        \def\svgwidth{\textwidth}
+        \includeinkscape{FEM-Theory/P1-systems-Elements-orders}
+\end{figure}
+\vspace*{1em}
+	\noindent\rule{.25\textwidth}{0.4pt}
+ \begin{spacing}{0}\fontsize{4}{12} \selectfont
+	$^1$ \fullcite{dhatt_finite_2012}\\
+	$^2$ \fullcite{fletcher_computational_1984}
+	\end{spacing}
+
+\column{.6\textwidth}
+$$  \mathcal{F}^{L}_\ell[f(\boldsymbol{\xi})] = f(\boldsymbol{\xi}_{\ell_k}) $$
+\begin{figure} \fontsize{4}{5} \selectfont
+    \def\svgwidth{\textwidth}
+     \includeinkscape{FEM-Theory/2-Example-Elements-2D}
+\end{figure}
+\end{columns}
+\end{frame}
+
+
