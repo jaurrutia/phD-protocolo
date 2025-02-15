@@ -108,7 +108,7 @@
 %			  backrefpages = {citado en las págs.},% originally "cited on pages"
 %		}
 
-		\addbibresource{4-References/references.bib}
+		\addbibresource{2-mainmatter/5-References/references.bib}
 
 	%------------------------- Maths --------------------------------------
 		\usepackage{amssymb, amsmath, amsbsy, amsfonts}	% Math symbols and so on

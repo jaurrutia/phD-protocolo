@@ -34,8 +34,8 @@
 \input{Latex/Comands}           % Special commands written by the author
 
 
-\svgpath{{1-Theory/figs},{5-Apendices/figs},{2-Results/figs}}
-\graphicspath{{5-Apendices/figs},{0-5-Introduccion/figs}}
+\svgpath{{2-mainmatter/2-Theory/figs},{3-Apendices/figs},{2-mainmatter/3-Results/figs}}
+\graphicspath{{3-Apendices/figs},{2-mainmatter/1-Introduccion/figs}}
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
 
 
@@ -119,15 +119,16 @@
 \begin{document}
 %
 \maketitle
+
 %-------------------------------------------------------------------------------
 %                                   FRONT MATTER
 %-------------------------------------------------------------------------------
-\frontmatter
+%\frontmatter
 
-%\include{0-1-Acknowledgments/1-Acknowledgments}
-%\include{0-2-Declaration/1-Declaration}
-%\include{0-3-Quote/1-Quote}
-\include{0-4-Resumen/1-Resumen}
+%\include{1-frontmatter/1-Acknowledgments}
+%\include{1-frontmatter/2-Declaration}
+%\include{1-frontmatter/3-Quote}
+%\include{1-frontmatter/4-Abstract}
 
 %-------------------------------------------------------------------------------
 %                                INDICES                                    |
@@ -147,7 +148,7 @@
 
 \def\baselinestretch{1}                   % Line spacing
 
-\input{0-5-Introduccion/1-Motivation-Structure}
+\input{2-mainmatter/1-Introduccion/1-Motivation-Structure}
 
 %\part{Theoretical Framework}
 \chapter{Scattering Theory of a Single Spherical Particle}
@@ -155,7 +156,7 @@
 
 	\section{The Optical Theorem: Amplitude Matrix and Cross Sections}
 	 \label{s:AmpMatCrossSect}
-	 \input{1-Theory/1-OpticalTheorem}
+	 \input{2-mainmatter/2-Theory/1-OpticalTheorem}
 
 
 %     In the previous Section, it was concluded that the extinction of light due to the interaction between a particle and a monochromatic plane wave can be determined through the amplitude of the scattered field in the forward direction. This is stated in the Optical Theorem, which is an exact relation, but inaccuracies may arise when either the scattering amplitude matrix or the extinction cross section are approximated\footnote{See for example Section 2.4 from Ref. \cite{tsang_scattering_2000} on the Rayleigh Scattering, and Section 21.7 from Ref. \cite{zangwill_modern_2013} on Thompson scattering.}. A particular case in which the scattering amplitude matrix can be exactly calculated is when the scatterer has spherical symmetry. In order to address this special case, it will be introduced a vectorial basis with spherical symmetry, known as the Vector Spherical Harmonics (VSH). Once the VSH are defined, they will be used to write a monochromatic plane wave in terms of the VSH. By imposing the continuity of the tangential components of the electric and magnetic fields, the scattered field can be also written in terms of the VSH. As a particular example of interest, shown in the last Section, the optical properties of a gold nanoparticle with radius of $12.5$ nm are calculated.
@@ -171,24 +172,24 @@
 
     \section{Supported and Totally Embedded Spherical Particles}
      \label{s:Totally}
-        \input{2-Results/0-Intro}
+        \input{2-mainmatter/3-Results/0-Intro}
 
         \subsection{Normal Incidence}
-        \input{2-Results/1-Totally}
+        \input{2-mainmatter/3-Results/1-Totally}
          \label{s:Totally:Normal}
        
 
 \chapter*{Conclusions}
 \addcontentsline{toc}{chapter}{\protect\numberline{}Conclusions}
 	\label{ch:Conclusions}
-	\input{3-Conclusions/1-Conclusions}	
+	\input{2-mainmatter/4-Conclusions/1-Conclusions}	
 	
 
 \appendix
 
 \chapter{Mie Theory (Conventions)}
   \label{app:MieCode}
-  \input{5-Apendices/1-SpecialFunc}
+  \input{3-Apendices/1-SpecialFunc}
 
 
 %%-------------------------------------------------------------------------------

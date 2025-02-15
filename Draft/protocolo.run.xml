@@ -84,7 +84,7 @@
       <file>protocolo-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>4-References/references.bib</file>
+      <file>2-mainmatter/5-References/references.bib</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
