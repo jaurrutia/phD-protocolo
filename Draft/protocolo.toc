@@ -1,9 +1,0 @@
-\contentsline {chapter}{\numberline {}Background and Motivation}{1}{chapter*.1}%
-\contentsline {chapter}{\numberline {1}Scattering Theory of a Single Spherical Particle}{7}{chapter.1}%
-\contentsline {section}{\numberline {1.1}The Optical Theorem: Amplitude Matrix and Cross Sections}{7}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Results and Discussion}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Supported and Totally Embedded Spherical Particles}{13}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Normal Incidence}{14}{subsection.2.1.1}%
-\contentsline {chapter}{\numberline {}Conclusions}{21}{chapter*.10}%
-\contentsline {chapter}{\numberline {A}Mie Theory (Conventions)}{23}{appendix.A}%
-\contentsline {chapter}{Index}{31}{section*.12}%

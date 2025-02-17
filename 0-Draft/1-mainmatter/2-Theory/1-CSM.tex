@@ -1,0 +1,167 @@
+%
+Las teorías de esparcimiento múltiple (\textit{Multiple Scattering Theories}, MSTs) resuelven, en el caso de esparcimiento de luz, las ecuaciones de Maxwell de forma aproximada cuando se ilumina un ensamble de partículas con una onda plana monocromática \cite{loiko_monolayers_1998,barrera1991optical,reyes2018analytical}. En particular, el  Modelo de Esparcimiento Coherente (\textit{Coherent Scattering Model}, CSM)  es una MST que proporciona una expresión para los coeficientes de amplitud de reflexión y transmisión de la luz esparcida en la dirección coherente para un ensamble bidimensional desordenado de partículas esféricas \cite{barrera_coherent_2003,garcia2012multiple,reyes2018analytical}. En esta sección se presenta de forma breve en qué consisten las MSTs y se enuncian las restricciones consideradas por el CSM.
+
+En el esquema de las MSTs, la respuesta óptica de un arreglo desordenado de partículas arbitrarias, iluminado por una onda plana monocromática eléctrica incidente $\vb{E}^\text{inc}(\vb{r},\omega)$ con frecuencia angular $\omega$ y dirección de propagación $\vu{k}^\text{inc}$, está determinada por el campo eléctrico $\vb{E}^\text{exc}_k(\vb{r},\omega)$ que excita a $k$-ésima partícula, de una colección de $N$, y que es igual a la suma del campo eléctrico incidente y el campo eléctrico inducido $\vb{E}^\text{ind}_\ell(\vb{r},\omega)$ ---el interno dentro de la partícula y el esparcido fuera de ésta--- por los otros elementos del ensamble, es decir \cite{garcia2012multiple,barrera_coherent_2003}
+%
+\begin{align}
+	\vb{E}^\text{exc}_k(\vb{r}) = \vb{E}^\text{inc}(\vb{r}) + \sum_{\ell\neq k}^N \vb{E}^\text{ind}_\ell(\vb{r}),
+	\label{eq:Eexc}
+\end{align}
+%
+donde se obvia la dependencia armónica. Dado que todas las partículas son excitadas por la misma interacción,  el campo eléctrico inducido en la $\ell$-ésima partícula está dado por \cite{garcia2012multiple,barrera_coherent_2003}
+%
+\begin{align}
+	\vb{E}^\text{ind}_\ell(\vb{r}) =
+	\int\dd^3 r' \mathbb{G}(\vb{r},\vb{r}')
+	\int\dd^3 r''\mathbb{T}(\vb{r}'-\vb{r}_\ell,\vb{r}''-\vb{r}_\ell) \vb{E}_\ell^\text{exc}(\vb{r}''),
+	\label{eq:Eind}
+\end{align}
+%
+en donde $\vb{r}_\ell$ es la posición del centro de la $\ell$-ésima partícula, $\mathbb{G}(\vb{r},\vb{r}')$ es la función de Green diádica ---solución a la ecuación de Helmholtz vectorial con el producto de la diádica unitaria y una delta de Dirac centrada en $\vb{r}'$ como fuente \cite{tsang_scattering_2000}---, $\mathbb{T}$ es el operador de transición, o matriz $T$, que relaciona de forma lineal el campo eléctrico esparcido de una partícula con el campo eléctrico que la excita \cite{tsang_scattering_2000}, y las integraciones se realizan sobre un mismo volumen $V$, descrito por las posiciones $\vb{r}'$ y $\vb{r}''$, tal que el centro $\vb{r}_\ell$ de la $\ell$-ésima partícula se localice dentro de $V$ \cite{barrera_coherent_2003}.
+
+El campo eléctrico total $\vb{E}(\vb{r})$ es igual a la suma de $\vb{E}^\text{inc}(\vb{r})$ y las $N$ contribuciones del campo eléctrico inducido $\vb{E}^\text{ind}_\ell(\vb{r})$ en cada partícula, el cual se calcula al resolver el sistema de $N$ ecuaciones dadas por las expresiones anteriores. Al tratar el caso de un arreglo desordenado, se calcula el promedio configuracional del campo eléctrico total  $\langle\vb{E}(\vb{r})\rangle$, que considera la probabilidad de ocurrencia de cada una de las combinaciones en las que pueden localizarse los centros $\vb{r}_\ell$ de los elementos del ensamble \cite{garcia2012multiple,barrera_coherent_2003}:
+%
+\begin{align}
+	\langle\vb{E}(\vb{r})\rangle =
+	\vb{E}^\text{inc}(\vb{r}) + \sum_{\ell = 1}^N \langle  \vb{E}^\text{ind}_\ell  (\vb{r})\rangle
+	= \vb{E}^\text{inc}(\vb{r}) +  \sum_{\ell = 1}^N  \left(\prod_{k = 1}^N \int\dd^3 r_k \rho(\vb{R}) \vb{E}^\text{ind}_\ell(\vb{r})\right),
+	\label{eq:Eave}
+\end{align}
+%
+con $\rho(\vb{R})$ la densidad de probabilidad de que el ensamble se encuentre en una configuración espacial específica dada por $\vb{R} = (\vb{r}_1,\vb{r}_2,\ldots,\vb{r}_N)^T$. Al calcular el promedio configuracional de la Ec. \eqref{eq:Eind} se obtiene la contribución promedio del campo eléctrico inducido en la $\ell$-ésima partícula, que está dada en términos de las siguientes expresiones \cite{barrera_coherent_2003,garcia2012multiple}
+
+%
+\begin{subequations}%
+	\begin{align}%
+		\langle \vb{E}^\text{ind}_\ell(\vb{r}) \rangle &= \int\dd^3 r'\mathbb{G}(\vb{r},\vb{r}')
+		\int\dd^3 r'' \int \dd^3 r_\ell \rho(\vb{r}_\ell) \mathbb{T}(\vb{r}'-\vb{r}_\ell,\vb{r}''-\vb{r}_\ell)
+		\langle \vb{E}_\ell^\text{exc}(\vb{r}'',\vb{R})\rangle_\ell,%
+		\\
+		\langle \vb{E}_\ell^\text{exc}(\vb{r}'',\vb{R})\rangle_\ell
+		&= \prod_{\substack{k =1 \\ k\neq \ell}}^N  \int\dd^3 r_k \rho(\vb{R}|\vb{r}_\ell) \vb{E}^\text{exc}_\ell(\vb{r}''),
+		\label{eq:EexcAve}
+	\end{align}%
+	\label{eq:EexcSSA}%
+\end{subequations}%
+%
+where $\rho(\vb{r}_\ell)$ is the probability density of finding the center of the $\ell$-th particle within the volume $V$, and Eq. \eqref{eq:EexcAve} represents the configurational average of the excitation electric field $\vb{E}_\ell^\text{exc}$ for the $\ell$-th particle, considering its fixed position in $V$, which is described by the conditional probability density $\rho(\vb{R}|\vb{r}_\ell)$. This expression can be further developed by substituting Eq. \eqref{eq:Eexc} into Eq. \eqref{eq:EexcAve} and following an analogous procedure, considering the index swaps $k\to\ell$ and $\ell \to m$, yielding
+%
+\begin{subequations}%
+	\begin{align}%
+		\langle \vb{E}_\ell^\text{exc}(\vb{r}'',\vb{R})\rangle_\ell =& \vb{E}^\text{inc}(\vb{r}'')
+		+ \sum_{\substack{m =1 \\ m\neq \ell}}^N  \int\dd^3 r' \mathbb{G}(\vb{r}',\vb{r}'') \times \notag\\
+		& \int\dd^3 r'''\int \dd^3 r_m \rho(\vb{r}_m) \mathbb{T}(\vb{r}'-\vb{r}_m,\vb{r}'''-\vb{r}_m) \langle \vb{E}_m^\text{exc}(\vb{r}'',\vb{R})\rangle_{\ell,m},
+		\\
+		\langle \vb{E}_m^\text{exc}(\vb{r}'',\vb{R})\rangle_{\ell,m}
+		&= \prod_{\substack{n =1 \\ n\neq \ell,m}}^N  \int\dd^3 r_n \rho(\vb{R}|\vb{r}_\ell,\vb{r}_m) \vb{E}^\text{exc}_n(\vb{r}''),
+		\label{eq:EexcAve2}
+	\end{align}%
+	\label{eq:EexcQSA}%
+\end{subequations}%
+%
+where Eq. \eqref{eq:EexcAve2} represents the configurational average of the excitation field $ \vb{E}_m^\text{exc}(\vb{r}'')$ acting on the $m$-th particle, considering the conditional probability density $\rho(\vb{R}|\vb{r}_\ell,\vb{r}_m)$ that the system is in configuration $\vb{R}$ with $\vb{r}_\ell$ and $\vb{r}_m$ fixed \cite{garcia2012multiple,barrera_coherent_2003}. By continuing this process for all $N$ spheres in the ensemble, a set of $N$ equations known as the Foldy-Lax hierarchy \cite{loiko_monolayers_1998} can be constructed. Solving this hierarchy enables the computation of the averaged electric field at $\vb{r}$, taking multiple scattering effects into account. The hierarchical equations can be truncated at different orders, reducing them to invertible systems of equations by applying approximations to how multiple scattering excites the elements of the ensemble.
+
+To truncate the Foldy-Lax hierarchy and determine the total averaged electric field, the CSM imposes two approximations at different orders. First, the Single Scattering Approximation (SSA) is considered, reducing the Foldy-Lax hierarchy to a single equation to be solved by neglecting multiple scattering effects \cite{barrera_coherent_2003}. Specifically, in the SSA, Eq. \eqref{eq:EexcAve} is equated to the incident electric field $\vb{E}^\text{inc}(\vb{r})$ \cite{loiko_monolayers_1998,garcia2012multiple}. The second approximation in the CSM is the Quasi-Crystalline Approximation (QSA), where the Foldy-Lax hierarchy is rewritten as a system of two equations by assuming that the configurational average for cases with one and two fixed particles is approximately equal, meaning that Eqs. \eqref{eq:EexcAve} and \eqref{eq:EexcQSA} are set equal \cite{loiko_monolayers_1998,barrera_coherent_2003}. While the SSA is suitable for dilute disordered arrays, as it disregards multiple scattering, the QSA adapts to denser ensembles—up to a coverage fraction of 60\% \cite{loiko_monolayers_1998}—because, under this condition, the average with two fixed particles does not significantly differ from the average with one fixed particle due to the presence of the remaining particles \cite{barrera_coherent_2003}.
+
+\begin{figure}[t!]\centering
+%	\includegraphics[scale = .7]{esquema.png}
+	\caption{Diagram of the particle ensemble considered in the CSM, consisting of a collection of $N$ identical spherical particles of radius $a$ whose centers are randomly located within the integration volume $V$: an infinite film centered at the plane $z=0$ and of thickness $d$, which tends to zero to reproduce the case of a two-dimensional array. The system, embedded in a dielectric matrix, is illuminated by a monochromatic plane wave incident on the film at an angle $\theta$.}
+	\label{fig:esquema}
+\end{figure}
+
+Once the approximation orders have been determined to truncate the Foldy-Lax hierarchy, the CSM introduces a series of assumptions about the particle ensemble to solve the resulting system of equations for each approximation. In particular, the CSM considers that the particle ensemble consists of $N \gg 1$ identical spherical particles of radius $a$—immersed in a dielectric medium called the matrix—whose centers $\vb{r}_\ell$ are within the integration volume $V$, which consists of an infinite film of thickness $d$ centered at $z=0$, with a uniform probability density $\rho(\vb{r}_\ell)= 1 /V$, and assumes that the volume $V_\ell$ of each sphere is negligible compared to $V$ \cite{barrera_coherent_2003}; a schematic of the system is shown in Fig. \ref{fig:esquema}. Under these assumptions, the electric field induced by the ensemble particles in the SSA can be computed by substituting in Eq. \eqref{eq:EexcSSA} the dyadic Green function $\mathbb{G}$ with its plane wave representation and performing the configurational average, along with the limit $d\to0$ to consider the case of a two-dimensional array \cite{barrera_coherent_2003}. This procedure results in
+%
+\begin{align}
+	\langle \vb{E}_\text{SSA}^\text{ind}(\vb{r})\rangle =
+	\begin{dcases}
+		-\alpha   S_j(\pi-2\theta) \exp(i\vb{k}^\text{r}_\text{coh}\cdot\vb{r}) \vb{E}^\text{inc}(\vb{r}), & z>0, \\
+		- \alpha S(0) \exp(i\vb{k}^\text{t}_\text{coh}\cdot\vb{r}) \vb{E}^\text{inc}(\vb{r}), & z<0,
+	\end{dcases}
+	\qquad \text{with} \qquad
+	\alpha = \frac{2\Theta}{x^2 \cos\theta},
+	\label{eq:SSA}
+\end{align}
+%
+where $\theta$ is the incidence angle at which the incident plane wave illuminates the two-dimensional array, $S_j(\vartheta)$ are the elements of the Mie scattering matrix \cite{bohren_absorption_1983}—which depend on the refractive index of the matrix, the sphere, and its size—evaluated at $\vartheta$, with $j=1$ for $s$-polarization and $j=2$ for $p$-polarization. The term $\Theta$ corresponds to the coverage fraction of the array, and $x = k^\text{ind}a$ is the size parameter with $k^\text{ind}$ being the magnitude of the incident field wave vector propagating in the matrix \cite{barrera_coherent_2003,garcia2012multiple}. The elements $S_j(\vartheta)$ are evaluated at $\vartheta = \pi-2\theta$ and $\vartheta = 0$ as they correspond to the coherent scattering directions given by the law of reflection and Snell’s law, respectively. From Eq. \eqref{eq:SSA}, it is shown that under the SSA, the two-dimensional array of spherical particles scatters light primarily in coherent directions, as the diffuse components interfere destructively \cite{barrera_coherent_2003}. Consequently, reflection $r^{(j)}_\text{SSA}$ and transmission $t^{(j)}_\text{SSA}$ amplitude coefficients can be defined for the two-dimensional array similarly to the Fresnel coefficients, given by
+%
+\begin{align}
+	r^{(j)}_\text{SSA}(\theta) = -\alpha   S_j(\pi-2\theta), \qquad\text{and}\qquad t^{(j)}_\text{SSA}(\theta) = 1 - \alpha S(0).
+\end{align}%
+%
+In the case of the QSA, the system of equations to be solved consists of Eqs. \eqref{eq:EexcSSA} and \eqref{eq:EexcQSA}, considering that Eqs. \eqref{eq:EexcAve} and \eqref{eq:EexcAve2} are equal. To solve this system of equations, the ensemble is assumed to have the same characteristics as in the SSA case and additionally that the surroundings of each sphere are identical on average \cite{garcia2012multiple}. Therefore, the system of equations can be solved by proposing the \textit{ansatz}
+%
+\begin{align}
+	\langle\vb{E}^{exc}_\ell(\vb{r}) \rangle_\ell =
+	\vb{E}^\text{exc}_\text{r}(\vb{r})\ \exp(i\vb{k}^\text{r}_\text{coh}\cdot\vb{r}) +
+	\vb{E}^\text{exc}_\text{t}(\vb{r})\ \exp(i\vb{k}^\text{t}_\text{coh}\cdot\vb{r})
+\end{align}
+%
+that is, in the CSM, it is assumed that $\langle\vb{E}^{exc}_\ell (\vb{r})\rangle_\ell$ consists of a contribution from an electric field propagating in the coherent reflection direction, denoted as $\vb{E}^\text{exc}_\text{r}$, and another in the transmission direction, denoted by $\vb{E}^\text{exc}_\text{t}$ \cite{garcia2012multiple}. These coherent contributions behave according to the SSA [Eq. \eqref{eq:SSA}], so each will have a reflected and transmitted component. The sum of these contributions determines the induced electric field under the QSA. Solving the system of equations and substituting in Eq. \eqref{eq:EindQSA}, the amplitude coefficients of reflection $r^{(j)}_\text{CSM}$ and transmission $t^{(j)}_\text{CSM}$ can be defined, considering multiple scattering \cite{garcia2012multiple,barrera_coherent_2003}. These coherent contributions behave according to the SSA [Eq. \eqref{eq:SSA}], so each of them will have a reflected and a transmitted component. The sum of these contributions determines the induced electric field under the QSA, whose expression is
+%
+\begin{align}
+	\langle \vb{E}_\text{QSA}^\text{ind}(\vb{r})\rangle =
+	\begin{dcases}
+		-\alpha \bigg( S_j(0) \norm{\vb{E}^\text{exc}_\text{r}(\vb{r})} +  S(\pi-2\theta)\norm{\vb{E}^\text{exc}_\text{t}(\vb{r})}\bigg)
+		\exp(i\vb{k}^\text{r}_\text{coh}\cdot\vb{r}) \vu{E}^\text{inc}, & z > 0, \\
+		-\alpha \bigg( S_j(\pi-2\theta) \norm{\vb{E}^\text{exc}_\text{r}(\vb{r})} + S(0)\norm{\vb{E}^\text{exc}_\text{t}(\vb{r})}\bigg)
+		\exp(i\vb{k}^\text{t}_\text{coh}\cdot\vb{r}) \vu{E}^\text{inc},  & z < 0, \\
+	\end{dcases}
+	\label{eq:EindQSA}
+\end{align}
+%
+where $\vu{E}^\text{inc}$ indicates the polarization of the incident electric field. Since in the QSA the expressions of Eq. \eqref{eq:EexcQSA} are equal for the electric field exciting a particle, then the contributions of the induced field in the coherent direction satisfy \cite{garcia2012multiple}
+%
+\begin{subequations}%
+	\begin{align}%
+		\vb{E}^\text{exc}_\text{r}(\vb{r}) &= -\frac{\alpha}{2} \bigg( S_j(0) \norm{\vb{E}^\text{exc}_\text{r}(\vb{r})} +  S(\pi-2\theta)\norm{\vb{E}^\text{exc}_\text{t}(\vb{r})}\bigg) \vu{E}^\text{inc},\\
+		\vb{E}^\text{exc}_\text{t}(\vb{r}) &= \vb{E}^\text{inc}(\vb{r}) -\frac{\alpha}{2} \bigg( S_j(\pi-2\theta) \norm{\vb{E}^\text{exc}_\text{r}} + S(0)\norm{\vb{E}^\text{exc}_\text{t}(\vb{r})} \bigg)
+		\vu{E}^\text{inc}.
+	\end{align}%
+	\label{eq:Ansatz}%
+\end{subequations}%
+%
+Solving the system of equations for $\vb{E}^\text{exc}_\text{r}(\vb{r})$ and $\vb{E}^\text{exc}_\text{t}(\vb{r})$ shown in Eq. \eqref{eq:Ansatz}, and substituting them in Eq. \eqref{eq:EindQSA}, expressions for the reflection $r^{(j)}_\text{CSM}$ and transmission $t^{(j)}_\text{CSM}$ amplitude coefficients are defined, considering multiple scattering. These expressions are \cite{garcia2012multiple,barrera_coherent_2003}
+%
+\begin{subequations}%
+	\begin{align}
+		r^{(j)}_\text{CSM}(\theta)&=\frac{-\alpha S_j(\pi-2\theta)}
+		{1+\alpha S(0)+\frac14 \alpha^2 \left[S^2(0)-S_j^2 (\pi-2\theta) \right]},\\
+		t^{(j)}_\text{CSM}(\theta)&=\frac{1-\frac14\alpha^2\qty[S^2(0)-S_j^2(\pi-2\theta)]}
+		{1+\alpha S(0)+\frac14 \alpha^2 \left[S^2(0)-S_j^2 (\pi-2\theta) \right]},
+	\end{align}%
+	\label{eq:CSMmono}%
+\end{subequations}%
+%
+where $j=1$ for $s$-polarization and $j=2$ for $p$-polarization. The assumption that spherical particles are identical, imposed in both the SSA and QSA, can be relaxed if the radius $a$ of the particles follows a size distribution density $\rho(a)$ and the field exciting each sphere is identical for all, except for a phase difference of $\pm2ik^\text{inc}a$ caused by size variation \cite{vazquez-estrada_optical_2014}. In this case, the average over the particle radius $a$ is computed in Eq. \eqref{eq:Ansatz}, incorporating the phase difference by multiplying the right-hand side of Eq. \eqref{eq:Ansatz} by $\exp(\pm2ik_z^\text{inc} a)$—with $k_z^\text{ind} = k^\text{ind}\cos\theta$, where the positive sign corresponds to the reflected contribution and the negative to the transmitted one. Following the analogous procedure described earlier, the reflection and transmission amplitude coefficients considering size polydispersity in the two-dimensional array are given by \cite{vazquez-estrada_optical_2014}.
+%
+\begin{subequations}%
+	\begin{align}%
+		r_\text{CSM}^{(j)}(\theta) &= \frac{-\beta_{+}^{(j)}(\theta)}
+		{1+\beta_F + \frac{1}{4} \qty[\beta_F^2-\beta_{+}^{(j)}(\theta) \beta_{-}^{(j)}(\theta)]},%
+		\\
+		t_\text{CSM}^{(j)}(\theta) &= \frac{1 - \frac{1}{4}\qty[\beta_F^2- \beta_{+}^{(j)}(\theta)\beta_{-}^{(j)}(\theta)]}
+		{1+\beta_F + \frac{1}{4} \qty[\beta_F^2-\beta_{+}^{(j)}(\theta) \beta_{-}^{(j)}(\theta)]},
+	\end{align}%
+	\label{eq:CSMpoly}%
+\end{subequations}%
+
+where
+%
+\begin{align}
+	\beta_F(\theta) = \eta \int_{0}^{\infty} \rho(a)S(0)\dd{a}
+	\quad\text{y}\quad
+	\beta_{\pm}^{(j)}(\theta) = \eta \int_{0}^{\infty} \rho (a)S_{j}(\pi-2\theta)\exp(\pm2ik_z^\text{inc} a)\dd{a},
+	\label{eq:betas}
+\end{align}%
+with $\eta = 2 \Theta/(x_0^2 \cos\theta)$ and where $x_0 = k^\text{ind}a_0$ is the size parameter of a sphere with radius $a_0$, which is the most probable value according to the size distribution density $\rho(a)$.
+
+The expressions in Eq. \eqref{eq:CSMpoly} allow describing the response of a disordered metasurface of spherical NPs under conditions close to experimental ones by introducing the presence of a substrate. To achieve this, multiple reflections between the substrate-matrix interface and the matrix-metasurface interface are considered, assuming that the latter responds according to Eq. \eqref{eq:CSMpoly} when separated from the substrate by a distance $\Delta\to 0$ \cite{vazquez-estrada_optical_2014}. In particular, to compare the theoretical response with reflectance measurements in an internal incidence scheme, the amplitude reflection coefficient of the entire system (metasurface with substrate) is given by \cite{vazquez-estrada_optical_2014} 
+%
+\begin{align}
+	r^{(j)}(\theta_i)=\frac{r^{(j)}_\text{sm}(\theta_i)+r^{(j)}_\text{CSM}(\theta_t)}{1+r_\text{sm}^{(j)}(\theta_i)r_\text{CSM}^{(j)}(\theta_t)},
+\end{align}
+%
+where $r_\text{sm}$ is the Fresnel reflection coefficient between the substrate and the matrix for $s$ ($p$) polarization if $j=1$ ($j=2$), and where $\theta_i$ is the angle of incidence of the plane wave illuminating the interface between the substrate and the matrix, and $\theta_t$ is the transmission angle upon crossing this interface and thus the angle at which it illuminates the metasurface.
+
+
+
