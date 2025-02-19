@@ -1,0 +1,112 @@
+% !TeX root = Coherent.tex
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, physics, graphicx,booktabs}
+
+\begin{document}
+	
+	\title{Coherent Scattering Model}
+	\author{Graduate Course Notes}
+	\date{\today}
+	\maketitle
+			
+	\section{Coherent Scattering Model}
+	The Coherent Scattering Model (CSM) is based on multiple scattering theory and is closely related to effective medium approximations. However, it goes beyond classical EMA by incorporating coherence effects between scatterers.
+	
+	\subsection{Coherent and Incoherent Fields}
+	The total electromagnetic field in a disordered system is separated into:
+	- \textbf{Coherent field} $\mathbf{E}_c$: The ensemble-averaged field that contributes to the effective medium properties.
+	- \textbf{Fluctuating field} $\mathbf{E}_f$: The incoherent contributions that lead to diffuse scattering.
+	
+	\subsection{Green’s Function Formalism}
+	The total Green’s function $G(\mathbf{r}, \mathbf{r'})$ satisfies:
+	\begin{equation}
+		\left( \nabla \times \nabla \times - k^2 \varepsilon(\mathbf{r}) \right) G(\mathbf{r}, \mathbf{r'}) = \delta(\mathbf{r} - \mathbf{r'}).
+	\end{equation}
+	Here, $\varepsilon(\mathbf{r})$ is the position-dependent permittivity, accounting for scatterers embedded in the medium.
+	
+	\subsection{Effective Dielectric Function}
+	The CSM provides an expression for the effective dielectric function:
+	\begin{equation}
+		\varepsilon_{\text{eff}} = \varepsilon_h + \frac{\rho \alpha_{\text{eff}}}{1 - \rho S(\mathbf{q}) \alpha_{\text{eff}}},
+	\end{equation}
+	where:
+	- $\varepsilon_h$ is the host medium permittivity.
+	- $\rho$ is the number density of scatterers.
+	- $\alpha_{\text{eff}}$ is the renormalized polarizability of individual scatterers.
+	- $S(\mathbf{q})$ is the structure factor capturing spatial correlations.
+	
+	This generalizes classical Maxwell-Garnett and Bruggeman effective medium theories, making it applicable to dense, correlated scatterer distributions.
+	
+	\section{Comparison with Other Theories}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Feature & Coherent Scattering Model & Foldy-Lax Approach & Effective Medium Theories \\
+			\hline
+			Key Idea & Coherence in disordered media & Exact multiple scattering & Mean-field approximations \\
+			Formalism & Green’s function + averaging & Integral equations & Homogeneous approximation \\
+			Coherent Effects & Explicitly included & Not always included & Often neglected \\
+			Scattering Treatment & Coherent + incoherent & Computationally expensive & Effective response only \\
+			\hline
+		\end{tabular}
+		\caption{Comparison of different scattering models.}
+		\label{tab:comparison}
+	\end{table}
+	
+	\section{Applications}
+	The CSM is widely used in:
+	- Disordered nanophotonic materials.
+	- Multiple scattering in random media (colloidal suspensions, biophotonics).
+	- Surface and interface scattering (thin films, rough surfaces).
+	- Metamaterials and effective medium theory extensions.
+	
+	\section{Conclusion}
+	Bedeaux and Vlieger’s Thin Film Theory and Barrera-Valenzuela’s Coherent Scattering Model extend classical optics by incorporating surface susceptibilities, generalized Fresnel coefficients, and multiple scattering effects. These approaches are crucial for modern nanophotonics and thin-film optics.
+	
+	
+	\section{Introduction}
+	The Coherent Scattering Model (CSM), developed by Barrera and Valenzuela, is a theoretical framework designed to describe the optical response of disordered systems of scatterers. Unlike effective medium theories, which approximate heterogeneous media as homogeneous, the CSM is a multiple scattering approach that remains valid up to the quasicrystalline approximation. This model is particularly relevant for dense collections of scatterers where coherent effects play a crucial role in the optical response.
+	
+	\section{Fundamental Formulation of Multiple Scattering}
+	The electromagnetic wave propagation in a medium containing scatterers is governed by Maxwell's equations:
+	\begin{equation}
+		\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad
+		\nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}.
+	\end{equation}
+	
+	For a system containing $N$ discrete scatterers, the total electric field at position $\mathbf{r}$ is given by:
+	\begin{equation}
+		\mathbf{E} (\mathbf{r}) = \mathbf{E}_0(\mathbf{r}) + \sum_{j} \mathbf{E}_j^{\text{sc}}(\mathbf{r}),
+	\end{equation}
+	where $\mathbf{E}_0$ is the incident field and $\mathbf{E}_j^{\text{sc}}$ is the scattered field from the $j$th scatterer.
+	
+	\section{Green's Function Formalism}
+	The total field at any point satisfies the integral equation:
+	\begin{equation}
+		\mathbf{E}(\mathbf{r}) = \mathbf{E}_0(\mathbf{r}) + \int_V \mathbf{G}(\mathbf{r}, \mathbf{r'}) \mathbf{P}(\mathbf{r'}) d^3 r',
+	\end{equation}
+	where $\mathbf{G}(\mathbf{r}, \mathbf{r'})$ is the dyadic Green’s function and $\mathbf{P}(\mathbf{r'})$ is the induced polarization.
+	
+	For a discrete distribution of scatterers:
+	\begin{equation}
+		\mathbf{E}_i = \mathbf{E}_0(\mathbf{r}_i) + \sum_{j \neq i} \mathbf{G}(\mathbf{r}_i, \mathbf{r}_j) \mathbf{P}_j.
+	\end{equation}
+	
+	\section{Quasicrystalline Approximation (QCA)}
+	To include the effects of positional correlations while preserving the multiple scattering nature, the CSM employs the Quasicrystalline Approximation (QCA). This approximation assumes that the pair distribution function $g(\mathbf{r}, \mathbf{r'})$ plays a role in defining the effective interaction between scatterers.
+	
+	In this framework, the renormalized self-energy term is given by:
+	\begin{equation}
+		\Sigma(\mathbf{k}) = \rho \int g(\mathbf{r}) \mathbf{T}(\mathbf{r}) e^{i \mathbf{k} \cdot \mathbf{r}} d^3r,
+	\end{equation}
+	where $\mathbf{T}(\mathbf{r})$ is the T-matrix describing individual scatterers and $\rho$ is the number density.
+	
+	\section{Conclusion}
+	The Coherent Scattering Model (CSM) provides a rigorous approach to describing the optical response of disordered media. By incorporating multiple scattering effects beyond traditional effective medium approaches and leveraging the Quasicrystalline Approximation (QCA), it remains a powerful tool in the study of complex photonic materials.
+	
+	
+	
+	
+\end{document}

@@ -1,0 +1,82 @@
+% !TeX root = Foldy-Lax.tex
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, physics, graphicx, bm}
+
+\begin{document}
+	
+	\title{Approximations to the Foldy-Lax Hierarchy: From Single Scattering to Beyond QCA}
+	\author{Graduate Course Notes}
+	\date{\today}
+	\maketitle
+	
+	\section{Introduction}
+	The Foldy-Lax hierarchy provides a fundamental framework for describing the multiple scattering of waves in a medium with discrete scatterers. Given its complexity, solving it exactly is impractical for large systems, necessitating various approximations. In this document, we review key approximations, from the simplest Single Scattering Approximation (SSA) to the more sophisticated Quasicrystalline Approximation (QCA) and beyond. These approximations have been extensively discussed in multiple works, including \cite{ishimaru1978wave, lagendijk1996resonant, tishkovets2011multiple, barrera1989coherent}.
+	
+	\section{Single Scattering Approximation (SSA)}
+	The simplest approximation assumes each scatterer interacts only with the incident field, neglecting multiple scattering.
+	\begin{equation}
+		\mathbf{E}(\mathbf{r}_i) \approx \mathbf{E}_0(\mathbf{r}_i).
+	\end{equation}
+	The scattered field is then:
+	\begin{equation}
+		\mathbf{E}^{\text{sc}}_i(\mathbf{r}) = \mathbf{G}(\mathbf{r}, \mathbf{r}_i) \mathbf{T}_i \mathbf{E}_0(\mathbf{r}_i),
+	\end{equation}
+	where \( \mathbf{T}_i \) is the individual scatterer's T-matrix and \( \mathbf{G} \) is the Green's function.
+	
+	\section{Independent Scattering Approximation (ISA)}
+	The ISA improves upon SSA by averaging over all possible configurations of scatterers. It assumes no positional correlations, making it suitable for low-density random media \cite{ishimaru1978wave}.
+	
+	\section{Coherent Potential Approximation (CPA)}
+	The CPA replaces the disordered medium with an effective homogeneous medium. The effective permittivity \( \varepsilon_{\text{eff}} \) is determined self-consistently:
+	\begin{equation}
+		\Sigma(\mathbf{k}) = \rho \int T(\mathbf{k}, \mathbf{k'}) G_{\text{eff}}(\mathbf{k'}) d^3k'.
+	\end{equation}
+	While CPA accounts for multiple scattering, it ignores spatial correlations \cite{tishkovets2011multiple}.
+	
+	\section{Quasicrystalline Approximation (QCA)}
+	QCA introduces short-range positional correlations via the pair distribution function \( g(\mathbf{r}, \mathbf{r'}) \):
+	\begin{equation}
+		\Sigma(\mathbf{k}) = \rho \int g(\mathbf{r}) T(\mathbf{r}) e^{i \mathbf{k} \cdot \mathbf{r}} d^3r.
+	\end{equation}
+	This improves accuracy for moderate densities but still neglects long-range interactions \cite{barrera1989coherent}.
+	
+	\section{Beyond QCA: Advanced Models}
+	For high-density media, more advanced methods are required:
+	\begin{itemize}
+		\item \textbf{Dense Media Model (DMM)}: Extends QCA by including three-body and higher-order correlations.
+		\item \textbf{Self-Consistent Coherent Scattering Approximation (SCCSA)}: Similar to CPA but accounts for phase coherence effects.
+		\item \textbf{Monte Carlo Methods}: Direct numerical solutions of the Foldy-Lax equations \cite{lagendijk1996resonant}.
+	\end{itemize}
+	
+	\section{Summary of Approximations}
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Approximation} & \textbf{Key Assumption} & \textbf{Strengths} & \textbf{Weaknesses} \\
+			\hline
+			SSA & No interactions & Simple, valid for dilute systems & Fails at high densities \\
+			ISA & No correlations & Useful for random media & Ignores multiple scattering \\
+			CPA & Effective medium & Self-consistent & Ignores spatial correlations \\
+			QCA & Short-range correlations & Improved accuracy & Ignores long-range effects \\
+			DMM & Higher-order correlations & Accurate at high densities & Computationally intensive \\
+			SCCSA & Phase coherence effects & More precise than CPA & Requires numerical methods \\
+			\hline
+		\end{tabular}
+		\caption{Comparison of different approximations to the Foldy-Lax hierarchy.}
+	\end{table}
+	
+	\section{Conclusion}
+	The Foldy-Lax hierarchy provides a rigorous framework for multiple scattering theory. Various approximations improve its tractability, each with different levels of complexity and accuracy. Understanding these approximations is crucial for applications in disordered photonic materials and wave propagation in complex media.
+	
+	\bibliographystyle{unsrt}
+	\begin{thebibliography}{9}
+		\bibitem{ishimaru1978wave} A. Ishimaru, \textit{Wave Propagation and Scattering in Random Media}, Academic Press, 1978.
+		\bibitem{lagendijk1996resonant} A. Lagendijk and B. van Tiggelen, "Resonant multiple scattering of light," \textit{Physics Reports}, vol. 270, no. 3, pp. 143-215, 1996.
+		\bibitem{tishkovets2011multiple} V. P. Tishkovets, B. Michel, and K. O. Muinonen, "Multiple scattering effects in discrete random media," \textit{Journal of Quantitative Spectroscopy and Radiative Transfer}, vol. 112, no. 5, pp. 821-836, 2011.
+		\bibitem{barrera1989coherent} R. G. Barrera and R. Valenzuela, "The coherent scattering approximation: A multiple scattering approach," \textit{Physical Review B}, vol. 39, no. 15, pp. 10554-10562, 1989.
+	\end{thebibliography}
+	
+\end{document}
+
