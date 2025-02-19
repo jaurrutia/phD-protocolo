@@ -138,17 +138,18 @@
 \mainmatter
 \def\baselinestretch{1}                   % Line spacing
 
-
-\chapter*{Background and Motivation}
-	\addcontentsline{toc}{chapter}{\protect\numberline{}Introduction}
-	\label{chapter:intro}
-	\input{1-mainmatter/1-Introduccion/1-Background}
-	\input{1-mainmatter/1-Introduccion/2-Development}	
+%
+%\chapter*{Background and Motivation}
+%	\addcontentsline{toc}{chapter}{\protect\numberline{}Introduction}
+%	\label{chapter:intro}
+%	\input{1-mainmatter/1-Introduccion/1-Background}
+%	\input{1-mainmatter/1-Introduccion/2-Development}	
 
 
 \chapter{Multiple Scattering Theories: two approaches}
  	\label{ch:OpticalProperties}
-	\input{1-mainmatter/2-Theory/1-CSM}
+	\input{1-mainmatter/2-Theory/0-MultipleScattering}
+	\input{1-mainmatter/2-Theory/1-CSM-copy}
 
 
 %     In the previous Section, it was concluded that the extinction of light due to the interaction between a particle and a monochromatic plane wave can be determined through the amplitude of the scattered field in the forward direction. This is stated in the Optical Theorem, which is an exact relation, but inaccuracies may arise when either the scattering amplitude matrix or the extinction cross section are approximated\footnote{See for example Section 2.4 from Ref. \cite{tsang_scattering_2000} on the Rayleigh Scattering, and Section 21.7 from Ref. \cite{zangwill_modern_2013} on Thompson scattering.}. A particular case in which the scattering amplitude matrix can be exactly calculated is when the scatterer has spherical symmetry. In order to address this special case, it will be introduced a vectorial basis with spherical symmetry, known as the Vector Spherical Harmonics (VSH). Once the VSH are defined, they will be used to write a monochromatic plane wave in terms of the VSH. By imposing the continuity of the tangential components of the electric and magnetic fields, the scattered field can be also written in terms of the VSH. As a particular example of interest, shown in the last Section, the optical properties of a gold nanoparticle with radius of $12.5$ nm are calculated.

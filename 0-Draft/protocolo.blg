@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: protocolo.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated field_info (elt_size=8) to 10180 items from 5000.
+Database file #1: protocolo-blx.bib
+Database file #2: 1-mainmatter/5-References/references.bib
+Warning--I didn't find a database entry for "cuanalo_sensitivity_2022"
+Biblatex version: 3.19
+Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+You've used 36 entries,
+            6399 wiz_defined-function locations,
+            1541 strings with 19762 characters,
+and the built_in function-call counts, 467253 in all, are:
+= -- 35123
+> -- 18092
+< -- 1750
++ -- 22912
+- -- 13797
+* -- 32023
+:= -- 60179
+add.period$ -- 0
+call.type$ -- 36
+change.case$ -- 487
+chr.to.int$ -- 1052
+cite$ -- 70
+duplicate$ -- 39637
+empty$ -- 36584
+format.name$ -- 3647
+if$ -- 84372
+int.to.chr$ -- 0
+int.to.str$ -- 82
+missing$ -- 0
+newline$ -- 1549
+num.names$ -- 1588
+pop$ -- 13586
+preamble$ -- 1
+purify$ -- 839
+quote$ -- 0
+skip$ -- 8304
+stack$ -- 0
+substring$ -- 74185
+swap$ -- 7390
+text.length$ -- 1481
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1212
+warning$ -- 0
+while$ -- 5760
+width$ -- 0
+write$ -- 1514
+(There was 1 warning)
