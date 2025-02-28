@@ -17,52 +17,51 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated field_info (elt_size=8) to 10180 items from 5000.
 Database file #1: protocolo-blx.bib
 Database file #2: 1-mainmatter/5-References/references.bib
-Warning--I didn't find a database entry for "cuanalo_sensitivity_2022"
+Warning--I didn't find a database entry for "coherent_barrier_2003"
 Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-You've used 36 entries,
+You've used 15 entries,
             6399 wiz_defined-function locations,
-            1541 strings with 19762 characters,
-and the built_in function-call counts, 467253 in all, are:
-= -- 35123
-> -- 18092
-< -- 1750
-+ -- 22912
-- -- 13797
-* -- 32023
-:= -- 60179
+            1333 strings with 13074 characters,
+and the built_in function-call counts, 166776 in all, are:
+= -- 12962
+> -- 5318
+< -- 646
++ -- 6949
+- -- 3775
+* -- 11684
+:= -- 20576
 add.period$ -- 0
-call.type$ -- 36
-change.case$ -- 487
-chr.to.int$ -- 1052
-cite$ -- 70
-duplicate$ -- 39637
-empty$ -- 36584
-format.name$ -- 3647
-if$ -- 84372
+call.type$ -- 15
+change.case$ -- 251
+chr.to.int$ -- 320
+cite$ -- 28
+duplicate$ -- 14061
+empty$ -- 13701
+format.name$ -- 1301
+if$ -- 31435
 int.to.chr$ -- 0
-int.to.str$ -- 82
+int.to.str$ -- 36
 missing$ -- 0
-newline$ -- 1549
-num.names$ -- 1588
-pop$ -- 13586
+newline$ -- 576
+num.names$ -- 693
+pop$ -- 5298
 preamble$ -- 1
-purify$ -- 839
+purify$ -- 366
 quote$ -- 0
-skip$ -- 8304
+skip$ -- 3263
 stack$ -- 0
-substring$ -- 74185
-swap$ -- 7390
-text.length$ -- 1481
+substring$ -- 27266
+swap$ -- 2690
+text.length$ -- 516
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1212
+type$ -- 498
 warning$ -- 0
-while$ -- 5760
+while$ -- 1988
 width$ -- 0
-write$ -- 1514
+write$ -- 562
 (There was 1 warning)
