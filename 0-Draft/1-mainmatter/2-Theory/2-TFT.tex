@@ -5,13 +5,39 @@ The Thin Film Theory (TFT) is theoretical framework used to describe the optical
 The TFT  accounts for nonlocal effects,  meaning that the response of the thin film is not purely dictated by local properties but also by interactions across the interface. Additionally, the thin film is treated as a layer with an additional surface polarization, which alters its reflection and transmission properties. From the TFT formalism, a generalized form of the Fresnel Equations arises, which includes the influence of the thin film thickness and material properties from which the effect on the phase and amplitude of reflected and transmitted light is calculated.
 
 
-In order to study the reflection and transmission of an electromagnetic plane wave illuminating an arbitrary thin film located at $z=0$, it is proposed the decomposition of the electric $\vb{E}(\vb{r})$ and magnetic $\vb{B}(\vb{r})$, as well as $\vb{D}(\vb{r}) = \varepsilon(\vb{r})\vb{E}(\vb{r})$  and $\vb{H}(\vb{r}) = \mu^{-1}(\vb{r})\vb{B}(\vb{r})$, above, below and on the thin film as follows
+In order to study the reflection and transmission of an electromagnetic plane wave illuminating an arbitrary thin film of thickness $d$ centered at $z=0$, it is proposed that the total electric field $\vb{E}(\vb{r})$ is decomposed in three terms as follows
+%
+\begin{align}
+	\vb{E}(\vb{r}) &= \vb{E}^{+}(\vb{r}) \theta(z) + \vb{E}^{-}(\vb{r}) \theta(-z) + \vb{E}^\text{excess}(\vb{r}),
+	\label{eq:excessDef}
+\end{align}
+%
+where the armonic dependency in $\omega$ is implicitly included in the enmployed notation, $\theta(z)$ is the Heaviside step function, and the superscript $+$ ($-$)  stands for the field evaluated in the upper (lower) side relative to the thin film. The term $\vb{E}^\text{excess}$ is the excess electric field and its contribution is non-zero in the neighborhood of the thin film since $\vb{E} \to  \vb{E}^{\pm}$ when $z \to \pm \infty$. Thus, the whole effect of the thin film in the electromagnetic properties of the system can be described by considering the total excess electric filed in the film and confining its contribution in the limit when $d \to 0$, thus, yielding the expression
+%
+\begin{align}
+	\vb{E}(\vb{r}) &= \vb{E}^{+}(\vb{r}) \theta(z) + \vb{E}^{-}(\vb{r}) \theta(-z) + \vb{E}^\text{film}(\vb{r}_\parallel) \delta(z),
+		\label{eq:ETotFilm}
+\end{align}
+%
+with $\delta(z)$ the Dirac delta function and
+%
+\begin{align}
+	\vb{E}^\text{film}(\vb{r}_\parallel) = \int_{-\infty}^{\infty} \vb{E}^\text{excess}(\vb{r}) \dd{z}
+	\label{eq:EFilm}
+\end{align}
+%
+where $\vb{r}_\parallel$ is a vector evaluated at the plane $z=0$. The same decomposition employed in Eqs. \eqref{eq:ETotFilm} and  \eqref{eq:EFilm} for $\vb{E}$ applies to the magnetic field $\vb{B}$, as well as any other scalar or vector field relevant to the system (electric field displacement, dielectric function, polarization, etc.). 
+
+
+
+
+
 %
 \begin{align}
 	\vb{E}(\vb{r}) &= \vb{E}^{+}(\vb{r}) \theta(z) + \vb{E}^{-}(\vb{r}) \theta(-z) + \vb{E}^\text{film}(\vb{r}_\parallel) \delta(z),
 \end{align}
 %
-where $\theta(z)$ and $\delta(z)$ are the Heaviside and Dirac delta functions, respectively; the superscript $+$ ($-$)  stands for the field evaluated in the upper (lower) side relative to the thin film; and the superscript ''film`` for the fields evaluated at $z=0$ described by the vector $\vb{r}_\parallel$.
+where $\theta(z)$ and $\delta(z)$ are the Heaviside and Dirac delta functions, respectively; the superscript $+$ ($-$)  stands for the field evaluated in the upper (lower) side relative to the thin film; and the superscript ``film'' for the fields evaluated at $z=0$ described by the vector $\vb{r}_\parallel$.
 
  The fields $\vb{H}^s$ and $\vb{D}^s$ satisfy $D_{xs} = D_{ys} = H_{xs} = H_{ys} = 0$.
 
