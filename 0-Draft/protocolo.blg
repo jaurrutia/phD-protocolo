@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
+This is BibTeX, Version 0.99d (TeX Live 2025/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: protocolo.aux
 The style file: biblatex.bst
@@ -19,36 +19,35 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: protocolo-blx.bib
 Database file #2: 1-mainmatter/5-References/references.bib
-Warning--I didn't find a database entry for "coherent_barrier_2003"
-Biblatex version: 3.19
+Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 You've used 15 entries,
-            6399 wiz_defined-function locations,
-            1333 strings with 13074 characters,
-and the built_in function-call counts, 166776 in all, are:
+            6402 wiz_defined-function locations,
+            1332 strings with 13060 characters,
+and the built_in function-call counts, 166846 in all, are:
 = -- 12962
 > -- 5318
 < -- 646
 + -- 6949
 - -- 3775
-* -- 11684
+* -- 11698
 := -- 20576
 add.period$ -- 0
 call.type$ -- 15
 change.case$ -- 251
 chr.to.int$ -- 320
 cite$ -- 28
-duplicate$ -- 14061
-empty$ -- 13701
+duplicate$ -- 14075
+empty$ -- 13715
 format.name$ -- 1301
-if$ -- 31435
+if$ -- 31449
 int.to.chr$ -- 0
 int.to.str$ -- 36
 missing$ -- 0
 newline$ -- 576
 num.names$ -- 693
-pop$ -- 5298
+pop$ -- 5312
 preamble$ -- 1
 purify$ -- 366
 quote$ -- 0
@@ -64,4 +63,3 @@ warning$ -- 0
 while$ -- 1988
 width$ -- 0
 write$ -- 562
-(There was 1 warning)
