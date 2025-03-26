@@ -19,12 +19,14 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: protocolo-blx.bib
 Database file #2: 1-mainmatter/5-References/references.bib
+Warning--I didn't find a database entry for "Bedeaux_Optical"
+Warning--I didn't find a database entry for "Lazzari_GranFilm"
 Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 You've used 15 entries,
             6402 wiz_defined-function locations,
-            1332 strings with 13060 characters,
+            1336 strings with 13122 characters,
 and the built_in function-call counts, 166846 in all, are:
 = -- 12962
 > -- 5318
@@ -63,3 +65,4 @@ warning$ -- 0
 while$ -- 1988
 width$ -- 0
 write$ -- 562
+(There were 2 warnings)
