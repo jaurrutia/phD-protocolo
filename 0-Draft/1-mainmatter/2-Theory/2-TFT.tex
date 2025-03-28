@@ -9,7 +9,7 @@ To study the reflection and transmission of an electromagnetic plane wave illumi
 	\label{eq:excessDef}
 \end{align}
 %
-where the harmonic dependency in $\omega$ is implicitly included in the employed notation and $\Theta(z)$ is the Heaviside step function; the electric fields $\vb{E}^\gtrless$ are considered to be radiation fields. The term $\vb{E}^\text{excess}$ is the excess electric field and its contribution is non-zero in the neighborhood of the thin film since $\vb{E} \to  \vb{E}^{\gtrless}$ when $z \to \pm \infty$. Thus, the whole effect of the thin film in the electromagnetic properties of the system can be described by considering the total excess electric field in the film $\vb{E}^\text{film}$ in the limit when $d \to 0$, thus, yielding the expression
+where the harmonic dependency in the angular frequency $\omega$ is implicitly included in the employed notation and $\Theta(z)$ is the Heaviside step function; the electric fields $\vb{E}^\gtrless$ are considered to be radiation fields. The term $\vb{E}^\text{excess}(\vb{r})$ is the excess electric field and its contribution is non-zero in the neighborhood of the thin film since $\vb{E}(\vb{r}) \to  \vb{E}^{\gtrless}(\vb{r})$ when $z \to \pm \infty$. Thus, the whole effect of the thin film in the electromagnetic properties of the system can be described by considering the total excess electric field in the film $\vb{E}^\text{film}(\vb{r}, z = 0)$ in the limit when $d \to 0$, thus, yielding the expression
 %
 \begin{align}
 	\vb{E}(\vb{r}) &= \vb{E}^{>}(\vb{r}) \Theta(z) + \vb{E}^{<}(\vb{r}) \Theta(-z) + \vb{E}^\text{film}(\vb{r}_\parallel) \delta(z),
@@ -25,7 +25,7 @@ with $\delta(z)$ the Dirac delta function and
 	\label{eq:EFilm}
 \end{align}
 %
-where $\vb{r}_\parallel$ is a vector evaluated at the plane $z=0$, and where it is explicitly shown that $	\vb{E}^\text{film}$ equals the Fourier transform of the excess electric field in the $z$ variable evaluated at $k_z = 0$. The same decomposition employed in Eqs. \eqref{eq:excessDef}--\eqref{eq:EFilm} for $\vb{E}$ applies to the magnetic field $\vb{B}$, as well as any other scalar or vector field relevant to the system, for example, the electric displacement field $\vb{D}$, the $\vb{H}$ field, and the external charge $\rho_\text{ext}$ and current $\vb{J}_\text{ext}$ densities. By substituting such definitions of the fields into Maxwell's equations, it follows that the excess quantities obey the following expressions
+where $\vb{r}_\parallel$ is a vector evaluated at the plane $z=0$, and where it is explicitly shown that $	\vb{E}^\text{film}(\vb{r}_\parallel)$ equals the Fourier transform of the excess electric field in the $z$ variable evaluated at $k_z = 0$. The same decomposition employed in Eqs. \eqref{eq:excessDef}--\eqref{eq:EFilm} for $\vb{E}(\vb{r})$ applies to the magnetic field $\vb{B}(\vb{r})$, as well as any other scalar or vector field relevant to the system, for example, the electric displacement field $\vb{D}(\vb{r})$, the $\vb{H}(\vb{r})$ field, and the external charge $\rho_\text{ext}(\vb{r})$ and current $\vb{J}_\text{ext}(\vb{r})$ densities. By substituting such definitions of the fields into Maxwell's equations, it follows that the excess quantities obey the following expressions
 %
 \begin{subequations}%
 \begin{align}
@@ -41,7 +41,7 @@ where $\vb{r}_\parallel$ is a vector evaluated at the plane $z=0$, and where it 
 %
 which are obtained by considering that the fields in the semi-infinite media are solution to Maxwell's equations each and that the step and delta functions are related by the relation $\dv*{\Theta(\pm z)}{z} = \pm \delta(z)$. The subscript ($\parallel$) correspond to the parallel components of the fields relative to the thin film, ($\perp$) to their normal components to the film; $\vu{e}_\perp$ is the unitary vector in this direction. The terms in between brackets in Eqs. \eqref{eq:MaxwellExcess} are the boundary conditions of the electromagnetic fields evaluated at the thin film and they are modified from the known case of a sharp interface ---which yield Fresnel's equations--- by the excess quantities.
 
-The boundary conditions of the electromagnetic field in the TFT formalism can be determined by calculating the Fourier transform  of Eqs. \eqref{eq:MaxwellExcess}  in the $z$ variable and then considering the particular case of $k_z = 0$ so that all excess quantities are interchanged for their total contribution according to Eq. \eqref{eq:EFilm}. Additionally,  total excess polarization $\vb{P}^\text{film}$ and magnetization $\vb{M}^\text{film}$ are defined in terms of the total excess electromagnetic fields, thus the boundary conditions in the absence of external sources ($\vb{J}_\text{ext}=\vb{0}$ and $\rho_\text{ext}=0$) can be written as
+The boundary conditions of the electromagnetic field in the TFT formalism can be determined by calculating the Fourier transform  of Eqs. \eqref{eq:MaxwellExcess}  in the $z$ variable and then considering the particular case of $k_z = 0$ so that all excess quantities are interchanged for their total contribution according to Eq. \eqref{eq:EFilm}. Additionally,  total excess polarization $\vb{P}^\text{film}(\vb{r}_\parallel)$ and magnetization $\vb{M}^\text{film}(\vb{r}_\parallel)$ are defined in terms of the total excess electromagnetic fields, thus the boundary conditions in the absence of external sources ---$\vb{J}_\text{ext}(\vb{r})=\vb{0}$ and $\rho_\text{ext}(\vb{r})=0$--- can be written as
 %
 \begin{subequations}%
 \begin{align}
@@ -51,7 +51,7 @@ The boundary conditions of the electromagnetic field in the TFT formalism can be
 		%	
 		\qty[\vb{E}^>_\parallel(\vb{r}_\parallel)-\vb{E}^<_\parallel(\vb{r}_\parallel)] & = -i{\omega}\vu{e}_\perp\times \vb{M}^\text{film}_\parallel(\vb{r}_\parallel)-\nabla_\parallel P_\perp^\text{film}(\vb{r}_\parallel),\\
 		%	
-		\qty[\vb{H}^>_\parallel(\vb{r}_\parallel)-\vb{H}^<_\parallel(\vb{r}_\parallel)] & = +i{\omega}\vu{e}_\perp\times \vb{P}^\text{film}_\parallel(\vb{r}_\parallel)-\nabla_\parallel P_\perp^\text{film}(\vb{r}_\parallel),
+		\qty[\vb{H}^>_\parallel(\vb{r}_\parallel)-\vb{H}^<_\parallel(\vb{r}_\parallel)] & = +i{\omega}\vu{e}_\perp\times \vb{P}^\text{film}_\parallel(\vb{r}_\parallel)-\nabla_\parallel M_\perp^\text{film}(\vb{r}_\parallel),
 \end{align}\label{eq:generalBC}%
 \end{subequations}
 %
@@ -65,23 +65,97 @@ where $\nabla_\parallel$ and $\nabla_\parallel\cdot$ are the bidimensional gradi
 	\label{eq:Mfilm}
 \end{align}
 %
-with $\varepsilon_0$ ($\mu_0$) the electric permittivity (magnetic permeability) of the vacuum. It is noteworthy that the definition of $\vb{P}^\text{film}$ in Eq. \eqref{eq:Pfilm} is not just a direct identification of the procedure from Eqs. \eqref{eq:MaxwellExcess} to Eqs. \eqref{eq:generalBC} but it is based on the non-continuity of $ \vb{D}_\parallel$ and $E_\perp$ across boundaries, which give rise to an excess polarization on the film unlike $D_\perp$ and $\vb{E}_\parallel$, whose continuity do not have such an effect on the system. An analogous argument is performed on the definition of the magnetization field in Eq. \eqref{eq:Mfilm}.
+with $\varepsilon_0$ ($\mu_0$) the electric permittivity (magnetic permeability) of the vacuum. It is noteworthy that the definition of $\vb{P}^\text{film}(\vb{r}_\parallel)$ in Eq. \eqref{eq:Pfilm} is not just a direct identification of the procedure from Eqs. \eqref{eq:MaxwellExcess} to Eqs. \eqref{eq:generalBC} but it is based on the non-continuity of $ \vb{D}_\parallel(\vb{r})$ and $E_\perp(\vb{r})$ across boundaries, which give rise to an excess polarization on the film unlike $D_\perp(\vb{r})$ and $\vb{E}_\parallel(\vb{r})$, whose continuity do not have such an effect on the system. An analogous argument is performed on the definition of the magnetization field in Eq. \eqref{eq:Mfilm}.
 
-
+The boundary conditions of the electromagnetic fields shown in Eq. \eqref{eq:generalBC} reproduce Fresnel's equations, where the film corresponds to a planar sharp interface between two linear homogeneous media, when $\vb{P}^\text{film}(\vb{r}_\parallel) = \vb{M}^\text{film}(\vb{r}_\parallel)=\vb{0}$. To introduce a thin film with a known structure, the total excess polarization and magnetization [Eqs. \eqref{eq:Pfilm} and \eqref{eq:Mfilm}] can be described by constitutive equations as an expansion to different orders of the electromagnetic fields. The particular case where the thin film corresponds to a collection of identical plasmonic scatters, with a size where no magnetic response is expected, the general constitutive relations to Eqs.  \eqref{eq:Pfilm} and \eqref{eq:Mfilm}  can be express to a linear order as
+%
 \begin{align}
 	\vb{P}^\text{film}(\vb{r}_\parallel) = 
 			\gamma\,\big\langle\vb{E}^\text{film}_\parallel(\vb{r}_\parallel)\big\rangle +
 			\beta \,\big\langle {D}^\text{film}_\perp(\vb{r}_\parallel)\big\rangle \vu{e}_\perp
 	\qquad\text{and}\qquad
 	\vb{M}^\text{film}(\vb{r}_\parallel) = \vb{0}
+\label{eq:P-TFT}
 \end{align}
+%
+where $\gamma$ and $\beta$ are known as the film susceptibilities, which encodes the physical properties of the ensamble of scatteres, and where the operator $\langle\cdot\rangle$ is the average on the film given as $\big\langle a^\text{film} (\vb{r}_\parallel)\big\rangle~=~(1/2)[a^>(\vb{r}_\parallel) + a^<(\vb{r}_\parallel)]$, for either a scalar or vector quantity $a^\gtrless(\vb{r})$.
 
+The TFT employs the excess field formalism to determine the optical response of a metasurface embedded in a matrix and supported on a substrate, as shown in Fig. \ref{fig:esquema2}, both non-absorbing nor magnetic ($\mu^\gtrless=\mu_0$), by calculating amplitude reflection $r_\text{TFT}$ and transmission $t_\text{TFT}$ coefficients from Eqs. \eqref{eq:generalBC} and \eqref{eq:P-TFT}, considering that the thin film consists in a disordered ensemble of identical plasmonic spherical NPs. In an schema of internal illumination, the electric field below the thin film is the superposition of an incident and a reflected electromagnetic plane waves $\vb{E}^\text{inc}(\vb{r})$ and $\vb{E}_\text{r}(\vb{r})$ traveling in the $\vb{k}^\text{inc}$ and $\vb{k}^\text{r}$, respectively, within the substrate characterized by the dielectric function $\varepsilon^< = \varepsilon_i = n_i^2$, while above the electric field is given by the plane wave $\vb{E}^\text{t}(\vb{r})$ traveling in  the $\vb{k}^\text{t}$ direction within the matrix with $\varepsilon^> = \varepsilon_t = n_t^2$. To determine the amplitude coefficients under the TFT the cases of an $s$ and a $p$ polarized incident electromagnetic wave are treated separately.
 
+In general, when an electromagnetic plane wave with an angular frequency $\omega$ travels from a substrate to a thin film in the direction $\vb{k}^\text{inc}$ at an angle $\theta_i$, relative to the normal direction to the thin film, the reflected (transmitted) plane wave does it in the direction of $\vb{k}^\text{r}$ ($\vb{k}^\text{t}$) at the angle $\theta_r$ ($\theta_t$). Thus, the wave vectors of the electromagnetic plane waves are
+%
+\begin{subequations}%
 \begin{align}
-	\big\langle a (\vb{r}_\parallel) \big\rangle = \frac12 \qty[
-			a^>(\vb{r}_\parallel) + a^<(\vb{r}_\parallel)
-			]
+	\vb{k}^\text{inc} &= n_i\frac{\omega}{c} (\sin\theta_i \vu{e}_x+ \cos\theta_i \vu{e}_\perp),\\
+%	
+	\vb{k}^\text{r} &= n_i \frac{\omega}{c} (\sin\theta_r \vu{e}_x- \cos\theta_r \vu{e}_\perp),\\
+%	
+	\vb{k}^\text{t} &= n_t \frac{\omega}{c} (\sin\theta_t \vu{e}_x+ \cos\theta_t \vu{e}_\perp),
 \end{align}
+\end{subequations}
+%
+where $\vu{e}_\perp = \vu{e}_z$. For an $s$ polarized electromagnetic plane wave [see Fig. \ref{sfig:sPol}], the electric field above and below the thin film is
+%
+\begin{subequations}%
+\begin{align}
+	\vb{E}^<(\vb{r}) &= \qty[E^\text{inc}\exp(i\vb{k}^\text{inc}\cdot\vb{r}) +
+	E_\text{r}^{(s)}\exp(i\vb{k}^\text{r}\cdot\vb{r})]\vu{e}_y\\
+	%	
+	\vb{E}^>(\vb{r}) &= E_\text{t}^{(s)}\exp(i\vb{k}^\text{t}\cdot\vb{r})
+	\vu{e}_y						     
+\end{align}\label{eq:EsTFT}
+\end{subequations}
+%
+while for a $p$ polarized plane wave, the electric field is given by
+%
+\begin{subequations}%
+\begin{align}
+	\vb{E}^<(\vb{r}) =& \qty[-E^\text{inc}\cos\theta_i\exp(i\vb{k}^\text{inc}\cdot\vb{r})
+	+E_\text{r}^{(p)}\cos\theta_r\exp(i\vb{k}^\text{r}\cdot\vb{r})
+	] \vu{e}_x+ \notag \\
+	& +
+	\qty[E^\text{inc}\sin\theta_i\exp(i\vb{k}^\text{inc}\cdot\vb{r})
+	+E^{(p)}_\text{r}\sin\theta_r\exp(i\vb{k}^\text{r}\cdot\vb{r})
+	] \vu{e}_\perp \\
+	%	
+	\vb{E}^>(\vb{r}) =& \qty[-E^{(p)}_\text{t}\cos\theta_t\exp(i\vb{k}^\text{t}\cdot\vb{r})
+	] \vu{e}_x +
+	\qty[-E^{(p)}_\text{t}\sin\theta_t\exp(i\vb{k}^\text{t}\cdot\vb{r})
+	] \vu{e}_\perp 				    
+\end{align}\label{eq:EpTFT}
+\end{subequations}
+%
+where $E_\alpha^{(j)}$ is the magnitude of either the reflected ($\alpha\to$r) or transmitted ($\alpha\to$t) electric field considering the $j$ polarization state; for either case $E^\text{inc}$ is the magnitude of the incident electric field. Additionally, the incident $\vb{B}^\text{inc}(\vb{r})$ and reflected and transmitted magnetic fields $\vb{B}_\alpha^{(j)}(\vb{r})$ for both polarizations can be determined by substituing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Faraday-Lenz's Law, while the displacement field and the $H$ field are calculated via the general relations $\vb{D}=\varepsilon\vb{E}(\vb{r})$ and $\vb{H}(\vb{r})=\vb{B}(\vb{r})/\mu_0$ considered for each media. Prior calculation of the total polarization in the film $\vb{P}^\text{film}(\vb{r}_\parallel)$ it is noteworthy to show that forcing the the proposed electric fields in Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} to follow the boundary conditions in Eqs. \eqref{eq:generalBC} yields the continuity of the parallel component of the wave vector $\vb{k}_\parallel = (\omega/c)n_i\sin\theta_i \vu{e}_x= (\omega/c)n_t\sin\theta_t\vu{e}_x$, therefore stating that even with the presence of the thin film, the reflection and Snell's law are valid. Under this consideration, $\vb{P}^\text{film}(\vb{r}_\parallel)$ is obtained by introducing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Eq. \eqref{eq:P-TFT} yielding
+%
+\begin{subequations}%
+\begin{align}
+	\vb{P}^{(s),\text{film}}_\parallel(\vb{r}_\parallel) &=
+				 \frac{\gamma}{2}\qty(E^\text{inc} + E_\text{r}^{(s)} + E_\text{t}^{(s)})\exp(\vb{k}_\parallel\cdot\vb{r}) \vu{e}_x
+	\\
+	P_\perp^{(s),\text{film}}(\vb{r}_\parallel) &= 0,
+\end{align}
+%
+for $s$ polarization and
+%
+\begin{align}
+	\vb{P}^{(p),\text{film}}_\parallel(\vb{r}_\parallel) &= 
+					\frac{\gamma}{2}\qty[
+					\qty(E_\text{r}^{(p)}-E^\text{inc})\cos\theta_i
+						-E_\text{t}^{(p)}\cos\theta_t
+				] \exp(\vb{k}_\parallel\cdot\vb{r}) \vu{e}_x
+	\\
+	P_\perp^{(p),\text{film}}(\vb{r}_\parallel)  &= \frac{\beta}{2}\qty[			
+				\varepsilon_i\qty(E^\text{inc}+E_\text{r}^{(p)})\sin\theta_i 
+				+ \varepsilon_t E_\text{t}^{(p)} \sin\theta_t ] \exp(\vb{k}_\parallel\cdot\vb{r}) 
+\end{align}
+\end{subequations}
+%
+for $p$ polarization.
+
+
+
+
+
 
 
 
@@ -94,14 +168,16 @@ point dipoles. The electromagnetic behavior of the metasurface is described thro
 \end{align}
 %
 \begin{align}
-	r_p = \frac{ \kappa_-(\omega) - i (\omega/c) \gamma\cos\theta_i\cos\theta_t +
+	r_p &= \frac{ \kappa_-(\omega) - i (\omega/c) \gamma\cos\theta_i\cos\theta_t +
 							i (\omega/c)  n_i n_t \varepsilon_i \beta \sin^2 \theta_i }
 			   { \kappa_+(\omega) - i (\omega/c) \gamma\cos\theta_i\cos\theta_t -
 			   				i (\omega/c)  n_i n_t \varepsilon_i \beta \sin^2 \theta_i },
-	\label{eq:rp}
+	\label{eq:rp}\\
+	\kappa_{\pm}(\omega) &= \bigg( n_t \cos\theta_i \pm n_i \cos\theta_t \bigg)
+							\qty[1-\qty(\frac{\omega}{2c})^2\varepsilon_{i}\gamma\beta \sin^{2}\theta_i]
 \end{align}
 %
-\noindent where $\theta_{i}$ and $\theta_{t}$ are the angles of incidence and transmission, respectively, $\omega$ is the frequency of the incident light and $c$ is the speed of light. To simplify the notation, the term $\kappa_{\pm}=\left[n_t \cos\theta_i \pm n_i \cos\theta_t\right]$ $\left[1-\left(\omega^2/4c^2\right)\varepsilon_{i}\gamma\beta \sin^{2}\theta_i\right]$  is introduced.  Equations (\ref{eq:rs}) and (\ref{eq:rp})  are reduced to the well-known Fresnel coefficients when the surface density of Au NI goes to zero (substrate-ambient interface). 
+\noindent where $\theta_{i}$ and $\theta_{t}$ are the angles of incidence and transmission, respectively, $\omega$ is the frequency of the incident light and $c$ is the speed of light. To simplify the notation, the term   is introduced.  Equations (\ref{eq:rs}) and (\ref{eq:rp})  are reduced to the well-known Fresnel coefficients when the surface density of Au NI goes to zero (substrate-ambient interface). 
 
 
 

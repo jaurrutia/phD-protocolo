@@ -24,45 +24,45 @@ Warning--I didn't find a database entry for "Lazzari_GranFilm"
 Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-You've used 15 entries,
+You've used 9 entries,
             6402 wiz_defined-function locations,
-            1336 strings with 13122 characters,
-and the built_in function-call counts, 166846 in all, are:
-= -- 12962
-> -- 5318
-< -- 646
-+ -- 6949
-- -- 3775
-* -- 11698
-:= -- 20576
+            1281 strings with 11509 characters,
+and the built_in function-call counts, 104568 in all, are:
+= -- 8384
+> -- 3013
+< -- 373
++ -- 4079
+- -- 2105
+* -- 7590
+:= -- 12970
 add.period$ -- 0
-call.type$ -- 15
-change.case$ -- 251
-chr.to.int$ -- 320
-cite$ -- 28
-duplicate$ -- 14075
-empty$ -- 13715
-format.name$ -- 1301
-if$ -- 31449
+call.type$ -- 9
+change.case$ -- 142
+chr.to.int$ -- 200
+cite$ -- 16
+duplicate$ -- 8451
+empty$ -- 8700
+format.name$ -- 780
+if$ -- 19932
 int.to.chr$ -- 0
-int.to.str$ -- 36
+int.to.str$ -- 20
 missing$ -- 0
-newline$ -- 576
-num.names$ -- 693
-pop$ -- 5312
+newline$ -- 350
+num.names$ -- 390
+pop$ -- 3088
 preamble$ -- 1
-purify$ -- 366
+purify$ -- 209
 quote$ -- 0
-skip$ -- 3263
+skip$ -- 1908
 stack$ -- 0
-substring$ -- 27266
-swap$ -- 2690
-text.length$ -- 516
+substring$ -- 18102
+swap$ -- 1573
+text.length$ -- 311
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 498
+type$ -- 294
 warning$ -- 0
-while$ -- 1988
+while$ -- 1235
 width$ -- 0
-write$ -- 562
+write$ -- 342
 (There were 2 warnings)
