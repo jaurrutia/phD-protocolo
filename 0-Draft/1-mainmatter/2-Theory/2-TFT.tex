@@ -92,6 +92,7 @@ In general, when an electromagnetic plane wave with an angular frequency $\omega
 %	
 	\vb{k}^\text{t} &= n_t \frac{\omega}{c} (\sin\theta_t \vu{e}_x+ \cos\theta_t \vu{e}_\perp),
 \end{align}
+\label{eq:Wavevectors}
 \end{subequations}
 %
 where $\vu{e}_\perp = \vu{e}_z$. For an $s$ polarized electromagnetic plane wave [see Fig. \ref{sfig:sPol}], the electric field above and below the thin film is
@@ -130,29 +131,47 @@ where $E_\alpha^{(j)}$ is the magnitude of either the reflected ($\alpha\to$r) o
 \begin{subequations}%
 \begin{align}
 	\vb{P}^{(s),\text{film}}_\parallel(\vb{r}_\parallel) &=
-				 \frac{\gamma}{2}\qty(E^\text{inc} + E_\text{r}^{(s)} + E_\text{t}^{(s)})\exp(\vb{k}_\parallel\cdot\vb{r}) \vu{e}_x
+				 \frac{\gamma}{2}\qty(E^\text{inc} + E_\text{r}^{(s)} + E_\text{t}^{(s)})\exp(\vb{k}_\parallel\cdot\vb{r}) \vu{e}_x,
 	\\
 	P_\perp^{(s),\text{film}}(\vb{r}_\parallel) &= 0,
 \end{align}
+\label{eq:Pfilms}
+\end{subequations}
 %
 for $s$ polarization and
 %
+\begin{subequations}%
 \begin{align}
 	\vb{P}^{(p),\text{film}}_\parallel(\vb{r}_\parallel) &= 
 					\frac{\gamma}{2}\qty[
 					\qty(E_\text{r}^{(p)}-E^\text{inc})\cos\theta_i
 						-E_\text{t}^{(p)}\cos\theta_t
-				] \exp(\vb{k}_\parallel\cdot\vb{r}) \vu{e}_x
+				] \exp(\vb{k}_\parallel\cdot\vb{r}) \vu{e}_x,
 	\\
 	P_\perp^{(p),\text{film}}(\vb{r}_\parallel)  &= \frac{\beta}{2}\qty[			
 				\varepsilon_i\qty(E^\text{inc}+E_\text{r}^{(p)})\sin\theta_i 
-				+ \varepsilon_t E_\text{t}^{(p)} \sin\theta_t ] \exp(\vb{k}_\parallel\cdot\vb{r}) 
+				+ \varepsilon_t E_\text{t}^{(p)} \sin\theta_t ] \exp(\vb{k}_\parallel\cdot\vb{r}),
 \end{align}
+\label{eq:Pfilms}
 \end{subequations}
 %
 for $p$ polarization.
 
-
+As stated above, the TFT returns expressions for reflection and transmission amplitude coefficients. These coefficients are obtaind for an $s$ polarized incident plane wave by solving the  system of equations obtained by substituting Eqs. \eqref{eq:Wavevectors}, \eqref{eq:EsTFT} and \eqref{eq:Pfilms} into the boundary conditions in Eq. \eqref{eq:generalBC}, yielding
+%
+\begin{align}
+	E^\text{inc} + E^{(s)}_\text{r}  & =  E^{(s)}_\text{t}   ,\\
+	\qty(n_i\cos\theta_i+ \frac{i}{2}\frac{\omega}{c}\gama)E^\text{inc}
+	- \qty(n_i\cos\theta_i- \frac{i}{2}\frac{\omega}{c}\gama)E^{(s)}_\text{r}
+	&= \qty(n_t\cos\theta_t- \frac{i}{2}\frac{\omega}{c}\gama)E^{(s)}_\text{t},
+\end{align}
+%
+Analogously, the system of equations for a $p$ polarized incident plane wave obtained from Eqs. \eqref{eq:generalBC}, \eqref{eq:Wavevectors} \eqref{eq:EpTFT} and \eqref{eq:Pfilmp} is
+%
+%\begin{align}
+%	algo &= algo1.
+%\end{align}
+%
 
 
 
