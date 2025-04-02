@@ -1,0 +1,175 @@
+% !TeX root = ./0-PhD-Thesis-JLBG.tex
+\label{cap: resultados computacionales}
+
+
+\section{Convergence Analysis}
+
+The goal of this Section is to develop the framework for evaluating the angular momentum transfer to nanoparticles calculating the integral of the spectral densities in the frequency domain, which can often be highly oscillatory or extend over infinite domains. When analytical methods become insufficient, numerical integration techniques, such as quadrature methods, provide a robust framework for approximating these integrals.
+
+This Section delves into the application of various quadrature techniques. We explore several well-known quadrature rules, emphasizing Gaussian quadrature due to its high precision, and further enhance it with Gauss-Kronrod quadrature for error estimation. These methods are not only crucial for obtaining accurate results but also for controlling the numerical error. Additionally, the Section discusses advanced integration techniques, such as double exponential quadrature, to manage the challenges of improper integrals. 
+
+Finally, we address the issue of multipolar truncation in spectral density calculations, where an infinite series must be approximated by a finite sum. Through careful convergence testing, we establish the criteria for selecting a truncation point that ensures numerical precision without unnecessary computational overhead. 
+
+\section{Numerical Integration Using Quadratures}
+
+Numerical integration is an essential tool when analytical solutions of integrals are not available. In such cases, quadrature methods provide a reliable way to approximate the value of definite integrals by discretizing the integral into a weighted sum of function evaluations at specific points \cite{kahaner1989numerical, hildebrand1987numeric, press2007numerical}.
+
+Consider an integral of the form
+\begin{equation}
+    I = \int_{a}^{b} f(x)\, dx,
+\end{equation}
+where $f(x)$ is a continuous function over the interval $[a, b]$. Quadrature methods approximate this integral as
+\begin{equation}
+    I \approx \sum_{i=1}^{N} w_i f(x_i), \label{eq: quadrature as a sum}
+\end{equation}
+where $x_i$ are the quadrature points (also known as nodes), and $w_i$ are the associated weights. The choice of the quadrature points and weights depends on the specific quadrature rule used. Common methods include trapezoidal, Simpson’s rule, and Gaussian quadrature.
+
+Gaussian quadrature is particularly powerful because it maximizes the degree of accuracy by selecting both the quadrature points and the weights optimally for polynomials of a given degree. For an $N$-point Gaussian quadrature, the integral is approximated by evaluating $f(x)$ at $N$ specific points within the interval, yielding Eq. \eqref{eq: quadrature as a sum} where $x_i$ and $w_i$ are chosen to provide an exact result for polynomials of degree $2N-1$ \cite{kahaner1989numerical, hildebrand1987numeric, press2007numerical}.
+
+The accuracy of the quadrature method depends on both the choice of the quadrature rule and the number of points $N$ used in the approximation. Increasing $N$ generally improves accuracy but at the cost of computational complexity. Therefore, error estimation and the optimal choice of $N$ are crucial, particularly in cases involving highly oscillatory functions.
+
+Quadrature methods are particularly useful in the context of this work, where integrals of the spectral densities in the frequency domain are evaluated numerically to determine the angular momentum transfer to nanoparticles. By applying appropriate quadrature techniques, we ensure that these integrals are computed with the necessary accuracy for our theoretical and computational analysis.
+
+
+\section{Gaussian Quadrature and Error Estimation}
+
+Gaussian quadrature on its own does not provide an intrinsic measure of error, which makes it difficult to determine whether the chosen number of points $N$ is sufficient for the desired accuracy. To overcome this limitation, we employ the Gauss-Kronrod quadrature rule, which not only improves the accuracy of the approximation but also enables an effective error estimation \cite{kahaner1989numerical, hildebrand1987numeric, press2007numerical}.
+
+%\subsection{Gauss-Kronrod Quadrature}
+
+The Gauss-Kronrod quadrature is an extension of Gaussian quadrature that adds extra points to the Gaussian nodes, effectively creating a higher-order quadrature rule that provides both an accurate integral approximation and an error estimation. Specifically, for an $N$-point Gaussian quadrature, the Gauss-Kronrod rule uses $2N+1$ points, but the Gaussian points are a subset of the Kronrod points. This allows for simultaneous evaluation using both quadrature rules:
+\begin{equation}
+    I_{\rm Gauss} = \sum_{i=1}^{N} w_i^{\rm G} f(x_i),
+\end{equation}
+and
+\begin{equation}
+    I_{\rm Kronrod} = \sum_{i=1}^{2N+1} w_i^{\rm K} f(x_i),
+\end{equation}
+where $w_i^{\rm G}$ and $w_i^{\rm K}$ are the weights for the Gaussian and Gauss-Kronrod quadrature rules, respectively.
+
+The key advantage of this method is that the difference between $I_{\rm Gauss}$ and $I_{\rm Kronrod}$ provides an estimate of the error in the Gaussian quadrature approximation. The error estimate $\epsilon$ can be expressed as
+\begin{equation}
+    \epsilon = | I_{\rm Kronrod} - I_{\rm Gauss} |,
+\end{equation}
+allowing us to assess the reliability of the computed integral and adapt the number of quadrature points accordingly.
+
+%\subsection{Justification for Using Gauss-Kronrod Quadrature}
+
+Due to the need for precise integration in the computation of spectral densities and other physical quantities in this work, it is critical to control and minimize numerical errors. The Gauss-Kronrod quadrature offers effective means to achieve this by providing both a highly accurate approximation of the integral and a built-in error estimate. This allows us to dynamically adjust the number of quadrature points until the desired accuracy is achieved.
+
+In the context of integrating functions with rapidly varying behavior or extended spectral ranges, the error estimation provided by the Gauss-Kronrod rule ensures that we maintain control over the numerical precision. This method is particularly useful when handling oscillatory integrands or integrals over large domains, which are common in the evaluation of angular momentum transfer for nanoparticles.
+
+For these reasons, we will adopt Gauss-Kronrod quadrature in this work as the primary method for numerical integration. Its error estimation capabilities ensure that the results are both accurate and computationally efficient, making it the optimal choice for the complex integrals encountered in this work.
+
+%
+\subsection{Choosing a Cutoff Frequency: Approximating Improper Integrals as Definite Integrals}
+
+The main throwback of the Gaussian Quadrature is that it can not be applied to improper integrals as the ones required to calculate the AMT, as the integral in frequencies encompasses an infinite domains. An improper integral is of the form:
+\begin{equation}
+    I = \int_{a}^{\infty} f(\omega)\, d\omega.
+\end{equation}
+As standard numerical techniques, such as Gaussian quadrature, are only valid for integrals over finite intervals, it is necessary to introduce a cutoff frequency $\omega_{\rm cut}$ to handle this limitation, effectively transforming the improper integral into a definite one:
+\begin{equation}
+    I = \int_{a}^{\omega_{\rm cut}} f(\omega)\, d\omega + \int_{\omega_{\rm cut}}^{\infty} f(\omega)\, d\omega \approx \int_{a}^{\omega_{\rm cut}} f(\omega)\, d\omega.
+\end{equation}
+The key challenge is selecting a cutoff frequency $\omega_{\rm cut}$ such that the contribution from the interval $[\omega_{\rm cut}, \infty)$ is negligible or can be estimated with sufficient accuracy. This ensures that the integral can be accurately approximated without compromising numerical precision.
+
+The Fig. \ref{fig: cutoff_integration_areas} illustrates the two distinct regions of one of the real integral kernels developed in this work: \(S_1\), where Gauss-Kronrod quadrature is used to evaluate the integral from the lower bound \(a\) to \(\omega_{\rm cut}\), and \(S_2\), where the Double Exponential \cite{kahaner1989numerical, hildebrand1987numeric, press2007numerical} (Exp-Sinh) quadrature is applied to estimate the tail contribution from \(\omega_{\rm cut}\) to infinity.
+
+%%
+%%FIGUREE
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{17-imagenes/4-Results/AreasQuadratures.pdf}
+\caption{\label{fig: cutoff_integration_areas} Schematic representation of the numerical integration process. The section \(S_1\) (green area) corresponds to the finite integral from \(a\) to \(\omega_{\rm cut}\), evaluated using Gauss-Kronrod quadrature. The section \(S_2\) (red area) corresponds to the tail integral from \(\omega_{\rm cut}\) to infinity, approximated using Exp-Sinh quadrature. The cutoff frequency \(\omega_{\rm cut}\) is chosen such that the integrand \(f(\omega)\) is sufficiently small in the \(S_2\) region, ensuring a controlled and negligible error contribution.}
+\end{figure}
+%%
+
+
+\subsection{Double Exponential Quadrature for Improper Integrals}
+
+To accurately account for the contribution of the integral from $\omega_{\rm cut}$ to infinity, we employ the double exponential quadrature method, also known as the tanh-sinh or exp-sinh quadrature. This technique is particularly effective for approximating integrals over semi-infinite and infinite intervals. Consider an improper integral of the form:
+\begin{equation}
+    I_{\infty} = \int_{\omega_{\rm cut}}^{\infty} f(\omega)\, d\omega,
+\end{equation}
+where the upper bound extends to infinity. The double exponential quadrature transforms the infinite integration domain into a finite one by a change of variables that forces the integrand to decay exponentially as $\omega$ approaches infinity. This transformation makes the integral manageable for standard numerical methods.
+
+The key advantage of the double exponential method is that it ensures the integrand decays rapidly for large $\omega$, allowing us to approximate the tail of the integral with a high degree of accuracy. By combining Gauss-Kronrod quadrature over the finite interval $[0, \omega_{\rm cut}]$ and double exponential quadrature for the interval $[\omega_{\rm cut}, \infty)$, the entire integral can be computed with precision while maintaining a controlled error threshold.
+
+This two-step integration strategy is illustrated schematically in Fig. \ref{fig: cutoff_integration_areas}. In the figure, the section labeled \(S_1\) (green area) represents the finite interval over which Gauss-Kronrod quadrature is applied, while the section labeled \(S_2\) (red area) corresponds to the tail region, where the Exp-Sinh quadrature is employed to capture the contribution from $\omega_{\rm cut}$ to infinity. The choice of the cutoff frequency $\omega_{\rm cut}$ ensures that the integrand \(f(\omega)\) is sufficiently small beyond this point, thereby minimizing any potential error from truncating the domain.
+
+The selection of the cutoff frequency $\omega_{\rm cut}$ is critical to ensure that the integral over $[\omega_{\rm cut}, \infty)$ is small enough to neglect or it can be integrated with an acceptable level of error. The criterion for choosing $\omega_{\rm cut}$ is that the integrand $f(\omega)$ should decay sufficiently fast beyond this frequency. Practically, this means that we numerically evaluate the integral for increasing values of $\omega_{\rm cut}$ until the improper integral falls below a predefined error threshold, $\epsilon$:
+\begin{equation}
+    \left| \int_{\omega_{\rm cut}}^{\infty} f(\omega)\, d\omega \right| < \epsilon.
+\end{equation}
+Once this condition is satisfied, we can confidently truncate the improper integral at $\omega_{\rm cut}$ and approximate it as a definite integral.
+
+By using the double exponential quadrature for the tail contribution and selecting an appropriate cutoff frequency, we ensure that the error introduced by truncating the infinite domain is minimized. This approach provides a reliable means to approximate improper integrals in the context of angular momentum transfer and similar calculations, where high precision is essential for obtaining accurate physical results.
+%
+
+\subsection{Multipolar Truncation: Approximating an Infinite Series with a Finite Sum}
+
+%%%%%
+The computation of the spectral density involves an infinite sum of multipolar terms. However, for practical computational purposes, it is necessary to impose a truncation point, $\ell_{\rm cut}$, at which the multipolar summation is finished. This allows the infinite sum to be approximated as:
+\begin{equation}
+\sum_{1}^{\infty} = \sum_{1}^{\ell_{\rm cut}} +\sum_{\ell_{\rm cut}}^{\infty} \approx \sum_{1}^{\ell_{\rm cut}}.
+\end{equation}
+The challenge lies in selecting $\ell_{\rm cut}$ such that it encompasses all the dominant multipolar contributions. To ensure this, we conducted a numerical comparison between the sum evaluated up to $\ell_{\rm cut}$ and the sum extended to $\ell_{\rm cut}+1$. Convergence is achieved when the difference between these two sums falls below a predefined threshold, indicating that the inclusion of additional terms would not significantly alter the result. This threshold represents the acceptable level of numerical error for the calculation.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.99\linewidth]{17-imagenes/4-Results/Multipolar Conergence Drude.pdf}
+\caption{\label{fig: multipolar contribution Drude Al} Convergence of the spectral density as higher-order multipolar terms are added. The sum stabilizes once the cut-off $\ell_{\rm cut}$ sufficiently captures the dominant contributions.}
+\end{figure}
+
+Figure \ref{fig: multipolar contribution Drude Al} graphically illustrates the process of progressively adding higher multipolar terms until convergence in the spectral density is attained. The plot demonstrates how the spectral density stabilizes as more terms are included, confirming that the chosen $\ell_{\rm cut}$ is sufficient to capture all relevant contributions.
+%%%%%
+
+The convergence analysis techniques outlined in this Section provide the foundation for accurate and reliable computational results in the evaluation of angular momentum transfer from swift electrons to nanoparticles. In the following Section, we apply these methods to a detailed numerical convergence analysis, assessing the performance of our quadrature-based approach in calculating angular momentum transfer for various nanoparticle configurations. This analysis not only validates the accuracy of our numerical methods but also provides insights into their efficiency and applicability to complex physical systems.
+
+
+\section{Angular Momentum Transfer from a Swift Electron to Spherical Nanoparticles: Drude-like (Aluminum) and Lorentzian-based (Gold) Dielectric Responses}
+
+Understanding the angular momentum transfer (AMT) requires analyzing the spectral density described by Eq. \eqref{eq: Ly spectral integral angles solved}. For small nanoparticles (on the order of $\sim 1$ nm), it has been reported that the dipolar contribution is sufficient to describe the angular momentum transfer. In such cases, the dipole approximation provides a good estimate for calculating AMT \cite{castellanos2021angular, castellanos2023theory, briseno2024angular}. However, as the nanoparticle size increases, higher-order multipolar contributions become significant, as demonstrated in Fig. \ref{fig: Drude-Al Spectral Densities for diff sizes}. Additionally, for this Drude-like aluminum nanoparticle, each multipolar resonance exhibits a redshift as the radius increases.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.99\linewidth]{17-imagenes/4-Results/SpectralDensitiesDrudeAlSizes.pdf}
+\caption{\label{fig: Drude-Al Spectral Densities for diff sizes} Spectral densities, in atomic units (a.u.), as a function of excitation energy for nanoparticles with radii of $5$ nm, $10$ nm, $20$ nm, and $50$ nm. As the nanoparticle size increases, higher-order multipolar resonances become more relevant and shift to higher excitation energies. The interaction is modeled considering an electron with energy of $200$ keV ($v \sim 0.7 c$) and corresponding impact parameters of $b = 5.5$, $11$, $21$, and $51$ nm, respectively.}
+\end{figure}
+
+As the nanoparticle radius increases, the magnitude of the spectral density also increases, as shown in Fig. \ref{fig: Drude-Al Spectral Densities for diff sizes}. It is reasonable to infer that the integral of the spectral density, representing the total angular momentum transfer, increases with nanoparticle size. However, for a fair comparison, Fig. \ref{fig: AMT over a cubed for Drude-Al NP} presents the AMT normalized by the nanoparticle's radius cubed ($a^3 = 3 V / 4\pi$), which is related to the volume of the nanoparticle. This figure indicates that smaller nanoparticles retain angular momentum more efficiently.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{17-imagenes/4-Results/DL5nmvsBeta_DrudeAl_sizes.pdf}
+\caption{\label{fig: AMT over a cubed for Drude-Al NP} Angular momentum transfer to Al NPs normalized by $a^3 \sim \text{Volume}$, as a function of the swift electron speed (which is related to the electron beam energy). The interaction is modeled considering an impact parameters of $b = 5.5$, $11$, $21$, and $51$ nm, respectively.}
+\end{figure}
+
+
+%%%%
+
+%%%%%
+To explore a more realistic dielectric response, we model Gold nanoparticles (NPs) using a sum of several Lorentzian functions \cite{werner}. This approach allows us to generalize the behavior observed in the simpler Drude model for metallic responses. The resulting spectral structure becomes significantly richer and more complex, covering a broader range of the spectrum with multiple resonances. These resonances reflect the complex interactions between the incident electron and the electronic excitations in the nanoparticle.
+
+As the radius of the nanoparticle increases, the spectral response may appear similar at first glance, but a closer analysis reveals a difference: the spectral density decreases more rapidly for larger particles, indicating a less efficient interaction at higher excitation energies. This behavior can be observed in Fig. \ref{fig: Werner Au Spectral Densities for diff sizes}, where the spectral density is plotted for different nanoparticle radii. Larger particles exhibit sharper drops in spectral density beyond certain energy thresholds.
+
+Additionally, a comparative study of the angular momentum transfer (AMT), normalized by the volume of the nanoparticle (using the $a^3 \propto V$ scaling factor), shows a consistent trend with the findings from the Drude-modeled Aluminum case. Despite the richer spectral features, the general conclusion holds: smaller nanoparticles tend to transfer angular momentum more efficiently due to their stronger absorption properties over a given volume. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.99\linewidth]{17-imagenes/4-Results/SpectralDensitiesAuSizes.pdf}
+\caption{\label{fig: Werner Au Spectral Densities for diff sizes} Spectral densities, in atomic units (a.u.), as a function of excitation energy for gold nanoparticles with varying radii. The plot demonstrates how spectral density decays more rapidly for larger particles, highlighting the diminishing strength of resonances as particle size increases. The interaction is modeled considering an electron with energy of $200$ keV ($v \sim 0.7 c$) and corresponding impact parameters of $b = 5.5$, $11$, $21$, and $51$ nm, respectively.}
+\end{figure}
+
+As the radius of the Gold nanoparticle increases, there is a corresponding rise in the spectral density, as illustrated in Fig. \ref{fig: Werner Au Spectral Densities for diff sizes}. This suggests that the total angular momentum transfer grows with larger nanoparticle sizes. Again, to make a meaningful comparison, Fig. \ref{fig: AMT over a cubed for Au NP} presents the angular momentum transfer normalized by the nanoparticle’s volume, represented as the radius cubed ($a^3 = 3V / 4\pi$). This normalization highlights that smaller Gold nanoparticles demonstrate a more efficient transfer of angular momentum. These findings are consistent with the results previously observed for Aluminum nanoparticles, where similar trends were noted.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{17-imagenes/4-Results/DL5nmvsBeta_Au_sizes.pdf}
+\caption{\label{fig: AMT over a cubed for Au NP} Angular momentum transfer to Au NPs normalized by $a^3 \sim \text{Volume}$, as a function of the swift electron speed (which is related to the electron beam energy). The interaction is modeled considering an impact parameters of $b = 5.5$, $11$, $21$, and $51$ nm, respectively.}
+\end{figure}
+
+%%%%%
+
+By comparing Figures \ref{fig: AMT over a cubed for Drude-Al NP} and \ref{fig: AMT over a cubed for Au NP}, it can be observed that the AMT to Au nanoparticles is an order of magnitude greater than that to Al nanoparticles. This difference arises from the broader distribution of resonances in Au NPs, where the lower-energy resonances exhibit higher intensity. These resonances coincide with regions of stronger electromagnetic fields, leading to a more pronounced AMT. This highlights the significant role of material properties and resonance behavior in determining the efficiency of angular momentum transfer.

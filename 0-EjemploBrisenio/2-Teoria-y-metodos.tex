@@ -1,0 +1,441 @@
+% !TeX root = ./0-PhD-Thesis-JLBG.tex
+\label{cap: teoria metodos}
+\vspace{-1.0cm}
+In this Section, the classical electrodynamics approach is employed to describe the interaction of a fast electron traveling at a constant velocity in the vicinity of a spherical nanoparticle (NP). In particular, the angular momentum transfer (AMT) from the electron to the NP is analyzed. In a previous work by García de Abajo \cite{deabajo2021optical}, it is justified that, under the conditions described in the Introduction Section, a quantum description of the phenomenon is not necessary.
+
+During the mathematical development, equations will be presented in the International System of Units (SI) in \textbf{black}, and in $\cgs{\text{magenta and within parentheses}}$\footnote{The \textbf{International System} is used to express equations in their standard textbook form. However, expressions in the $\cgs{\text{cgs}}$ system are ideal for a numerical description of the problem, which is proposed as future work.} the necessary factor to express the equation in the \textit{cgs} system. For example, the force between two point charges $q_1$ and $q_2$ separated by a distance $r$ will be written as
+\begin{equation}
+\vv{F} = \cgs{4\pi\epsilon_0}\frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{r^2} \hat{r}.
+\end{equation}
+%
+%
+\section{Conservation of Angular Momentum in Electrodynamics}
+The Maxwell equations are \cite{jackson}
+%%%%%%%%%%%%%%%% ECUACIONES DE MAXWELL
+\begin{align}
+\nabla\cdot\vv{E} =& \cgs{4\pi\epsilon_0}\frac{\rho_{\text{tot}}}{\epsilon_0}, \qquad \qquad \nabla\times\vv{E}=-\cgs{\frac{1}{c}}\frac{\partial\vv{B}}{\partial t}, \nonumber \\
+\nabla\cdot\vv{B} =& 0, \qquad \qquad \qquad \qquad \nabla\times\vv{B}=\cgs{\frac{4\pi}{\mu_0 c}}\mu_0\vv{J}_{\text{tot}}+\cgs{c}\frac{1}{c^2}\frac{\partial\vv{E}}{\partial t},
+\label{eq: Maxwell equations}
+\end{align}
+where $\vv{E}$ is the electric field, $\vv{B}$ is the magnetic field, $\rho_{\rm tot}$ is the total charge density, $\vv{J}_{\rm tot}$ is the total current density, $c$ is the speed of light, $\epsilon_0$ is the vacuum permittivity, and $\mu_0$ is the vacuum permeability. In terms of the potentials $\phi$ and $\vv{A}$, the Maxwell equations are given as follows \cite{jackson}
+%%%%%%%%%%%%%%% ECUACIONES DE ONDA PARA LOS POTENCIALES
+\begin{align}
+\var{\nabla^2 -\frac{1}{c^2}\frac{\partial}{\partial t}}\phi\vars =& - \cgs{4\pi\epsilon_0} \frac{\rho_{\text{tot}}\vars}{\epsilon_0}, \label{eq: scalar potential}\\
+\var{\nabla^2 -\frac{1}{c^2}\frac{\partial}{\partial t}}\vv{A}\vars =& - \cgs{\frac{4\pi}{\mu_0 c}}\mu_0 \vv{J}_{\text{tot}}\vars.\label{eq: vector potential}
+\end{align}
+During the theoretical development, the Lorenz gauge will be used, $\nabla\cdot\vv{A}+\cgs{1/c}\partial_t \phi =0$, so that the electromagnetic fields, in terms of the potentials, are written as
+%%%%%%%%%%%%%%% ECUACIONES DE CAMPO EN TÉRMINOS DE LOS POTENCIALES
+\begin{align}
+\vv{E}\vars =& \, -\nabla\phi\vars - \cgs{\frac{1}{c}}\frac{\partial}{\partial t}\vv{A}\vars, \label{eq: E field potentials}\\
+\vv{B}\vars =& \, \nabla\times\vv{A}\vars. \label{eq: B field potentials}
+\end{align}
+The expression for the conservation of linear momentum in electrodynamics is \cite{jackson}
+%%%%%%%%%%%%%%% CONSERVACIÓN DEL MOMENTO LINEAL EN ELECTRODINÁMICA
+\begin{equation}
+\frac{\partial}{\partial t} \Var{\vv{p}^{\rm \, mec}\var{\vv{r},t}+\vv{p}^{\rm \, em}\var{\vv{r},t}} = \nabla \cdot \tensa{T}\var{\vv{r},t},
+\label{eq: cons momento lineal}
+\end{equation}
+where $\vv{p}^{\rm \, mec}\var{\vv{r},t}$ represents the volumetric density of mechanical linear momentum, and $\vv{p}^{\rm \, em}\var{\vv{r},t}$ represents the volumetric density of electromagnetic linear momentum
+%%%%%%%%%%%%%%% MOMENTO LINEAL ELECTROMAGNÉTICO
+\begin{equation}
+\vv{p}^{\rm \, em}\vars = \cgs{\frac{c}{4\pi}}\frac{1}{c^2}\vv{E}\vars\times\vv{B}\vars,
+\end{equation}
+and $\tensa{T}\var{\vv{r},t}$ is the Maxwell stress tensor given by \cite{jackson}
+%%%%%%%%%%%%%%% TENSOR DE ESFUERZOS DE MAXWELL
+\begin{equation}
+T_{ij}\var{\vv{r},t}= \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \Var{E_i\var{\vv{r},t}E_j\var{\vv{r},t} -\frac{\delta_{ij}}{2}E^2\vars} +  \frac{\mu_0}{\cgs{4\pi\mu_0}} \Var{ H_i\var{\vv{r},t}H_j\var{\vv{r},t} -\frac{\delta_{ij}}{2}H^2\vars } ,
+\end{equation}
+where $T_{ij}\var{\vv{r},t}$ represents the $ij$ entry of $\tensa{T}\var{\vv{r},t}$, $E_i\var{\vv{r},t}$ is the $i$-th component of the electric field $\vv{E}\var{\vv{r},t}$, $H_i\var{\vv{r},t}$ is the $i$-th component of the field $\vv{H}\var{\vv{r},t}$, and $\delta_{ij}$ is the Kronecker delta.
+
+From Eq. \eqref{eq: cons momento lineal}, the conservation of angular momentum in electrodynamics can be deduced as follows
+\begin{equation}
+\frac{\partial}{\partial t} \Var{\vvb{\ell}^{\rm \, \,mec}\var{\vv{r},t}+\vvb{\ell}^{\rm \, \,em}\var{\vv{r},t}} = \vv{r}\times\nabla \cdot \tensa{T}\var{\vv{r},t},
+\label{Eq: r cross P}
+\end{equation}
+where $\vvb{\ell}^{\rm \, \,mec}=\vv{r}\times\vv{p}^{\rm \, mec}$ and $\vvb{\ell}^{\rm \, \,em}=\vv{r}\times\vv{p}^{\rm \, em}$ are the volumetric densities of mechanical and electromagnetic angular momentum, respectively.
+
+If we define the tensor $\tensa{M}\var{\vv{r},t}=\vv{r}\times\tensa{T}\var{\vv{r},t}$ \textemdash or using index notation and Einstein's summation convention $M_{jk}\var{\vv{r}\,t}=\epsilon_{j}^{\,\,\,\, li} \, r_l \, T_{ik}\var{\vv{r}\,t}$\textemdash \, and calculate the divergence of $\tensa{M}$, we obtain
+\begin{align}
+\var{\nabla\cdot\tensa{M}}_{j} =& \,\delta^{nk} \partial_n M_{jk} = \delta^{nk} \partial_n \epsilon_{j}^{\,\,\,\, li} r_l T_{ik} =\delta^{nk}\epsilon_{j}^{\,\,\,\, li}\partial_n r_l T_{ik}, \nonumber \\
+								=& \,\delta^{nk}\epsilon_{j}^{\,\,\,\, li}\var{\delta_{nl} T_{ik} + r_l \partial_n T_{ik}} =\delta^{nk}\epsilon_{j}^{\,\,\,\, li}r_l\partial_n T_{ik}, \nonumber \\
+								=& \,\delta^{nk} \epsilon_{j}^{\,\,\,\, li} r_l \partial_n T_{ik} = \epsilon_{j}^{\,\,\,\, li} r_l \partial^k T_{ik} = \epsilon_{j}^{\,\,\,\, li} r_l \var{\nabla\cdot\tensa{T}}_i, 
+\end{align}
+so that
+\begin{equation}
+\var{\nabla\cdot\tensa{M}}_{j} = \var{\vv{r}\times \nabla\cdot\tensa{T}}_j,
+\label{Eq: Div M}
+\end{equation}
+where it has been identified that $\delta^{nk}\delta_{nl}\,\epsilon_{j}^{\,\,\,\, li}T_{ik} = \epsilon_{j}^{\,\,\,\, ni}T_{in} = 0$, because the Maxwell stress tensor is symmetric $\var{T_{in}=T_{ni}}$ and the Levi-Civita symbol is antisymmetric $\var{\epsilon_{j}^{\,\,\,\, ni}=-\epsilon_{j}^{\,\,\,\, in}}$.
+
+From Eqs. \eqref{Eq: r cross P} and \eqref{Eq: Div M}, the conservation of angular momentum is written as
+%
+%-------conservation of angular momentum ----------
+\begin{empheq}[box=\mymath]{equation}
+\frac{\partial}{\partial t} \Var{\vvb{\ell}^{\rm \, \,mec}\var{\vv{r},t}+\vvb{\ell}^{\rm \, \,em}\var{\vv{r},t}} = \nabla \cdot \tensa{M}\var{\vv{r},t},
+\label{eq: cons momento angular}
+\end{empheq}
+%-------------------------------------------------
+%
+which is a local equation. To represent the global conservation of angular momentum, Eq. \eqref{eq: cons momento angular} is integrated over a volume $V$ bounded by a surface $S$ as follows
+%
+\begin{mybox}{\centering  Global angular momentum transfer in classical electrodynamics}
+	\begin{equation}
+\frac{d}{dt}\Var{\vv{L}^{\rm mec}\var{t}+\vv{L}^{\rm em}\var{t}} = \oint_S \tensa{M}\var{\vv{r},t} \, \cdot d\vv{S},
+\label{eq: cons momento angular global}
+	\end{equation}
+\end{mybox}	
+%
+% 
+\noindent where the divergence theorem has been used in the last equality, and
+\begin{equation}
+\vv{L}^{\rm mec}\var{t} = \int_V \vvb{\ell}^{\, \, \rm mec}\var{\vv{r},t}\, dV \qquad\qquad \text{and} \qquad\qquad \vv{L}^{\rm em}\var{t} = \int_V \vvb{\ell}^{\, \, \rm em}\var{\vv{r},t}\, dV.
+\end{equation}
+It is important to mention that the integration surface \(S\) contains the NP but does not intersect the trajectory of the electron, as shown in Fig. \ref{fig: system complete}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{17-imagenes/2-TeoriaMetodos/system_complete}
+\caption{\label{fig: system complete}Spherical nanoparticle of radius $a$ centered at the origin and characterized by a homogeneous dielectric response $\epsilon(\omega)$, enclosed by the integration surface $S$ of radius $R$, along with the trajectory of the fast electron located at $\vv{r}=(b,0,vt)$.}
+\end{figure}
+
+The system under investigation consists of a spherical nanoparticle (NP) of radius $a$, characterized by a homogeneous dielectric response $\epsilon(\omega)$ and centered at the origin, interacting with a fast electron whose trajectory is described by $\vv{r}=(b,0,vt)$, as depicted in Fig. \ref{fig: system complete}. To calculate the transfer of angular momentum (TMA) from the electron to the NP ($\Delta \vv{L}$), Eq. \eqref{eq: cons momento angular global} is integrated along the entire trajectory of the electron, or equivalently in time, as follows
+
+\begin{equation}
+\Delta\vv{L} = \intt{\frac{d}{dt}\vv{L}^{\rm mec}\var{t}} = \intt{\intS{\tensa{M}\var{\vv{r},t}}} - \Delta\vv{L}^{\rm em},
+\end{equation}
+where 
+\begin{equation}
+\Delta\vv{L}^{\rm em}=\intt{\frac{d}{dt}\vv{L}^{\rm em}} = \vv{L}^{\rm em}(t\to\infty)-\vv{L}^{\rm em}(t\to-\infty).
+\end{equation}
+The terms
+\begin{equation}
+\vv{L}^{\rm em}(t\to\pm\infty) = \epsilon_0 \mu_0  \intV{\vv{r}\times\Var{\vv{E}\var{t\to\pm\infty}\times\vv{H}\var{t\to\pm\infty}}}
+\label{eq: Lem}
+\end{equation}
+are null because at time $t\to -\infty$ the electron is infinitely far away and has not interacted with the NP, meaning that the total electromagnetic fields $\{\EE{},\HH{}\}$, composed of the sum of external fields $\{\EE{ext},\HH{ext}\}$ and those scattered by the NP $\{\EE{scat},\HH{scat}\}$, are null within the integration volume $V$ \textemdash$\vv{E}(t\to-\infty)=\vv{0}$ and $\vv{H}(t\to-\infty)=\vv{0}$\textemdash. On the other hand, for $t\to\infty$, the electron will also be infinitely far away, but it will have already interacted with the NP, resulting in the induction of charge and current distributions within the NP. However, these distributions will have vanished for $t\to\infty$ due to dissipative processes. Therefore, $\vv{L}^{\rm em}(t\to\pm\infty)=0$.
+
+Then
+%
+%-------conservation of angular momentum 2----------
+\begin{empheq}[box=\mymath]{equation}
+\Delta\vv{L} = \intt{\intS{\tensa{M}\var{\vv{r},t}}},
+\label{Eq: Delta L in time}
+\end{empheq}
+%-------------------------------------------------
+%
+or using index notation
+\begin{equation}
+\Delta L_i =  \intt{\oint_S \epsilon_{i}^{\,\,\,\, lj} r_l T_{jk}\var{\vv{r},t} n^k\,dS},
+\label{eq: angular momentum transfer index notation}
+\end{equation}
+where $n_i$ is the $i$-th component of the normal vector to the surface $S$.
+
+For the calculation of angular momentum transfer, it is convenient to express the electromagnetic fields in the frequency domain. Using the following definition of the Fourier transform
+\begin{equation}
+\vv{F}(\w) = \intt{\vv{F}(t)\,{\rm e}^{{\rm i} \w t}} \qquad \text{y} \qquad \vv{F}(t) = \frac{1}{2\pi}\intw{\vv{F}(\w)\,{\rm e}^{-{\rm i} \w t}},
+\end{equation}
+where $\vv{F}\in \{ \vv{B}, \vv{H}\}$, and for $\vv{F}(t)$ to be a real function, it must hold in the frequency domain that $\vv{F}(\omega)^{*}=\vv{F}(-\omega)$, where $*$ denotes complex conjugation. To calculate the angular momentum transfer via Eq. \eqref{eq: angular momentum transfer index notation}, it is important to note that the time dependence is contained only in the Maxwell stress tensor $\tensa{T}\var{\vv{r},t}$. Thus, the integral in time of the product of electric fields can be rewritten as follows
+\begin{align}
+\intt{E_i\vars E_j \vars} =& \intt{\Var{\frac{1}{2\pi}\intw{E_i\varsw \,{\rm e}^{-{\rm i} \w t} }} \Var{\frac{1}{2\pi}\intw{E_j\var{\vv{r},\w^{\prime}} \,{\rm e}^{-{\rm i} \w^{\prime} t} }^{\prime}} } \nonumber\\
+=&\frac{1}{2\pi} \intw{\intw{\Var{\frac{1}{2\pi}\intt{{\rm e}^{-{\rm i}\var{\w+\w^{\prime}} t}}} E_i \varsw E_j\var{\vv{r},\w^{\prime}}}}^{\prime} \nonumber\\
+=&\frac{1}{2\pi}\intw{\intw{\delta\var{\w+\w^{\prime}} E_i \varsw E_j\var{\vv{r},\w^{\prime}} }}^{\prime} \nonumber\\
+=&\frac{1}{2\pi}\intw{ E_i \varsw E_j\var{\vv{r},-\w} }=\frac{1}{2\pi}\intw{ E_i \varsw E_j^{*}\varsw } \nonumber\\
+=&\frac{1}{\pi}\intwo{{\rm Re}\Var{E_i\varsw E_j^{*}\varsw}}.
+\end{align}
+For the components of the field $\vv{H}$, an analogous process is followed.
+
+Thus, Eq. \eqref{eq: angular momentum transfer index notation} can be rewritten as
+%
+%-------Angular momentum transfer----------
+\begin{empheq}[box=\mymath]{equation}
+\Delta L_i = \frac{1}{\pi} \intwo{\oint_S \epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}_{jk}\varsw n^k\,dS},
+\label{eq: angular momentum transfer index notation freq domain}
+\end{empheq}
+%-------------------------------------------------
+%
+where we have defined 
+\begin{align}
+\tensa{\mathcal{T}}\varsw = \,{\rm Re}\Bigg[&\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \vv{E} \varsw \vv{E}^{*}\varsw-\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \frac{\tensa{I}}{2} \vv{E} \varsw\cdot\vv{E}_j^{*}\varsw \nonumber \\
+& + \frac{\mu_0}{\cgs{4\pi\mu_0}} \vv{H}_i \varsw \vv{H}_j^{*}\varsw- \frac{\mu_0}{\cgs{4\pi\mu_0}} \frac{\tensa{I}}{2}  \vv{H} \varsw\cdot\vv{H}^{*}\varsw \Bigg], \label{Eq: tensor maxwell freq}
+\end{align}
+where $\tensa{I}$ is the rank-2 identity tensor. Thus, the \textit{spectral density} of angular momentum is defined as
+%
+%-------Spectral density----------
+\begin{empheq}[box=\mymath]{equation}
+\mathcal{L}_i\var{\w} = \frac{1}{\pi} \oint_S \epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}_{jk}\varsw n^k\,dS, \label{Eq: spectral density AMT}
+\end{empheq}
+%-------------------------------------------------
+%
+so that the angular momentum transfer is calculated as
+\begin{equation}
+\Delta \vv{L} = \intwo{\vv{\mathcal{L}}\var{\w}}.
+\label{eq: densidad espectral momento angular}
+\end{equation}
+In Cartesian coordinates, Eq. \eqref{Eq: spectral density AMT} can be written as
+\begin{align}
+\mathcal{L}_x &=\frac{1}{\pi}\Var{\oint_{S} y\, \mathcal{T}_{zk}\, dS^k - \oint_{S} z\, \mathcal{T}_{yk}\, dS^k },\\
+\mathcal{L}_y &=\frac{1}{\pi}\Var{\oint_{S} z\, \mathcal{T}_{xk}\, dS^k - \oint_{S} x\, \mathcal{T}_{zk}\, dS^k },\label{eq: Ly spectral density}\\
+\mathcal{L}_z &=\frac{1}{\pi}\Var{\oint_{S} x\, \mathcal{T}_{yk}\, dS^k - \oint_{S} y\, \mathcal{T}_{xk}\, dS^k }. 
+\end{align}
+%
+Due to the problem of interaction between a fast electron and a spherical NP possessing reflection symmetry with respect to the $xz$ plane, there cannot exist a component of transferred linear momentum in the $y$ direction \cite{PRBCoronado}. From this, it can be concluded that the angular momentum transferred to the NP cannot have $x$ nor $z$ components \cite{castellanos2021phdthesis}. Therefore, it follows that only the spectral contribution $\mathcal{L}_y$ is nonzero. In terms of the spherical basis, the spectral components are given by the following expressions \cite{castellanos2021phdthesis}
+%
+\begin{mybox}{\centering Nonvanishing spectral density component}
+\begin{equation}
+\mathcal{L}_y = \frac{R}{\pi}\oint \Var{\cos\varphi \,\mathcal{T}_{\theta r} - \cos\theta\sin\varphi\,\mathcal{T}_{\varphi r}} dS_r,
+\label{eq: Ly spectral density r theta}
+\end{equation}
+\end{mybox}	
+% 
+and
+%
+\begin{mybox}{\centering  Vanishing spectral density components}
+\vspace{-0.55cm}
+\begin{align}
+\mathcal{L}_x &= \frac{R}{\pi}\oint \Var{\sin\varphi \,\mathcal{T}_{\theta r} + \cos\theta\cos\varphi\,\mathcal{T}_{\varphi r}} dS_r,
+\label{eq: Lx spectral density r theta} \\
+\mathcal{L}_z &= \frac{R}{\pi}\oint \sin\theta \, \mathcal{T}_{\varphi r} \, dS_r,
+\label{eq: Lz spectral density r theta}
+\end{align}
+\end{mybox}	
+% 
+\noindent where a spherical integration surface has been assumed, as shown in Fig. \ref{fig: system complete}.
+
+It is possible to separate the electric and magnetic contributions in the spectral angular momentum density, Eq. \eqref{eq: densidad espectral momento angular}, so that the tensor can be separated as follows
+
+\begin{equation}
+\tensa{\mathcal{T}}\varsw = \tensE{\mathcal{T}}\varsw+\hspace{-0.2 cm}\tensH{\mathcal{T}}\varsw, 
+\end{equation}
+where
+\begin{align}
+\tensE{\mathcal{T}}=& \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \re{\vv{E}\varsw \vv{E}^{*}\varsw - \frac{\tensa{I}}{2} \vv{E}\varsw\cdot\vv{E}^{*}\varsw}
+\end{align}
+and
+\begin{align}
+\hspace{0.3 cm}\tensH{\mathcal{T}}=& \frac{\mu_0}{\cgs{4\pi\mu_0}} \re{\vv{H}\varsw \vv{H}^{*}\varsw - \frac{\tensa{I}}{2} \vv{H}\varsw\cdot\vv{H}^{*}\varsw}.
+\end{align}
+%
+Since we are considering a spherical integration surface $S$ of radius $R$ and $\hat{r}_i$ as the $i$-th component of the radial unit vector, the spectral angular momentum density $\mathcal{L}_i(\omega)$ can be expressed as follows
+\begin{equation}
+\mathcal{L}_i\var{\w} = \frac{R^2}{\pi} \int_0^{4\pi} \Var{\epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}^{\, \rm E}_{jk}\varsw n^k + \epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}^{\, \rm H}_{jk}\varsw n^k}\,d\Omega,
+\label{Eq: complete spectral component of AMT with spherical symmetry}
+\end{equation}
+where only the solid angle $\Omega$ remains to be integrated. In Eq. \eqref{Eq: complete spectral component of AMT with spherical symmetry} it is noticeable that the electric contribution is separated from the magnetic, allowing us to define both contributions as
+\begin{align}
+\mathcal{L}_i^{\rm E}\var{\w} = \frac{R^2}{\pi} \int_0^{4\pi} \Var{\epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}^{\,\rm E}_{jk}\varsw n^k}\,d\Omega, \\
+\mathcal{L}_i^{\rm H}\var{\w} = \frac{R^2}{\pi} \int_0^{4\pi} \Var{\epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}^{\,\rm H}_{jk}\varsw n^k}\,d\Omega.
+\end{align}
+
+Since we can separate the electromagnetic fields $\mathbf{E}$ and $\mathbf{H}$ into their external (ext) and scattered (scat) field contributions, the electric component of the tensor defined in Eq. \eqref{Eq: tensor maxwell freq} is rewritten as
+\begin{align}
+\tensE{\mathcal{T}}=\,\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} {\rm Re} \Bigg[& \var{\EE{ext}+\EE{scat}}\var{\EE{ext}^{*}+\EE{scat}^{*}}-\frac{\tensa{I}}{2}\var{\EE{ext}+\EE{scat}}\cdot\var{\EE{ext}^{*}+\EE{scat}^{*}} \Bigg] \nonumber 
+\end{align}
+expanding the terms, we obtain
+\begin{align}
+\tensE{\mathcal{T}}= \, \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} {\rm Re} \Bigg[& \var{\EE{scat}\EE{scat}^{*}+\EE{scat}\EE{ext}^{*}+\EE{ext}\EE{scat}^{*}+\EE{ext}\EE{ext}^{*}}\nonumber \\
+&-\frac{\tensa{I}}{2}\var{\EE{scat}\cdot\EE{scat}^{*}+\EE{scat}\cdot\EE{ext}^{*}+\EE{ext}\cdot\EE{scat}^{*}+\EE{ext}\cdot\EE{ext}^{*}} \Bigg],
+\label{eq: tensor de esfuerzos inicio}
+\end{align}
+where the electric component of the stress tensor can be written as
+\begin{equation}
+\tensE{\mathcal{T}}=\tensE{\mathcal{T}}_{\rm ss}+\tensE{\mathcal{T}}_{\rm int}+\tensE{\mathcal{T}}_{\rm ee},
+\end{equation}
+with
+\begin{align}
+\tensE{\mathcal{T}}_{\rm ss} =& \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \re{\EE{scat}\EE{scat}^{*}-\frac{\tensa{I}}{2}\EE{scat}\cdot\EE{scat}^{*}},\label{Eq: tensor de esfuerzos inicio 2}\\
+\tensE{\mathcal{T}}_{\rm ee} =& \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \re{\EE{ext}\EE{ext}^{*}-\frac{\tensa{I}}{2}\EE{ext}\cdot\EE{ext}^{*}}, \label{Eq: Tee}\\
+&\tensE{\mathcal{T}}_{\rm int} = \tensE{\mathcal{T}}_{\rm se} + \tensE{\mathcal{T}}_{\rm es},
+\end{align}
+where
+\begin{align}
+\tensE{\mathcal{T}}_{\rm es} =& \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \re{\EE{ext}\EE{scat}^{*}-\frac{\tensa{I}}{2}\EE{ext}\cdot\EE{scat}^{*}},\label{Eq: Tes}\\
+\tensE{\mathcal{T}}_{\rm se} =& \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \re{\EE{scat}\EE{ext}^{*}-\frac{\tensa{I}}{2}\EE{scat}\cdot\EE{ext}^{*}}.
+\label{eq: tensor de esfuerzos final}
+\end{align}
+Similarly, by substituting $\epsilon_0 \to \mu_0$ and $\vv{E} \to \vv{H}$ in Eqs. \eqref{eq: tensor de esfuerzos inicio} to \eqref{eq: tensor de esfuerzos final}, the magnetic contributions to the tensor $\tensa{\mathcal{T}}$ are obtained, denoted as $\hspace{-0.6em}\tensH{\mathcal{T}}_{\rm ij}$ where $\rm ij$ take the values \{$\rm e$, $\rm s$\}. The term $\tensa{\mathcal{T}}_{\rm int}$ can be interpreted as the component associated with the interaction of the electromagnetic field of the electron with the charges and currents induced in the nanoparticle (NP). If there were no NP, the electron's movement would remain unaffected, meaning it would not lose or transfer energy, linear momentum, or angular momentum ($\Delta L = 0$). In this scenario, the scattered electromagnetic fields would be zero, implying that the only contribution to the angular momentum would come from the component $\tensa{\mathcal{T}}_{\rm ee}$. Therefore, in general, it is concluded that the angular momentum transfer due to $\tensa{\mathcal{T}}_{\rm ee}$ is null \cite{castellanos2023theory}. It is also worth mentioning that the component $\tensa{\mathcal{T}}_{\rm ss}$, which depends solely on the electromagnetic fields scattered by the NP, is related to the interaction of the NP with itself, referred to as radiation reaction \cite{jackson}.
+
+The next Section presents the analytical expressions for the external electromagnetic fields (produced by the electron) as well as those scattered by the NP.
+%
+% 	Angular Momentum Transfer from a Fast Electron to a Spherical Nanoparticle
+%
+\section{Angular Momentum Transfer from a Fast Electron to a Spherical Nanoparticle}
+The external electromagnetic field produced by a fast electron, considered as a point charge $q = -e$, traveling at a constant velocity $\vv{v} = v\hat{z}$ along the z-axis and following the trajectory $\vv{r} = (b,0,vt)$ (see Fig. \ref{fig: system complete}), can be obtained via a Lorentz transformation from a reference frame in which the electron is at rest to a frame in which the electron is moving at a constant velocity $\vv{v}$. This results in the following expressions for the fields \cite{jackson}:
+\begin{align}
+\EE{ext}\vars =& \cgs{4\pi\epsilon_0}\frac{-e}{4\pi\epsilon_0}\frac{\gamma \Var{\vv{R}+(z-vt)\hat{z}}}{\Var{R^2+\gamma^2(z-vt)^2}^{3/2}}, \label{eq: Eext}\\
+\HH{ext}\vars =& \cgs{4\pi}\frac{-e}{4\pi}\frac{\gamma \, \vv{v}\times\vv{R}}{\Var{R^2+\gamma^2(z-vt)^2}^{3/2}}, \label{eq: Hext}
+\end{align}
+where $c$ is the speed of light, $\gamma = \var{1-\beta^2}^{-1/2}$, $\beta = v/c$, $\vv{R} = (x-b)\hat{x} + y\hat{y}$, $R = \sqrt{(x-b)^2 + y^2}$, and $\vv{v} \times \vv{R} = v\Var{(x-b)\hat{y} - y\hat{x}}$. The external electromagnetic fields can also be expressed in the frequency domain using a Fourier transform of Eqs. \eqref{eq: Eext} and \eqref{eq: Hext} \cite{maciel2019electromagnetic}:
+%-------E & H fields in freq space----------
+\begin{empheq}[box=\mymath]{align}
+\EE{ext}\varsw = &\cgs{4\pi\epsilon_0}\frac{-e}{4\pi\epsilon_0}  \frac{2\w}{v^2 \gamma} \rme^{\rmi \w (z/v)} \left\{ {\rm sign}(\w) K_1\wR\hat{R} - \frac{\rmi}{\gamma}K_0\wR \hat{z}\right\},\label{eq: electron external field E}\\
+&\HH{ext}\varsw = \cgs{4\pi}\frac{-e}{4\pi}\frac{2e}{v c \gamma} \abs{\omega} {\rm e}^{{\rm i}\omega z /v} K_1\wR \hat{v}\times\hat{R}, \label{eq: electron external field H}
+\end{empheq}
+%-------------------------------------------------
+where $K_{\nu}$ is the modified Bessel function of the second kind of order $\nu$ and $\hat{v} = \vv{v}/v$. Eqs. \eqref{eq: electron external field E} and \eqref{eq: electron external field E} are closed-form expressions with cylindrical symmetry. Since the calculation of the angular momentum transfer (AMT) requires the scattered fields by the nanoparticle (NP), which exhibit spherical symmetry, it is convenient to express the electromagnetic fields produced by the electron in a spherical basis.
+
+The electric field produced by the electron can be derived using the time-dependent Green's function \cite{maciel2019electromagnetic} 
+\begin{equation}
+\EE{ext}\varsw = e\var{\nabla-\rmi \frac{k\vv{v}}{c}} \intt{\rme^{\rmi \w t} G_0 \var{\vv{r}-\vv{r}_t}},
+\label{eq: E field Green function}
+\end{equation}
+where $G_0 \var{\vv{r}-\vv{r}_t}$ is given by 
+\begin{equation}
+G_0 \var{\vv{r}-\vv{r}_t} = \frac{\cgs{4\pi\epsilon_0}}{4\pi\epsilon_0}\frac{\rme^{\rmi k \abs{\vv{r}-\vv{r}_t}}}{\abs{\vv{r}-\vv{r}_t}},
+\end{equation}
+with $k = \w/c$ being the wave number in vacuum, $\vv{r}_t=\vv{r}_0+\vv{v}t$ representing the position of the electron at time $t$, and $\vv{r}_0 = (b,0,0)$. Expanding the Green's function in spherical coordinates yields \cite{de1999relativistic}
+\begin{equation}
+G_0(\vv{r}-\vv{r}_t) = \frac{\cgs{4\pi\epsilon_0}}{\epsilon_0} k \sum_{\ell = 0}^{\infty} \sum_{m=-\ell}^{\ell} j_{\ell}(kr) h_{\ell}^{+}(k r_t) Y_{\ell, m}(\Omega_r) Y_{\ell, m}(\Omega_{r_t})^{*},
+\label{eq: Green function spherical base}
+\end{equation}
+where $Y_{\ell,m}$ are the scalar spherical harmonics, $\Omega_r$ is the solid angle of vector $\vv{r}$, $h_{\ell}^{+}(x) = \rmi h_{\ell}^{1}(x)$ is the spherical Hankel function of the first kind of order $\ell$, and $j_{\ell}(x)$ is the spherical Bessel function of order $\ell$ \citep{Abramowitz}. By substituting Eq. \eqref{eq: Green function spherical base} into Eq. \eqref{eq: E field Green function}, we obtain
+\begin{equation}
+\EE{ext}\vars = \var{\nabla-\rmi \frac{k\vv{v}}{c}} \sum_{\ell = 0}^{\infty} \sum_{m=-\ell}^{\ell} j_{\ell}(kr) Y_{\ell, m}(\Omega_{r})\phi_{\ell, m},
+\end{equation}
+where
+\begin{equation}
+\phi_{\ell, m} = \frac{\cgs{4\pi\epsilon_0}}{\epsilon_0} k \intt{e^{i \omega t} h_{\ell}^{+}(k r_{t}) Y_{\ell, m}^{*}(\Omega_{r_t}) }.
+\label{Eq: GdA phi coeffs}
+\end{equation}
+
+%In \hyperref[AppendixScalarPotentials]{Appendix A}, the detailed analytical calculation of Eq. \eqref{Eq: GdA phi coeffs} is provided. Consequently, the external electromagnetic field in spherical multipolar representation can be expressed as:
+The detailed analytical calculation of Eq. \eqref{Eq: GdA phi coeffs} can be found in Ref. \cite{briseno2023masterthesis}. Consequently, the external electromagnetic field in spherical multipolar representation can be expressed as:
+%
+\begin{mybox}{\centering  Multipolar expansion of the external electromagnetic field produced by the swift electron}
+\vspace{-0.3cm}
+\begin{align}
+\EE{ext} &= \sum_{\ell, m} \var{\mathscr{E}_{\ell, m}^{\text{er}}\hat{r} +\mathscr{E}_{\ell, m}^{\text{e}\theta}\hat{\theta} + \mathscr{E}_{\ell, m}^{\text{e}\varphi}\hat{\varphi}},\label{Eq: multipolar ext E field}\\
+\HH{ext} &= \sum_{\ell, m} \var{\mathscr{H}_{\ell, m}^{\text{er}}\hat{r} +\mathscr{H}_{\ell, m}^{\text{e}\theta}\hat{\theta} + \mathscr{H}_{\ell, m}^{\text{e}\varphi}\hat{\varphi}},\label{Eq: multipolar ext H field}
+\end{align}
+\end{mybox}	
+%
+% 
+\noindent where
+%
+%-------Components of ext electric field ----------
+\begin{empheq}[box=\mymath]{align}
+& \qquad\qquad \mathscr{E}_{\ell, m}^{\text{er}}=\rme^{\rmi m \varphi} D_{\ell, m}^{\text{ext}} \ell (\ell +1 ) P_{\ell}^{m}\var{\cos\theta}\frac{j_{\ell}\var{k r}}{k r},\label{eq: Elmer}\\
+%
+\mathscr{E}_{\ell, m}^{\text{e}\theta}=&-\rme^{\rmi m \varphi}C_{\ell, m}^{\text{ext}} \frac{m}{\sin\theta}j_{\ell}\var{k r}P_{\ell}^{m}(\cos\theta)-\rme^{\rmi m \varphi}D_{\ell, m}^{\text{ext}}\bigg[ \var{\ell + 1}\frac{\cos\theta}{\sin\theta} P_{\ell}^{m}\var{\cos\theta}- \nonumber \\
+&\frac{\var{\ell-m+1}}{\sin\theta}P_{\ell+1}^{m}\var{\cos\theta} \bigg] \Var{\var{\ell +1}\frac{j_{\ell}\var{k r}}{k r}-j_{\ell +1}\var{k r}}, \label{eq: Elmet}\\
+%
+\mathscr{E}_{\ell, m}^{\text{e}\varphi}=& \,\rmi\, \rme^{\rmi m \varphi}C_{\ell, m}^{\text{ext}}\, j_{\ell}\var{k r}\Var{\var{\ell +1}\frac{\cos\theta}{\sin\theta}P_{\ell}^{m}\var{\cos\theta}-\frac{\ell-m+1}{\sin\theta}P_{\ell +1}^{m}\var{\cos\theta}} \nonumber \\
+&+\rmi\,\rme^{\rmi m \varphi}D_{\ell, m}^{\text{ext}}\frac{m}{\sin\theta}P_{\ell}\var{\cos\theta}\Var{\var{\ell +1}\frac{j_{\ell}\var{k r}}{k r}-j_{\ell + 1}(k r)}, \label{eq: Elmep}
+\end{empheq}
+%-------------------------------------------------
+%
+and
+%
+%-------Components of ext electric field ----------
+\begin{empheq}[box=\mymath]{align}
+& \qquad\qquad \mathscr{H}_{\ell, m}^{\text{er}}=\rme^{\rmi m \varphi} C_{\ell, m}^{\text{ext}} \ell (\ell +1 ) P_{\ell}^{m}\var{\cos\theta}\frac{j_{\ell}\var{k r}}{k r}, \label{eq: Hlmer}\\
+%
+\mathscr{H}_{\ell, m}^{\text{e}\theta}=&\,\rme^{\rmi m \varphi}D_{\ell, m}^{\text{ext}} \frac{m}{\sin\theta}j_{\ell}\var{k r}P_{\ell}^{m}(\cos\theta)-\rme^{\rmi m \varphi}C_{\ell, m}^{\text{ext}}\bigg[ \var{\ell + 1}\frac{\cos\theta}{\sin\theta} P_{\ell}^{m}\var{\cos\theta}- \nonumber \\
+&\frac{\var{\ell-m+1}}{\sin\theta}P_{\ell+1}^{m}\var{\cos\theta} \bigg] \Var{\var{\ell +1}\frac{j_{\ell}\var{k r}}{k r}-j_{\ell +1}\var{k r}}, \label{eq: Hlmet}\\
+%
+\mathscr{H}_{\ell, m}^{\text{e}\varphi}=&- \,\rmi\, \rme^{\rmi m \varphi} D_{\ell, m}^{\text{ext}}\, j_{\ell}\var{k r}\Var{\var{\ell +1}\frac{\cos\theta}{\sin\theta}P_{\ell}^{m}\var{\cos\theta}-\frac{\ell-m+1}{\sin\theta}P_{\ell +1}^{m}\var{\cos\theta}} \nonumber \\
+&+\rmi\,\rme^{\rmi m \varphi}C_{\ell, m}^{\text{ext}}\frac{m}{\sin\theta}P_{\ell}\var{\cos\theta}\Var{\var{\ell +1}\frac{j_{\ell}\var{k r}}{k r}-j_{\ell + 1}(k r)}, \label{eq: Hlmep}
+\end{empheq}
+%-------------------------------------------------
+%
+where $P_{\ell}^{m}$ are the associated Legendre functions, and the scalar coefficients $C_{\ell, m}^{\text{ext}}$ and $D_{\ell, m}^{\text{ext}}$ are given by:
+%
+%-------Ckm & Dlm ext coeffs ----------
+\begin{empheq}[box=\mymath]{align}
+C_{\ell, m}^{\text{ext}} =& \rmi^{\ell}\sqrt{\frac{2\ell +1}{4\pi}\frac{\var{\ell - m}!}{\var{\ell +m}!}}\psi_{\ell, m}^{\rm M, \text{ext}}, \label{Eq: C ext l,m} \\
+D_{\ell, m}^{\text{ext}} =& \rmi^{\ell}\sqrt{\frac{2\ell +1}{4\pi}\frac{\var{\ell - m}!}{\var{\ell +m}!}}\psi_{\ell, m}^{\rm E, \text{ext}}, \label{Eq: D ext l,m}
+\end{empheq} 
+%-------------------------------------------------
+% 
+with $\psi_{\ell, m}^{E, \text{ext}}$ and $\psi_{\ell, m}^{M, \text{ext}}$ being the coefficients in the spherical representation of the auxiliary potentials, defined in Ref. \cite{briseno2023masterthesis}. %\hyperref[AppendixScalarPotentials]{Appendix A}.
+%
+\section{Electromagnetic Fields Scattered by the Nanoparticle}
+%As shown in \hyperref[AppendixScalarPotentials]{Appendix A}, the electromagnetic fields satisfy the source-free Helmholtz equation:
+The electromagnetic fields satisfy the source-free Helmholtz equation:
+\begin{align}
+\var{\nabla^2+k^2}\EE{} = \vv{0},\label{Eq: Helmholtz E}\\
+\var{\nabla^2+k^2}\HH{} = \vv{0}.\label{Eq: Helmholtz H}
+\end{align}
+%donde $k^2 = \cgs{c^{-2}}\w^2\epsilon\var{\w}\mu\var{\w}$. 
+The solutions to Eqs. \eqref{Eq: Helmholtz E} and \eqref{Eq: Helmholtz H} can be written as \cite{Low}:
+\begin{align}
+\EE{} &= \nabla\psi^{\rm L} + \vv{L}\psi^{\rm M}-\frac{\rmi}{k}\nabla\times\vv{L}\psi^{\rm E}, \label{Eq: E field in terms of potentials}\\
+\HH{} &= -\frac{\rmi}{k}\nabla\times\vv{L}\psi^{M}-\vv{L}\psi^{\rm E}, \label{Eq: H field in terms of potentials}
+\end{align}
+where $\vv{L}=-\rmi \vv{r}\times\nabla$ is the orbital angular momentum operator, and $\psi^{\rm L}$, $\psi^{\rm E}$, and $\psi^{\rm M}$ are scalar functions that satisfy the scalar Helmholtz equation. Since the external electric field is solenoidal ($\nabla\cdot\EE{}=0$), the scalar function $\psi^{\rm L}$ must be zero. The scalar functions $\psi^{\rm E}$ and $\psi^{\rm M}$, for both the external and scattered fields, can be written in the spherical basis defined by the coordinate system shown in Fig. \ref{fig: system complete}, as \cite{de1999relativistic}:
+\begin{align}
+\psi^{\rm E, \text{ext}}(\vv{r})&=\sum_{\ell =1}^{\infty}\sum_{m=-\ell}^{\ell}\rmi^{\ell}j_{\ell}\var{kr}Y_{\ell, m}(\Omega_r)\psi_{\ell, m}^{\rm E, \text{ext}},\\
+\psi^{\rm M, \text{ext}}(\vv{r})&=\sum_{\ell =1}^{\infty}\sum_{m=-\ell}^{\ell}\rmi^{\ell}j_{\ell}\var{kr}Y_{\ell, m}(\Omega_r)\psi_{\ell, m}^{\rm M, \text{ext}},\\
+\psi^{\rm E, \text{scat}}(\vv{r})&=\sum_{\ell =1}^{\infty}\sum_{m=-\ell}^{\ell}\rmi^{\ell}h_{\ell}^{+}\var{kr}Y_{\ell, m}(\Omega_r)\psi_{\ell, m}^{\rm E, \text{scat}},\\
+\psi^{\rm M, \text{scat}}(\vv{r})&=\sum_{\ell =1}^{\infty}\sum_{m=-\ell}^{\ell}\rmi^{\ell}h_{\ell}^{+}\var{kr}Y_{\ell, m}(\Omega_r)\psi_{\ell, m}^{\rm M, \text{scat}}.
+\end{align}
+Applying the boundary conditions for the electromagnetic fields on a spherical particle, the scattered scalar electromagnetic potentials by the nanoparticle (NP) can be expressed in terms of the external scalar electromagnetic potentials as follows \cite{de1999relativistic}:
+\begin{align}
+\psi_{\ell, m}^{\rm E, scat} =& \,t_{\ell}^{\rm E} \psi_{\ell, m}^{\rm E, \text{ext}}, \label{Eq: psilm E scat}\\
+\psi_{\ell, m}^{\rm M, scat} =& \,t_{\ell}^{\rm M} \psi_{\ell, m}^{\rm M, \text{ext}}, \label{Eq: psilm M scat}
+\end{align} 
+where the coefficients $t_{\ell}^{\rm E}$ and $t_{\ell}^{\rm M}$ for homogeneous spherical particles correspond to the Mie coefficients \cite{Bohren}:
+\begin{align}
+t_{\ell}^{\rm E} &=\frac{-j_{\ell}(x_0)\Var{x_i j_{\ell}(x_i)}^{\prime}+\epsilon\,j_{\ell}(x_i)\Var{x_0j_{\ell}(x_0)}^{\prime}}{h^{+}_{\ell}\var{x_0}\Var{x_i j_l\var{x_i}}^{\prime}-\epsilon j_l\var{x_i}\Var{x_0 h_{\ell}^{+}\var{x_0}}^{\prime}}, \label{Eq: tlE Mie}\\
+t_{\ell}^{\rm M} &= \frac{-x_i j_{\ell}\var{x_0}j_{\ell}^{\prime}\var{x_i}+ x_0 j_{\ell}^{\prime}\var{x_0} j_{\ell}\var{x_i} }{x_i h_{\ell}^{+}\var{x_0} j_{\ell}^{\prime}\var{x_i} - x_0 h_{\ell}^{+ \prime}\var{x_0} j_{\ell}(x_i)}, \label{Eq: tlM Mie}
+\end{align}
+where $x_0 = k a$ and $x_i = k a \sqrt{\epsilon}$, with $a$ being the particle radius and $\epsilon$ the dielectric function of the NP. The primes in Eqs. \eqref{Eq: tlE Mie} and \eqref{Eq: tlM Mie} denote derivatives with respect to the argument.
+
+By substituting the scattered scalar potentials from Eqs. \eqref{Eq: psilm E scat} and \eqref{Eq: psilm M scat} into Eqs. \eqref{Eq: E field in terms of potentials} and \eqref{Eq: H field in terms of potentials}, we obtain: 
+% Multipolar expansion of the scattered electromagnetic field by the NP
+\begin{mybox}{\centering  Multipolar expansion of the electromagnetic field scattered by the NP}
+\vspace{-0.3cm}
+\begin{align}
+\EE{scat} &= \sum_{\ell, m} \var{\mathscr{E}_{\ell, m}^{\text{sr}}\hat{r} +\mathscr{E}_{\ell, m}^{\text{s}\theta}\hat{\theta} + \mathscr{E}_{\ell, m}^{\text{s}\varphi}\hat{\varphi}},\label{Eq: multipolar scat E field}\\
+\HH{scat} &= \sum_{\ell, m} \var{\mathscr{H}_{\ell, m}^{\text{sr}}\hat{r} +\mathscr{H}_{\ell, m}^{\text{s}\theta}\hat{\theta} + \mathscr{H}_{\ell, m}^{\text{s}\varphi}\hat{\varphi}},\label{Eq: multipolar scat H field}
+\end{align}
+\end{mybox}	
+%
+% 
+\noindent where
+%
+%-------E scat field components ----------
+\begin{empheq}[box=\mymath]{align}
+& \qquad\qquad \mathscr{E}_{\ell, m}^{\text{sr}}=\rme^{\rmi m \varphi} D_{\ell, m}^{\text{scat}} \ell (\ell +1 ) P_{\ell}^{m}\var{\cos\theta}\frac{h^{+}_{\ell}\var{k_0 r}}{k_0 r},\\
+%
+\mathscr{E}_{\ell, m}^{\text{s}\theta}=&-\rme^{\rmi m \varphi}C_{\ell, m}^{\text{scat}} \frac{m}{\sin\theta}h^{+}_{\ell}\var{k_0 r}P_{\ell}^{m}(\cos\theta)-\rme^{\rmi m \varphi}D_{\ell, m}^{\text{scat}}\bigg[ \var{\ell + 1}\frac{\cos\theta}{\sin\theta} P_{\ell}^{m}\var{\cos\theta}- \nonumber \\
+&\frac{\var{\ell-m+1}}{\sin\theta}P_{\ell+1}^{m}\var{\cos\theta} \bigg] \Var{\var{\ell +1}\frac{h^{+}_{\ell}\var{k_0 r}}{k_0 r}-h^{+}_{\ell +1}\var{k_0 r}},\\
+%
+\mathscr{E}_{\ell, m}^{\text{s}\varphi}=& \,\rmi\, \rme^{\rmi m \varphi}C_{\ell, m}^{\text{scat}}\, h^{+}_{\ell}\var{k_0 r}\Var{\var{\ell +1}\frac{\cos\theta}{\sin\theta}P_{\ell}^{m}\var{\cos\theta}-\frac{\ell-m+1}{\sin\theta}P_{\ell +1}^{m}\var{\cos\theta}} \nonumber \\
+&+\rmi\,\rme^{\rmi m \varphi}D_{\ell, m}^{\text{scat}}\frac{m}{\sin\theta}P_{\ell}\var{\cos\theta}\Var{\var{\ell +1}\frac{h^{+}_{\ell}\var{k_0 r}}{k_0 r}-h^{+}_{\ell + 1}(k_0 r)},
+\end{empheq}
+%-------------------------------------------------
+% 
+and
+%
+%-------H scat field components ----------
+\begin{empheq}[box=\mymath]{align}
+& \qquad\qquad \mathscr{H}_{\ell, m}^{\text{sr}}=\rme^{\rmi m \varphi} C_{\ell, m}^{\text{scat}} \ell (\ell +1 ) P_{\ell}^{m}\var{\cos\theta}\frac{h^{+}_{\ell}\var{k_0 r}}{k_0 r},\\
+%
+\mathscr{H}_{\ell, m}^{\text{s}\theta}=&\,\rme^{\rmi m \varphi}D_{\ell, m}^{\text{scat}} \frac{m}{\sin\theta}h^{+}_{\ell}\var{k_0 r}P_{\ell}^{m}(\cos\theta)-\rme^{\rmi m \varphi}C_{\ell, m}^{\text{scat}}\bigg[ \var{\ell + 1}\frac{\cos\theta}{\sin\theta} P_{\ell}^{m}\var{\cos\theta}- \nonumber \\
+&\frac{\var{\ell-m+1}}{\sin\theta}P_{\ell+1}^{m}\var{\cos\theta} \bigg] \Var{\var{\ell +1}\frac{h^{+}_{\ell}\var{k_0 r}}{k_0 r}-h^{+}_{\ell +1}\var{k_0 r}},\\
+%
+\mathscr{H}_{\ell, m}^{\text{s}\varphi}=&- \,\rmi\, \rme^{\rmi m \varphi} D_{\ell, m}^{\text{scat}}\, h^{+}_{\ell}\var{k_0 r}\Var{\var{\ell +1}\frac{\cos\theta}{\sin\theta}P_{\ell}^{m}\var{\cos\theta}-\frac{\ell-m+1}{\sin\theta}P_{\ell +1}^{m}\var{\cos\theta}} \nonumber \\
+&+\rmi\,\rme^{\rmi m \varphi}C_{\ell, m}^{\text{scat}}\frac{m}{\sin\theta}P_{\ell}\var{\cos\theta}\Var{\var{\ell +1}\frac{h^{+}_{\ell}\var{k_0 r}}{k_0 r}-h^{+}_{\ell + 1}(k_0 r)},
+\end{empheq}
+%-------------------------------------------------
+% 
+with the scalar coefficients $C_{\ell, m}^{\text{scat}}$ and $D_{\ell, m}^{\text{scat}}$ given by
+%
+%-------Clm & Dlm scat coeffs ----------
+\begin{empheq}[box=\mymath]{align}
+C_{\ell, m}^{\text{scat}} =& \rmi^{\ell}\sqrt{\frac{2\ell +1}{4\pi}\frac{\var{\ell - m}!}{\var{\ell +m}!}}t_{\ell}^{\rm M}\psi_{\ell, m}^{\rm M, \text{ext}}, \label{Eq: C scat l,m}\\
+D_{\ell, m}^{\text{scat}} =& \rmi^{\ell}\sqrt{\frac{2\ell +1}{4\pi}\frac{\var{\ell - m}!}{\var{\ell +m}!}}t_{\ell}^{\rm E}\psi_{\ell, m}^{\rm E, \text{ext}}. \label{Eq: D scat l,m}
+\end{empheq}
+%-------------------------------------------------
+% 
+
+Once the total electromagnetic field has been computed, one can determine the tensor $\tensa{\mathcal{T}}$ as given by Eq. \eqref{Eq: tensor maxwell freq}, and consequently, compute the spectral density of TMA, expressed by Eq. \eqref{Eq: spectral density AMT}:
+\begin{equation}
+\mathcal{L}_i\var{\w} = \frac{1}{\pi} \oint_S \epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}_{jk}\varsw n^k\,dS. \nonumber
+\end{equation}
+
+%
+%*******************************************************
+%*******************************************************
+
+

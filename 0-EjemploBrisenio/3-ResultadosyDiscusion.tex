@@ -1,0 +1,429 @@
+% !TeX root = ./0-PhD-Thesis-JLBG.tex
+\label{cap: resultados}
+
+This Section presents the results of the semi-analytical expressions that describe the spectral contribution of angular momentum transfer (AMT) in the interaction between a fast electron and a spherical nanoparticle (NP). Specifically, the spectral densities of the AMT are developed through the Fourier transform of the Maxwell stress tensor, expanding the cross terms of the electromagnetic fields, and calculating the integrals semi-analytically over a spherical surface $S$ enclosing the NP.
+
+It is important to note that to obtain the AMT from the semi-analytical expressions developed for the spectral contributions to the AMT, a numerical integration over the entire frequency space is required. For this purpose, the Gauss-Kronrod quadrature method will be used, which allows for the estimation of the numerical error incurred \cite{kahaner1989numerical}.
+
+\vspace{-0.6 cm}
+
+\section{Spectral Density of Angular Momentum Transfer}
+
+In \hyperref[cap: teoria metodos]{Section} \ref{cap: teoria metodos}, an expression for the AMT from a fast electron to a spherical NP was obtained, given by Eq. \eqref{eq: densidad espectral momento angular},
+%
+\begin{equation}
+\Delta \vv{L} = \intwo{\vv{\mathcal{L}}\var{\w}}. \nonumber
+\end{equation}
+%
+where the spectral density of angular momentum is defined in Eq. \eqref{Eq: spectral density AMT}
+%
+\begin{equation}
+\mathcal{L}_i\var{\w} = \frac{1}{\pi} \oint_S \epsilon_{i}^{\,\,\,\, lj} r_l \mathcal{T}_{jk}\varsw n^k\,dS, \nonumber
+\end{equation}
+%
+so that the components of the AMT are given by
+\begin{equation}
+\color{cyan}
+\mathcal{L}_y = \frac{R^3}{\pi}\int_0^{\pi}\int_0^{2\pi} \sin\theta \Var{\cos\varphi \,\mathcal{T}_{\theta r} - \cos\theta\sin\varphi\,\mathcal{T}_{\varphi r}} \,d\varphi \, d\theta, \label{eq: Ly spectral integral angles} \footnote{The term $\color{cyan} y$ is highlighted in $\color{cyan} \rm cyan$ because it is the only non-vanishing term, as will be demonstrated later. This color coding will be consistently applied to emphasize non-vanishing terms for the reader's convenience.}
+\end{equation}
+%
+\begin{align}
+\mathcal{L}_x &= \frac{R^3}{\pi}\int_0^{\pi}\int_0^{2\pi} \sin\theta \Var{\sin\varphi \,\mathcal{T}_{\theta r} + \cos\theta\cos\varphi\,\mathcal{T}_{\varphi r}} \,d\varphi \, d\theta, \label{eq: Lx spectral integral angles}\\
+\mathcal{L}_z &= \frac{R^3}{\pi}\int_0^{\pi}\int_0^{2\pi} \sin^{2}\theta \, \mathcal{T}_{\varphi r} \,d\varphi \, d\theta, \label{eq: Lz spectral integral angles}
+\end{align}
+% 
+where 
+\begin{align}
+\mathcal{T}_{\theta r} &= {\rm Re}\Var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} E_{\theta}\varsw E_{r}^{*}\varsw + \frac{\mu_0}{\cgs{4\pi\mu_0}} H_{\theta}\varsw H_{r}^{*}\varsw  },\label{Eq: T theta r}\\
+\mathcal{T}_{\varphi r} &= {\rm Re}\Var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} E_{\varphi}\varsw E_{r}^{*}\varsw + \frac{\mu_0}{\cgs{4\pi\mu_0}} H_{\varphi}\varsw H_{r}^{*}\varsw  }. \label{Eq: T phi r}
+\end{align}
+%
+It is important to note that $E_i=E_i^{\rm ext}+E_i^{\rm scat}$ and $H_i=H_i^{\rm ext}+H_i^{\rm scat}$ can be separated, and the terms $E_{\alpha}(\omega) E_{r}^{*}(\omega)$ and $H_{\alpha}(\omega) H_{r}^{*}(\omega)$ can be expanded in terms of the multipolar sums expressed in Eqs. \eqref{Eq: multipolar ext E field}, \eqref{Eq: multipolar ext H field}, \eqref{Eq: multipolar scat E field}, and \eqref{Eq: multipolar scat H field}, as follows:
+%
+\begin{align}
+E^{\rm a}_{\alpha}\varsw E_{r}^{\rm b \,*}\varsw &= \sum_{\ell, m} \sum_{\ell^{\prime}, m^{\prime}} \mathscr{E}_{\ell, m}^{\text{a}\alpha}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*},\label{eq: cross terms E field}\\
+H^{\rm a}_{\alpha}\varsw H_{r}^{\rm b \,*}\varsw &= \sum_{\ell, m} \sum_{\ell^{\prime}, m^{\prime}} \mathscr{H}_{\ell, m}^{\text{a}\alpha}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*},\label{eq: cross terms H field}
+\end{align}
+where $a$ and $b$ can take the values ``$\rm scat$'' (denoting scattered field components) or ``$\rm ext$'' (external field components), and $\alpha$ corresponds to the projection in $\hat{\theta}$ or $\hat{\varphi}$.
+
+The term $\mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}$ is given by
+%
+\begin{align}
+\mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}= \, \Bigg\{&-C_{\ell,m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k r} m \frac{P_{\ell}^{m}P_{\ell^{\prime}}^{m^{\prime}}}{\sin\theta}-D_{\ell, m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k r}\nonumber\\
+& \times \Var{(\ell+1) \frac{P_{\ell}^m P_{\ell^{\prime}}^{m^{\prime}}\cos\theta}{\sin\theta}-(l-m+1)\frac{P_{\ell+1}^{m}P_{\ell^{\prime}}^{m^{\prime}}}{\sin\theta}}\Bigg\}\ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi },
+\end{align}
+%
+where $k=\omega/c$, $P_{\ell}^{m}$ is the associated Legendre function of degree $\ell$ and order $m$, the coefficients $C_{\ell, m}^{a}$ and $D_{\ell, m}^{a}$ are defined in Eqs. \eqref{Eq: C ext l,m}, \eqref{Eq: D ext l,m}, \eqref{Eq: C scat l,m} and \eqref{Eq: D scat l,m}, $Z_{\ell}^{\rm s}=h_{\ell}^{+}(k r)$ for the scattered field, and $Z_{\ell}^{\rm e}=j_{\ell}(k r)$ for the external field, and we have defined:
+%
+\begin{equation}
+f_{\ell}^{\rm a}= \var{\ell + 1} \frac{Z_{\ell}^{\rm a}}{k r}-Z_{\ell+1}^{\rm a}.
+\end{equation}
+%
+Similarly, the term $\mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}$ can be written as
+%
+\begin{align}
+\mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}= \, \Bigg\{& D_{\ell,m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k r} m \frac{P_{\ell}^{m}P_{\ell^{\prime}}^{m^{\prime}}}{\sin\theta}-C_{\ell, m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k r}\nonumber\\
+& \times \Var{(\ell+1) \frac{P_{\ell}^m P_{\ell^{\prime}}^{m^{\prime}}\cos\theta}{\sin\theta}-(l-m+1)\frac{P_{\ell+1}^{m}P_{\ell^{\prime}}^{m^{\prime}}}{\sin\theta}}\Bigg\}\ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi }.
+\end{align}
+%
+Analogously, the term $\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}$ can be written as
+%
+\begin{align}
+\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} = \, \Bigg\{& C_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k r} \Var{\var{\ell +1} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m^{\prime}}\cos\theta}{\sin\theta} -\var{\ell - m +1}\frac{P_{\ell+1}^m P_{\ell^{\prime}}}{\sin\theta} }\nonumber\\
+& + D_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k r} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m^{\prime}}}{\sin\theta} \Bigg\} \, \rmi \, \ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi },
+\end{align}
+%
+and finally, the term $\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}$ can be written as
+%
+\begin{align}
+\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} = \, \Bigg\{& -D_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k r} \Var{\var{\ell +1} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m^{\prime}}\cos\theta}{\sin\theta} -\var{\ell - m +1}\frac{P_{\ell+1}^m P_{\ell^{\prime}}}{\sin\theta} }\nonumber\\
+& + C_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k r} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m^{\prime}}}{\sin\theta} \Bigg\} \, \rmi \, \ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi }.
+\end{align}
+
+To simplify the alegraic development, the variable change $x=\cos\theta$ is propoused, an the following recurrence relation is taken into account
+\begin{equation}
+ (1-x^2)\frac{dP_{\ell}^m}{dx} = (\ell+1) x P_{\ell}^{m}-(l-m+1)P_{\ell+1}^{m},
+\end{equation}
+and thus we can rewrite the following terms as 
+\begin{align}
+\mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}= \, \Bigg\{&-C_{\ell,m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k r} m \frac{P_{\ell}^{m}P_{\ell^{\prime}}^{m^{\prime}}}{\sqrt{1-x^2}}-D_{\ell, m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k r}\nonumber\\
+& \times \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx}\Bigg\}\ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi },\\
+\mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}= \, \Bigg\{& D_{\ell,m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k r} m \frac{P_{\ell}^{m}P_{\ell^{\prime}}^{m^{\prime}}}{\sqrt{1-x^2}}-C_{\ell, m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k r}\nonumber\\
+& \times \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx}\Bigg\}\ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi },\\
+\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} = \, \Bigg\{& C_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k r} \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx}\nonumber\\
+& + D_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k r} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m^{\prime}}}{\sqrt{1-x^2}} \Bigg\} \, \rmi \, \ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi },\\
+\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} = \, \Bigg\{& -D_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k r} \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx}\nonumber\\
+& + C_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k r} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m^{\prime}}}{\sqrt{1-x^2}} \Bigg\} \, \rmi \, \ell^{\prime}(\ell^{\prime}+1)  \rme^{\rmi (m-m^{\prime})\varphi }.
+\end{align}  
+
+%\section{Semi-analytical Calculation of Integrals Required for Angular Momentum Transfer}
+
+The integrals over $\varphi$ can be calculated considering that
+%
+\begin{align}
+\int_0^{2\pi} \rme^{\rmi (m-m^{\prime}) \varphi} \cos\varphi  \, d\varphi &= \pi \var{ \delta_{m+1, m^{\prime}} + \delta_{m-1, m^{\prime}} },\\
+\int_0^{2\pi} \rme^{\rmi (m-m^{\prime}) \varphi} \sin\varphi  \, d\varphi &= \rmi \pi \var{ \delta_{m-1, m^{\prime}} - \delta_{m+1, m^{\prime}} },
+\end{align}
+%
+where $\delta_{i,j}$ is the Kronecker delta. %To compute the integrals over $\theta$, the following quantities are defined:
+%
+%\begin{align}
+%IM_{\ell,\ell^{\prime}}^{m,m^{\prime}} &=\int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \,x \, dx, \\
+%IU_{\ell,\ell^{\prime}}^{m,m^{\prime}} &=\int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{dx}{\sqrt{1-x^2}}, \\
+%IV_{\ell,\ell^{\prime}}^{m,m^{\prime}} &=\int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x^2}{\sqrt{1-x^2}} \, dx, \\
+%IW_{\ell,\ell^{\prime}}^{m,m^{\prime}} &=\int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x}{\sqrt{1-x^2}} \, dx, 
+%\end{align}
+%
+%which can be calculated using Gaussian quadratures \cite{kahaner1989numerical}, providing exact results when used to integrate polynomials\footnote{It should be noted that only the associated Legendre functions $P_{\ell}^m$ of even order $m$ are polynomials due to the factor $(1-x^2)^{m/2}$ that accompanies them. Therefore, only integrals with even $m$ will be calculated exactly.}. For the particular case where only two associated Legendre functions are integrated, the orthogonality relation is used \cite{Abramowitz}
+%
+%\begin{equation}
+%\int_{-1}^{1} P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m}(x) \, dx = \Delta_{\ell \ell^{\prime}} \qquad \text{con} \qquad \Delta_{\ell \ell^{\prime}}= \frac{2(\ell+m)!}{(2\ell+1)(\ell-m)!} \delta_{\ell \ell^{\prime}}.
+%\end{equation}
+
+%\section{Angular Momentum Transfer}
+%
+To obtain the angular momentum transfer (AMT), it is necessary to integrate the spectral density $\mathcal{L}$ over the frequency space. To calculate the spectral density, the surface integrals over the spherical shell $S$ enclosing the NP must be solved [see Eqs. \eqref{eq: Lx spectral integral angles}-\eqref{eq: Lz spectral integral angles}]. Therefore, it is required to compute the surface integral of the components $\mathcal{T}_{\theta r}$ and $\mathcal{T}_{\varphi r}$, described in Eqs. \eqref{Eq: T theta r} and \eqref{Eq: T phi r}. By substituting Eqs. \eqref{eq: cross terms E field} and \eqref{eq: cross terms H field} into Eqs. \eqref{Eq: T theta r} and \eqref{Eq: T phi r}, we obtain
+%
+\begin{align}
+\mathcal{T}_{\theta r} &= \sum_{a,b}\sum_{\ell, m} \sum_{\ell^{\prime}, m^{\prime}} {\rm Re}\Var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} + \frac{\mu_0}{\cgs{4\pi\mu_0}} \mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}  }, \label{Eq: T theta t sum}\\
+\mathcal{T}_{\varphi r} &= \sum_{a,b}\sum_{\ell, m} \sum_{\ell^{\prime}, m^{\prime}} {\rm Re}\Var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} + \frac{\mu_0}{\cgs{4\pi\mu_0}} \mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}  }, \label{Eq: T phi t sum}
+\end{align}
+where the sum over $a, b$ considers the interactions $\mathcal{T}_{\rm ss}$, $\mathcal{T}_{\rm ee}$, $\mathcal{T}_{\rm es}$, and $\mathcal{T}_{\rm se}$, described in Eqs. \eqref{Eq: tensor de esfuerzos inicio 2}-\eqref{eq: tensor de esfuerzos final}.
+
+The integrals of the cross terms in the multipolar contribution to the electromagnetic fields' stress tensor $\tensa{\mathcal{T}}$, as shown in Eqs. \eqref{Eq: T theta t sum} and \eqref{Eq: T phi t sum}, can be written as
+%
+\begin{align}
+\int_{0}^{4\pi} \mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} \sin\varphi \, d\Omega =& 
+%
+\, \rmi \pi \var{ \delta_{m-1, m^{\prime}} - \delta_{m+1, m^{\prime}} } \Bigg\{-C_{\ell,m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k R} m \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{dx}{\sqrt{1-x^2}} \nonumber \\
+%
+&-D_{\ell, m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k R}   \int_{-1}^1 \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \Bigg\}\ell^{\prime}(\ell^{\prime}+1),\\
+%
+%
+\int_{0}^{4\pi} \mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} \sin\varphi \, d\Omega =& 
+%
+\, \rmi \pi \var{ \delta_{m-1, m^{\prime}} - \delta_{m+1, m^{\prime}} } \Bigg\{D_{\ell,m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k R} m \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{dx}{\sqrt{1-x^2}} \nonumber \\
+%
+&-C_{\ell, m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k R} 
+%
+\int_{-1}^1 \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \Bigg\}\ell^{\prime}(\ell^{\prime}+1),\\
+%
+%
+%
+%
+\color{cyan}\int_{0}^{4\pi} \mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} \cos\varphi \, d\Omega =& 
+%
+\color{cyan}\, \pi \var{ \delta_{m-1, m^{\prime}} + \delta_{m+1, m^{\prime}} } \Bigg\{-C_{\ell,m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k R} m \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{dx}{\sqrt{1-x^2}}\nonumber \\
+%
+&\color{cyan}-D_{\ell, m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k R} 
+%
+\int_{-1}^1 \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \Bigg\}\ell^{\prime}(\ell^{\prime}+1),\\
+%
+%
+%
+\color{cyan}\int_{0}^{4\pi} \mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} \cos\varphi \, d\Omega =& 
+%
+\color{cyan}\, \pi \var{ \delta_{m-1, m^{\prime}} + \delta_{m+1, m^{\prime}} } \Bigg\{D_{\ell,m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k R} m \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{dx}{\sqrt{1-x^2}}\nonumber \\
+%
+&\color{cyan}-C_{\ell, m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k R} 
+%
+\int_{-1}^1 \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \Bigg\}\ell^{\prime}(\ell^{\prime}+1),
+\end{align}
+\vspace{-0.8cm}
+\begin{align}
+%
+%
+%
+%
+\color{cyan}\int_0^{4\pi}\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\cos\theta\sin\varphi \, d\Omega
+%
+ =&\color{cyan} \, - \pi \var{ \delta_{m-1, m^{\prime}} - \delta_{m+1, m^{\prime}} } \Bigg\{ C_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^1 x \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \nonumber \\ &
+%
+ \color{cyan}+ D_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x}{\sqrt{1-x^2}} \, dx \Bigg\} \, \ell^{\prime}(\ell^{\prime}+1), \\ 
+%
+%
+% 
+\color{cyan}\int_0^{4\pi}\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\cos\theta\sin\varphi \, d\Omega
+%
+ =&\color{cyan} \, - \pi \var{ \delta_{m-1, m^{\prime}} - \delta_{m+1, m^{\prime}} } \Bigg\{ -D_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^1 x \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \nonumber \\ &
+%
+\color{cyan} + C_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x}{\sqrt{1-x^2}} \, dx \Bigg\} \, \ell^{\prime}(\ell^{\prime}+1),  
+% 
+%
+\end{align}
+\vspace{-0.8cm}
+\begin{align}
+%
+%
+\int_0^{4\pi}\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\cos\theta\cos\varphi \, d\Omega
+%
+ =& \, \rmi \, \pi \var{ \delta_{m-1, m^{\prime}} + \delta_{m+1, m^{\prime}} } \Bigg\{ C_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^1 x \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \nonumber \\ &
+%
+ + D_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x}{\sqrt{1-x^2}} \, dx \Bigg\}\, \ell^{\prime}(\ell^{\prime}+1),\\
+%
+%
+\int_0^{4\pi}\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\cos\theta\cos\varphi \, d\Omega
+%
+ =& \, \rmi \, \pi \var{ \delta_{m-1, m^{\prime}} + \delta_{m+1, m^{\prime}} } \Bigg\{ -D_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^1 x \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \nonumber \\ &
+%
+ + C_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x}{\sqrt{1-x^2}} \, dx \Bigg\}\, \ell^{\prime}(\ell^{\prime}+1),\\
+% 
+%
+%
+%
+\int_0^{4\pi}\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\sin\theta \, d\Omega
+%
+ =& \, \rmi \, 2\pi \, \delta_{m m^{\prime}} \Bigg\{ C_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^{1} (1-x^2) P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \, dx \nonumber \\ &
+%
++ D_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \Delta_{\ell \ell^{\prime}} \Bigg\} \, \ell^{\prime}(\ell^{\prime}+1),\\
+%
+%
+\int_0^{4\pi}\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\sin\theta \, d\Omega
+%
+ =& \, \rmi \, 2\pi \, \delta_{m m^{\prime}} \Bigg\{ -D_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^{1} (1-x^2) P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \, dx \nonumber \\ &
+%
++ C_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \Delta_{\ell \ell^{\prime}} \Bigg\} \, \ell^{\prime}(\ell^{\prime}+1).
+\end{align}
+For the particular case where only two associated Legendre functions are integrated, the orthogonality relation is used \cite{Abramowitz}
+%
+\begin{equation}
+\int_{-1}^{1} P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m}(x) \, dx = \Delta_{\ell \ell^{\prime}} \qquad \text{where} \qquad \Delta_{\ell \ell^{\prime}}= \frac{2(\ell+m)!}{(2\ell+1)(\ell-m)!} \delta_{\ell \ell^{\prime}},
+\end{equation}
+%
+and defining the following quantities
+%
+\begin{align}
+IS_{\ell m \ell^{\prime} m^{\prime}}^{\rm a \theta b r} 
+=& \, \frac{R^3}{\pi} \int_{0}^{4\pi} {\rm Re}\var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}}\mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} + \frac{\mu_0}{\cgs{4\pi\mu_0}}\mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} } \sin\varphi \, d\Omega = 0 ,
+\\
+%
+%
+%
+\color{cyan}IC_{\ell m \ell^{\prime} m^{\prime}}^{\rm a \theta b r} 
+=&\color{cyan} \, \frac{R^3}{\pi} \int_{0}^{4\pi} {\rm Re}\var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}}\mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} + \frac{\mu_0}{\cgs{4\pi\mu_0}}\mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} } \cos\varphi \, d\Omega,\\
+%
+%
+% 
+\color{cyan}ICS_{\ell m \ell^{\prime} m^{\prime}}^{\rm a \varphi b r}
+=& \color{cyan}\, \frac{R^3}{\pi} \int_0^{4\pi} {\rm Re}\var{ \frac{\epsilon_0}{\cgs{4\pi\epsilon_0}} \mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} + \frac{\mu_0}{\cgs{4\pi\mu_0}} \mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}}\cos\theta\sin\varphi \, d\Omega,  
+%
+\end{align}
+\vspace{-0.8cm}
+\begin{align}
+%
+ICC_{\ell m \ell^{\prime} m^{\prime}}^{\rm a \varphi b r}
+ =& \, \frac{R^3}{\pi} \int_0^{4\pi}{\rm Re}\var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}}\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} + \frac{\mu_0}{\cgs{4\pi\mu_0}}\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}}\cos\theta\cos\varphi \, d\Omega = 0 , \\
+%
+%
+%
+IS_{\ell m \ell^{\prime} m^{\prime}}^{\rm a \varphi b r}
+ =& \, \frac{R^3}{\pi} \int_0^{4\pi}{\rm Re}\var{\frac{\epsilon_0}{\cgs{4\pi\epsilon_0}}\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} + \frac{\mu_0}{\cgs{4\pi\mu_0}}\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}}\sin\theta \, d\Omega = 0 ,
+\end{align}
+\vspace{-0.3 cm}
+the Eqs. \eqref{eq: Ly spectral integral angles}, \eqref{eq: Lx spectral integral angles} and \eqref{eq: Lz spectral integral angles} can be rewritten as
+%
+\begin{align}
+\mathcal{L}_x &= 
+0, \label{eq: Lx spectral integral angles solved} \\
+% 
+\color{cyan}\mathcal{L}_y &= 
+\color{cyan}\sum_{\ell, m} \sum_{\ell^{\prime}, m^{\prime}}
+\var{IC_{\ell m \ell^{\prime} m^{\prime}}^{\rm a \theta b r} - 
+ICS_{\ell m \ell^{\prime} m^{\prime}}^{\rm a \varphi b r}}, \label{eq: Ly spectral integral angles solved} \\
+%
+\mathcal{L}_z &= 
+0, \label{eq: Lz spectral integral angles solved}
+\end{align}
+%
+by  taking the real part of the functions of interest and recognizing the purely imaginary contributions of the $x$ and $z$ components, we find that only the $y$ component contributes to the spectral density of the angular momentum transfer. This result aligns with the previously stated fact that, due to the symmetry of the problem, the $y$ component is the only non-zero component of the angular momentum transfer.
+
+Therefore, the following discussion will only develop the terms related to the $y$ component of the angular momentum transfer which are
+\begin{align}
+\color{cyan}\int_{0}^{4\pi} \mathscr{E}_{\ell, m}^{\text{a}\theta}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} \cos\varphi \, d\Omega =& 
+%
+\color{cyan}\, \pi \var{ \delta_{m-1, m^{\prime}} + \delta_{m+1, m^{\prime}} } \Bigg\{-C_{\ell,m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k R} m \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{dx}{\sqrt{1-x^2}}\nonumber \\
+%
+&\color{cyan}-D_{\ell, m}^{\rm a}D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k R} 
+%
+\color{cyan}\int_{-1}^1 \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \Bigg\}\ell^{\prime}(\ell^{\prime}+1),\\
+%
+%
+\color{cyan}\int_{0}^{4\pi} \mathscr{H}_{\ell, m}^{\text{a}\theta}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*} \cos\varphi \, d\Omega =& 
+%
+\color{cyan}\, \pi \var{ \delta_{m-1, m^{\prime}} + \delta_{m+1, m^{\prime}} } \Bigg\{D_{\ell,m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *}\frac{Z_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b\, *}}{k R} m \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{dx}{\sqrt{1-x^2}}\nonumber \\
+%
+&\color{cyan}-C_{\ell, m}^{\rm a}C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{f_{\ell}^{\rm a}Z_{\ell^{\prime}}^{\rm b \, *}}{k R} 
+%
+\color{cyan}\int_{-1}^1 \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \Bigg\}\ell^{\prime}(\ell^{\prime}+1),\\
+%
+%
+%
+%
+\color{cyan}\int_0^{4\pi}\mathscr{E}_{\ell, m}^{\text{a}\varphi}\mathscr{E}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\cos\theta\sin\varphi \, d\Omega
+%
+ =&\color{cyan} \, - \pi \var{ \delta_{m-1, m^{\prime}} - \delta_{m+1, m^{\prime}} } \Bigg\{ C_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^1 x \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \nonumber \\ &
+%
+ \color{cyan}+ D_{\ell, m}^{\rm a} D_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x}{\sqrt{1-x^2}} \, dx \Bigg\} \, \ell^{\prime}(\ell^{\prime}+1), \\ 
+%
+%
+% 
+\color{cyan}\int_0^{4\pi}\mathscr{H}_{\ell, m}^{\text{a}\varphi}\mathscr{H}_{\ell^{\prime}, m^{\prime}}^{\text{br}\,*}\cos\theta\sin\varphi \, d\Omega
+%
+ =& \color{cyan}\, - \pi \var{ \delta_{m-1, m^{\prime}} - \delta_{m+1, m^{\prime}} } \Bigg\{ -D_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} \frac{Z_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b \, *}}{k R} \int_{-1}^1 x \sqrt{1-x^2} P_{\ell^{\prime}}^{m^{\prime}} \frac{dP_{\ell}^m}{dx} \,dx \nonumber \\ &
+%
+ \color{cyan}+ C_{\ell, m}^{\rm a} C_{\ell^{\prime}, m^{\prime}}^{\rm b \, *} m \frac{f_{\ell}^{\rm a} Z_{\ell^{\prime}}^{\rm b\, *}}{k R} \int_{-1}^1 P_{\ell}^{m}(x) P_{\ell^{\prime}}^{m^{\prime}}(x) \, \frac{x}{\sqrt{1-x^2}} \, dx \Bigg\} \, \ell^{\prime}(\ell^{\prime}+1).  
+% 
+%
+\end{align}
+
+%\section{Analytical Solutions of the Spectral Density Integrals}
+Analytical solutions for the integral equation \eqref{eq: Ly spectral integral angles solved} can be calculated using the following recurence relationships
+
+\begin{align}
+\sqrt{1-x^2} P_{\ell}^{m} (x) &= \frac{1}{2\ell +1}\left[ P_{\ell-1}^{m+1}(x)-P_{\ell+1}^{m+1}(x)\right], 
+\end{align}
+
+\begin{align}
+    \sqrt{1-x^2} P_{\ell}^{m} (x) &= \frac{1}{2\ell +1}[ (\ell-m+1)(\ell-m+2)P_{\ell+1}^{m-1}(x) \nonumber\\
+    &-(\ell+m-1)(\ell+m)P_{\ell-1}^{m-1}(x)], \\
+    \sqrt{1-x^2} P_{\ell}^{m-1} (x) &= \frac{1}{2\ell +1}\left[ P_{\ell-1}^{m}(x)-P_{\ell+1}^{m}(x)\right], \\
+    \sqrt{1-x^2} P_{\ell}^{m+1} (x) &= \frac{1}{2\ell +1}[ (\ell-m)(\ell-m+1)P_{\ell+1}^{m}(x) \nonumber\\
+    &-(\ell+m)(\ell+m+1)P_{\ell-1}^{m}(x)],
+\end{align}
+so it can be written that
+\begin{align}
+    \sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m+1} (x) &= \frac{1}{2\ell^{\prime} +1}[ (\ell^{\prime}-m)(\ell^{\prime}-m+1)\,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}+1}^{m}(x) \nonumber\\
+    &-(\ell^{\prime}+m)(\ell^{\prime}+m+1)\,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}-1}^{m}(x)], \\
+    \sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m-1} (x) &= \frac{1}{2\ell^{\prime} +1}\left[ \,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}-1}^{m}(x)-\,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}+1}^{m}(x)\right], 
+\end{align}
+where it has been considered that the sum over $\ell$ is performed first, and then one performs the sum over $\ell^{\prime}$ because that is how the code has been implemented. This ordering is arbitrary and could be reversed in another implementation without affecting the final result. Thus, it is always satisfied that $\ell \ge \ell^{\prime}$, which helps to simplify the expressions.
+
+\subsection{Case $m^{\prime}= m +1$ with positive $m$}
+
+\begin{align}
+    \int_{-1}^{1} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m+1}}{\sqrt{1-x^2}} dx &= 0, \\
+    %\int_{-1}^{1} \frac{dP^{m}_{\ell}}{dx} P_{\ell^{\prime}+1}^{m} dx &= \left[ \delta_{m,0} + \frac{(\ell^{\prime}+1+m)!}{(\ell^{\prime}+1-m)!}\right] \delta_{\ell^{\prime}, \ell-2n-2} \quad \text{si} \,\ell^{\prime}+1<\ell\\
+    %\int_{-1}^{1} \frac{dP^{m}_{\ell}}{dx} P_{\ell^{\prime}+1}^{m} dx &= \left[ \delta_{m,0} - \frac{(\ell+m)!}{(\ell-m)!}\right] \delta_{\ell^{\prime}, \ell+2n} \quad \text{si} \,\ell^{\prime}+1>\ell\\
+    %\int_{-1}^{1} \frac{dP^{m}_{\ell}}{dx} P_{\ell^{\prime}-1}^{m} dx &= \left[ \delta_{m,0} + \frac{(\ell^{\prime}-1+m)!}{(\ell^{\prime}-1-m)!}\right] \delta_{\ell^{\prime}, \ell-2n} \\
+    %\int_{-1}^{1} \sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m+1} (x) &= \frac{\delta_{\ell,\ell^{\prime}}}{2\ell+1} \Big\{(\ell-m)(\ell-m+1)(\delta_{m,0}-\frac{(\ell+m)!}{(\ell-m)!})\nonumber\\
+    %&-(\ell+m)(\ell+m+1)(\delta_{m,0}+\frac{(\ell-1+m)!}{(\ell-1-m)!})\Big\}\\
+    %&\text{DEMOSTRAR LO DE ARRIBA CON} \nonumber\\
+    %&\text{LAS TRES QUE ESTÁN SOBRE ELLA}\nonumber\\
+    \int_{-1}^{1} \sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m+1} (x) &= -2\frac{(\ell+1)(\ell+m)!}{(2\ell+1)(\ell-m-1)!}\delta_{\ell,\ell^{\prime}},\\
+    %\int_{-1}^{1} x \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m+1}}{\sqrt{1-x^2}} dx &=  \frac{1}{2\ell^{\prime} +1}\int_{-1}^{1} x \frac{P_{\ell}^{m}}{1-x^2} [ (\ell^{\prime}-m)(\ell^{\prime}-m+1)P_{\ell^{\prime}+1}^{m}(x) \nonumber\\
+    %&-(\ell^{\prime}+m)(\ell^{\prime}+m+1)P_{\ell^{\prime}-1}^{m}(x)] dx \nonumber \\
+    %&=  \frac{1}{2\ell^{\prime} +1} \Big[ (\ell^{\prime}-m)(\ell^{\prime}-m+1) \frac{(\ell_{\text{min}}+m)!}{m(\ell_{\text{min}}-m)!} \delta_{\text{m-m}} \nonumber\\
+    %&-(\ell^{\prime}+m)(\ell^{\prime}+m+1) \frac{(\ell^{\prime}-1+m)!}{m(\ell^{\prime}-1-m)!} \delta_{\ell,\ell^{\prime}+2n} \Big]  \\
+    \int_{-1}^{1} x \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m+1}}{\sqrt{1-x^2}} dx &= -2\frac{(\ell+m)!}{(2\ell+1)(\ell-m-1)!}\delta_{\ell,\ell^{\prime}},\\
+    %\int_{-1}^{1} x \frac{dP^{m}_{\ell}}{dx} P_{\ell^{\prime}+1}^{m} dx &= \left[ \delta_{m,0} - \frac{(\ell+m)!}{(2\ell+1)(\ell-m)!}\right] \delta_{\ell^{\prime}+1, \ell} \\
+    %\int_{-1}^{1} x \frac{dP^{m}_{\ell}}{dx} P_{\ell^{\prime}-1}^{m} dx &= \left[ \delta_{m,0} - \frac{(\ell+m)!}{(2\ell+1)(\ell-m)!}\right] \delta_{\ell^{\prime}-1, \ell} \\
+    %\int_{-1}^{1} x \frac{dP^{m}_{\ell}}{dx} P_{\ell^{\prime}-1}^{m} dx &= \left[ \delta_{m,0} + \frac{(\ell^{\prime}-1+m)!}{(\ell^{\prime}-1-m)!}\right] \delta_{\ell^{\prime}-1+2n, \ell} \\
+    \int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m+1} (x) &= -2\delta_{\ell^{\prime}+1,\ell}\frac{(\ell+1)(\ell+m)!}{(2\ell+1)(2\ell^{\prime}+1)(\ell^{\prime}-m-1)!}.
+\end{align}
+%donde $\ell_{\text{min}} = \text{min}(\ell,\ell^{\prime}+1)$, $\ell_{\text{max}} = \text{max}(\ell,\ell^{\prime}+1)$ y $\delta_{\text{m-m}}=\delta_{\ell_{\text{max}},\ell_{\text{min}}+2n+1}$.
+%\sqrt{1-x^2} P_{\ell}^{m+1} (x) &= \frac{1}{2\ell +1}[ (\ell-m)(\ell-m+1)P_{\ell+1}^{m}(x) \nonumber\\
+%    &-(\ell+m)(\ell+m+1)P_{\ell-1}^{m}(x)]
+\subsection{Case $m^{\prime}= m +1$ with negative $m$} %\footnote{Signo menos diferente al de Samaddar}
+\begin{align}
+    \int_{-1}^{1} \frac{P_{\ell}^{-|m|} P_{\ell^{\prime}}^{-|m|+1}}{\sqrt{1-x^2}} dx &= \int_{-1}^{1} \frac{P_{\ell}^{-|m|} P_{\ell^{\prime}}^{-(|m|-1)}}{\sqrt{1-x^2}} dx \nonumber \\
+    &= \int_{-1}^{1} (-1)^|m| \frac{(l-|m|)!}{(l+|m|)!} P_{\ell}^{|m|} (-1)^{|m|-1} \frac{(l^{\prime}-m+1)!}{(l^{\prime}+m-1)!} P_{\ell^{\prime}}^{|m|-1} \frac{1}{\sqrt{1-x^2}} dx \nonumber\\
+    &= - \frac{(l-|m|)!}{(l+|m|)!} \frac{(l^{\prime}-|m|+1)!}{(l^{\prime}+|m|-1)!}  \int_{-1}^{1}   P_{\ell}^{|m|} P_{\ell^{\prime}}^{|m|-1} \frac{1}{\sqrt{1-x^2}} dx \nonumber
+        \end{align}
+\begin{align}
+    %&= \frac{(l-|m|)!}{(l+|m|)!} \frac{(l^{\prime}-|m|+1)!}{(l^{\prime}+|m|-1)!}  2\frac{(\ell^{\prime}+|m|-1)!}{(\ell^{\prime}-|m|+1)!} \delta_{\ell^{\prime},\ell-2n+1} \nonumber\\
+    &= 2\frac{(l-|m|)!}{(l+|m|)!} \delta_{\ell^{\prime},\ell-2n+1} =2\frac{(l+m)!}{(l-m)!} \delta_{\ell^{\prime},\ell-2n+1},
+\end{align}
+if we define $\alpha_{\ell,m}^{\ell^{\prime},m^{\prime}}=- \Big[(l-m)!\Big/(l+m)!\Big] \Big[ (l^{\prime}-m+1)!\Big/(l^{\prime}+m-1)!\Big]$
+\begin{align}
+    \int_{-1}^{1} \sqrt{1-x^2} \,\frac{dP_{\ell}^{-|m|}}{dx} P_{\ell^{\prime}}^{-|m|+1} (x) &= \alpha_{\ell,|m|}^{\ell^{\prime},|m|^{\prime}}\int_{-1}^{1} \sqrt{1-x^2} \,\frac{dP_{\ell}^{|m|}}{dx} P_{\ell^{\prime}}^{|m|-1} (x) \nonumber\\
+    %\int_{-1}^{1} \frac{dP^{m}_{\ell}}{dx} P_{\ell^{\prime}+1}^{m} dx &= \left[ \delta_{|m|,0} + \frac{(\ell^{\prime}+1+m)!}{(\ell^{\prime}+1-|m|)!}\right] \delta_{\ell^{\prime}, \ell-2n-2} \quad \text{si} \,\ell^{\prime}+1<\ell\\
+    %\int_{-1}^{1} \frac{dP^{|m|}_{\ell}}{dx} P_{\ell^{\prime}+1}^{|m|} dx &= \left[ \delta_{|m|,0} - \frac{(\ell+|m|)!}{(\ell-|m|)!}\right] \delta_{\ell^{\prime}, \ell+2n} \quad \text{si} \,\ell^{\prime}+1>\ell\\
+    %\int_{-1}^{1} \frac{dP^{|m|}_{\ell}}{dx} P_{\ell^{\prime}-1}^{|m|} dx &= \left[ \delta_{|m|,0} + \frac{(\ell^{\prime}-1+|m|)!}{(\ell^{\prime}-1-|m|)!}\right] \delta_{\ell^{\prime}, \ell-2n} \\
+     &= 2m\frac{(l-|m|)!}{(l+|m|)!}\delta_{\ell^{\prime},\ell-2n-2} -\frac{2l}{2l+1}\frac{(l-|m|+1)!}{(l+|m|)!}\delta_{\ell^{\prime},\ell},\\
+    %&\text{DEMOSTRAR LO DE ARRIBA CON} \nonumber\\
+    %&\text{LAS TRES QUE ESTÁN SOBRE ELLA}\nonumber\\
+    %\int_{-1}^{1} x \frac{P_{\ell}^{|m|} P_{\ell^{\prime}}^{|m|+1}}{\sqrt{1-x^2}} dx &=  \frac{1}{2\ell^{\prime} +1}\int_{-1}^{1} x \frac{P_{\ell}^{|m|}}{1-x^2} [ (\ell^{\prime}-|m|)(\ell^{\prime}-|m|+1)P_{\ell^{\prime}+1}^{m}(x) \nonumber\\
+    %&-(\ell^{\prime}+|m|)(\ell^{\prime}+|m|+1)P_{\ell^{\prime}-1}^{|m|}(x)] dx \nonumber \\
+    %&=  \frac{1}{2\ell^{\prime} +1} \Big[ (\ell^{\prime}-m)(\ell^{\prime}-m+1) \frac{(\ell_{\text{min}}+m)!}{m(\ell_{\text{min}}-m)!} \delta_{\text{m-m}} \nonumber\\
+    %&-(\ell^{\prime}+m)(\ell^{\prime}+m+1) \frac{(\ell^{\prime}-1+m)!}{m(\ell^{\prime}-1-m)!} \delta_{\ell,\ell^{\prime}+2n} \Big]  \\
+    %\int_{-1}^{1} x \frac{P_{\ell}^{-m} P_{\ell^{\prime}}^{-m+1}}{\sqrt{1-x^2}} dx &= \alpha_{\ell,m}^{\ell^{\prime},m^{\prime}}\int_{-1}^{1} x \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m-1}}{\sqrt{1-x^2}} dx\\
+    %&= \frac{\alpha_{\ell,m}^{\ell^{\prime},m^{\prime}}}{2\ell^{\prime} +1}\int_{-1}^{1}\frac{x}{1-x^2} P_{\ell}^{m} (x) \Big[ P_{\ell^{\prime}-1}^{m}(x)\\&-P_{\ell^{\prime}+1}^{m}(x)\Big]
+    \int_{-1}^{1} x \frac{P_{\ell}^{-|m|} P_{\ell^{\prime}}^{-|m|+1}}{\sqrt{1-x^2}} dx &= 2 \frac{(l-|m|)!}{(l+|m|)!}\delta_{\ell,\ell^{\prime}+2n+2}+\frac{2}{2\ell+1}\frac{(\ell-|m|+1)!}{(l+|m|)!}\delta_{\ell,\ell^{\prime}},\\
+    %\int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{-m}}{dx} P_{\ell^{\prime}}^{-m+1} (x) &= \alpha_{\ell,m}^{\ell^{\prime},m^{\prime}} \int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m-1} dx\\
+   % \alpha_{\ell,m}^{\ell^{\prime},m^{\prime}} \int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m-1} (x) dx &= \alpha_{\ell,m}^{\ell^{\prime},m^{\prime}} \int_{-1}^{1} x\frac{1}{2\ell^{\prime} +1}\left[ \,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}-1}^{m}(x)-\,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}+1}^{m}(x)\right] dx
+   %\int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{-m}}{dx} P_{\ell^{\prime}}^{-m+1} (x) &= -\frac{1}{2\ell^{\prime}+1}\frac{(\ell-m)!}{(\ell+m)!} \Big[(\ell^{\prime}-m)(\ell^{\prime}-m+1)\delta_{\ell,\ell^{\prime}+2 n-1}\nonumber\\
+   %&+\frac{(\ell+m)(\ell+m-1)}{(2\ell+1)}\delta_{\ell,\ell^{\prime}+1}\nonumber \\
+   %&-(\ell^{\prime}+m+1)(\ell^{\prime}+m)\delta_{\ell,\ell^{\prime}+ 2n_1 +1}\Big]
+   \int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{-|m|}}{dx} P_{\ell^{\prime}}^{-|m|+1} (x) &= -\frac{1}{2\ell^{\prime}+1}\frac{(\ell-|m|)!}{(\ell+|m|)!} \Big\{\Big[(\ell^{\prime}-|m|)(\ell^{\prime}-|m|+1)-\nonumber\\
+   -(\ell^{\prime}+|m|+1)(\ell^{\prime}+|m|)\Big]\delta_{\ell,\ell^{\prime}+ 2n_1 +1} &+\Big[(\ell-|m|)(\ell^{\prime}-|m|)+\frac{(\ell+|m|)(\ell+|m|-1)}{(2\ell+1)}\Big]\delta_{\ell,\ell^{\prime}+1} \Big\},
+\end{align}
+where $n$ could take any value in $\mathbb{N}$ for which $\ell \geq \ell^{\prime} \geq 0$.  
+\subsection{Case $m^{\prime}= m - 1$ with positive $m$}
+\begin{align}
+    \int_{-1}^{1} \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m-1}}{\sqrt{1-x^2}} dx &= \int_{-1}^{1} \frac{P_{\ell}^{m'+1} P_{\ell^{\prime}}^{m'}}{\sqrt{1-x^2}} dx = -2\frac{(\ell^{\prime}+m^{\prime})!}{(\ell^{\prime}-m^{\prime})!} \delta_{\ell^{\prime}, \ell - 2n -1},\\
+    %\int_{-1}^{1} \sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m-1} (x) &= \frac{1}{2\ell^{\prime} +1}\int_{-1}^{1}dx\left[ \,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}-1}^{m}(x)-\,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}+1}^{m}(x)\right]\\
+    \int_{-1}^{1} \sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m-1} (x) &= \frac{(\ell^{\prime}-1+m)!}{(\ell^{\prime}+1-m)!}\Big[\frac{2\ell^{\prime}}{2\ell^{\prime}+1}(\ell^{\prime}-m+1)\delta_{\ell,\ell^{\prime}} \nonumber\\
+    &-2m \delta_{\ell,\ell^{\prime}+2n+2}\Big],\\
+    %\int_{-1}^{1} x \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m-1}}{\sqrt{1-x^2}} dx &= \frac{1}{2\ell^{\prime} +1}\int_{-1}^{1}x \frac{P_{\ell}^{m}}{1-x^2}\left[ P_{\ell^{\prime}-1}^{m}(x)-P_{\ell^{\prime}+1}^{m}(x)\right] \\
+    \int_{-1}^{1} x \frac{P_{\ell}^{m} P_{\ell^{\prime}}^{m-1}}{\sqrt{1-x^2}} dx &=  -\frac{2(\ell^{\prime}+m-1)!}{(2\ell^{\prime}+1)(\ell^{\prime}-m)!}\delta_{\ell,\ell^{\prime}}-\frac{2(\ell^{\prime}+m-1)!}{(\ell^{\prime}-m+1)!}\delta_{\ell,\ell^{\prime}+2n+2},\\
+    %\int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m-1} (x) &= \frac{1}{2\ell^{\prime} +1}\int_{-1}^{1}x\left[ \,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}-1}^{m}(x)-\,\frac{dP_{\ell}^{m}}{dx}P_{\ell^{\prime}+1}^{m}(x)\right]
+    \int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{m}}{dx} P_{\ell^{\prime}}^{m-1} (x) &= \frac{(\ell^{\prime}+m-1)!}{(\ell^{\prime}-m+1)!} \Big\{ -2m \delta_{\ell^{\prime},\ell-1-2n_1} \nonumber \\
+    & \frac{1}{2\ell^{\prime}+1}\left[(\ell^{\prime}-m)(\ell-m)+\frac{(\ell+1)(\ell^{\prime}+1)}{2\ell+1}\right] \delta_{\ell,\ell^{\prime}+1} \Big\},
+\end{align}
+where $n$ could take any value in $\mathbb{N}$ for which $\ell \geq \ell^{\prime} \geq 0$.
+\subsection{Case $m^{\prime}= m - 1$ with negative $m$}
+\begin{align}
+    &\int_{-1}^{1} \frac{P_{\ell}^{-|m|} P_{\ell^{\prime}}^{-|m|-1}}{\sqrt{1-x^2}} dx = \int_{-1}^{1} \frac{P_{\ell}^{-|m|} P_{\ell^{\prime}}^{-(|m|+1)}}{\sqrt{1-x^2}} dx \\
+    &= \int_{-1}^{1} (-1)^|m| \frac{(l-|m|)!}{(l+|m|)!} P_{\ell}^{|m|} (-1)^{|m|+1} \frac{(l^{\prime}-|m|-1)!}{(l^{\prime}+|m|+1)!} P_{\ell^{\prime}}^{|m|+1} \frac{1}{\sqrt{1-x^2}} dx \\
+    &= - \frac{(l-|m|)!}{(l+|m|)!} \frac{(l^{\prime}-|m|-1)!}{(l^{\prime}+|m|+1)!}  \int_{-1}^{1}   P_{\ell}^{|m|} P_{\ell^{\prime}}^{|m|+1} \frac{1}{\sqrt{1-x^2}} dx =0, 
+\end{align}
+\begin{align}
+    \int_{-1}^{1} \sqrt{1-x^2} \,\frac{dP_{\ell}^{|m|}}{dx} P_{\ell^{\prime}}^{|m|-1} (x) &= 2 \frac{(\ell-|m|)!}{(\ell+|m|+1)!}\frac{(\ell+1)}{(2\ell+1)}\delta_{\ell,\ell^{\prime}},\\
+    \int_{-1}^{1} x \frac{P_{\ell}^{|m|} P_{\ell^{\prime}}^{|m|-1}}{\sqrt{1-x^2}} dx &= \frac{(\ell-|m|)!}{(\ell+|m|+1)!}\frac{2}{2\ell+1}\delta_{\ell,\ell^{\prime}},\\
+     %\int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{-|m|}}{dx} P_{\ell^{\prime}}^{-|m|-1} (x) &= \alpha_{\ell,|m|}^{\ell^{\prime},|m|^{\prime}} \int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{|m|}}{dx} P_{\ell^{\prime}}^{|m|+1} (x) \\
+     %&= \frac{1}{2\ell^{\prime} +1} \int_{-1}^{1}\, dx \, x[ (\ell^{\prime}-|m|)(\ell^{\prime}-|m|+1)\,\frac{dP_{\ell}^{|m|}}{dx} P_{\ell^{\prime}+1}^{|m|}(x) \nonumber\\
+    %&-(\ell^{\prime}+|m|)(\ell^{\prime}+|m|+1)\,\frac{dP_{\ell}^{|m|}}{dx} P_{\ell^{\prime}-1}^{|m|}(x)] \\
+    \int_{-1}^{1} x\sqrt{1-x^2} \,\frac{dP_{\ell}^{-|m|}}{dx} P_{\ell^{\prime}}^{-|m|-1} (x) &= 2 \frac{(\ell-|m|)!}{(\ell+|m|)!}\frac{\ell+1}{(2\ell+1)(2\ell^{\prime}+1)} \delta_{\ell,\ell^{\prime}+1}.
+\end{align}
+
+These results provide a robust foundation for understanding the angular momentum transfer from swift electrons to spherical nanoparticles, forming the basis for further investigations into several material properties, as well as their potential applications in electron tweezers.
