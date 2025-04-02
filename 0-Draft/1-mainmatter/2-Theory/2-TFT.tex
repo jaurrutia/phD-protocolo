@@ -95,7 +95,7 @@ In general, when an electromagnetic plane wave with an angular frequency $\omega
 \label{eq:Wavevectors}
 \end{subequations}
 %
-where $\vu{e}_\perp = \vu{e}_z$. For an $s$ polarized electromagnetic plane wave [see Fig. \ref{sfig:sPol}], the electric field above and below the thin film is
+where $\vu{e}_\perp = \vu{e}_z$  and $c$ is the speed of light. For an $s$ polarized electromagnetic plane wave [see Fig. \ref{sfig:sPol}], the electric field above and below the thin film is
 %
 \begin{subequations}%
 \begin{align}
@@ -126,7 +126,7 @@ while for a $p$ polarized plane wave, the electric field is given by
 \end{align}\label{eq:EpTFT}
 \end{subequations}
 %
-where $E_\alpha^{(j)}$ is the magnitude of either the reflected ($\alpha\to$r) or transmitted ($\alpha\to$t) electric field considering the $j$ polarization state; for either case $E^\text{inc}$ is the magnitude of the incident electric field. Additionally, the incident $\vb{B}^\text{inc}(\vb{r})$ and reflected and transmitted magnetic fields $\vb{B}_\alpha^{(j)}(\vb{r})$ for both polarizations can be determined by substituing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Faraday-Lenz's Law, while the displacement field and the $H$ field are calculated via the general relations $\vb{D}=\varepsilon\vb{E}(\vb{r})$ and $\vb{H}(\vb{r})=\vb{B}(\vb{r})/\mu_0$ considered for each media. Prior calculation of the total polarization in the film $\vb{P}^\text{film}(\vb{r}_\parallel)$ it is noteworthy to show that forcing the the proposed electric fields in Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} to follow the boundary conditions in Eqs. \eqref{eq:generalBC} yields the continuity of the parallel component of the wave vector $\vb{k}_\parallel = (\omega/c)n_i\sin\theta_i \vu{e}_x= (\omega/c)n_t\sin\theta_t\vu{e}_x$, therefore stating that even with the presence of the thin film, the reflection and Snell's law are valid. Under this consideration, $\vb{P}^\text{film}(\vb{r}_\parallel)$ is obtained by introducing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Eq. \eqref{eq:P-TFT} yielding
+where $E_\xi^{(j)}$ is the magnitude of either the reflected ($\xi\to$r) or transmitted ($\xi\to$t) electric field considering the $j$ polarization state; for either case $E^\text{inc}$ is the magnitude of the incident electric field. Additionally, the incident $\vb{B}^\text{inc}(\vb{r})$ and reflected and transmitted magnetic fields $\vb{B}_\alpha^{(j)}(\vb{r})$ for both polarizations can be determined by substituing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Faraday-Lenz's Law, while the displacement field and the $H$ field are calculated via the general relations $\vb{D}=\varepsilon\vb{E}(\vb{r})$ and $\vb{H}(\vb{r})=\vb{B}(\vb{r})/\mu_0$ considered for each media. Prior calculation of the total polarization in the film $\vb{P}^\text{film}(\vb{r}_\parallel)$ it is noteworthy to show that forcing the the proposed electric fields in Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} to follow the boundary conditions in Eqs. \eqref{eq:generalBC} yields the continuity of the parallel component of the wave vector $\vb{k}_\parallel = (\omega/c)n_i\sin\theta_i \vu{e}_x= (\omega/c)n_t\sin\theta_t\vu{e}_x$, therefore stating that even with the presence of the thin film, the reflection and Snell's law are valid. Under this consideration, $\vb{P}^\text{film}(\vb{r}_\parallel)$ is obtained by introducing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Eq. \eqref{eq:P-TFT} yielding
 %
 \begin{subequations}%
 \begin{align}
@@ -152,51 +152,92 @@ for $s$ polarization and
 				\varepsilon_i\qty(E^\text{inc}+E_\text{r}^{(p)})\sin\theta_i 
 				+ \varepsilon_t E_\text{t}^{(p)} \sin\theta_t ] \exp(\vb{k}_\parallel\cdot\vb{r}),
 \end{align}
-\label{eq:Pfilms}
+\label{eq:Pfilmp}
 \end{subequations}
 %
 for $p$ polarization.
 
-As stated above, the TFT returns expressions for reflection and transmission amplitude coefficients. These coefficients are obtaind for an $s$ polarized incident plane wave by solving the  system of equations obtained by substituting Eqs. \eqref{eq:Wavevectors}, \eqref{eq:EsTFT} and \eqref{eq:Pfilms} into the boundary conditions in Eq. \eqref{eq:generalBC}, yielding
+As stated above, the TFT returns expressions for reflection and transmission amplitude coefficients. These coefficients are obtained for an $s$ polarized incident plane wave by solving the  system of equations obtained by substituting Eqs. \eqref{eq:Wavevectors}, \eqref{eq:EsTFT} and \eqref{eq:Pfilms} into the boundary conditions in Eq. \eqref{eq:generalBC}, yielding
 %
+\begin{subequations}%
 \begin{align}
 	E^\text{inc} + E^{(s)}_\text{r}  & =  E^{(s)}_\text{t}   ,\\
-	\qty(n_i\cos\theta_i+ \frac{i}{2}\frac{\omega}{c}\gama)E^\text{inc}
-	- \qty(n_i\cos\theta_i- \frac{i}{2}\frac{\omega}{c}\gama)E^{(s)}_\text{r}
-	&= \qty(n_t\cos\theta_t- \frac{i}{2}\frac{\omega}{c}\gama)E^{(s)}_\text{t},
+	\qty(n_i\cos\theta_i+ \frac{i}{2}\frac{\omega}{c}\gamma)E^\text{inc}
+	- \qty(n_i\cos\theta_i- \frac{i}{2}\frac{\omega}{c}\gamma)E^{(s)}_\text{r}
+	&= \qty(n_t\cos\theta_t- \frac{i}{2}\frac{\omega}{c}\gamma)E^{(s)}_\text{t}.
 \end{align}
+\label{eq:Systems}
+\end{subequations}
 %
 Analogously, the system of equations for a $p$ polarized incident plane wave obtained from Eqs. \eqref{eq:generalBC}, \eqref{eq:Wavevectors} \eqref{eq:EpTFT} and \eqref{eq:Pfilmp} is
 %
-%\begin{align}
-%	algo &= algo1.
-%\end{align}
-%
-
-
-
-
-
-
-point dipoles. The electromagnetic behavior of the metasurface is described through the susceptibilities $\gamma$ and $\beta$. Specifically, $\gamma=\rho\alpha_{\parallel}$ relates surface polarization parallel to the interface, while $\beta=\rho\alpha_\perp/\varepsilon_{s}^2$ relates surface polarization perpendicular to it. Here, $\alpha_{\parallel}$ and $\alpha_{\perp}$ denote the particle polarizabilities along their major and minor axes, respectively, and $\rho$ is the particle surface density. These expressions hold under the condition of identical non-interacting nanoparticles, i.e., in the low coverage limit (small $\rho$). The modified Fresnel coefficients can be formulated in terms of the surface susceptibilities $\gamma$ and $\beta$ as \cite{Bedeaux_Optical,Lazzari_GranFilm}
-%
+\begin{subequations}%
 \begin{align}
-	r_s = \frac{ n_i \cos\theta_i - n_t\cos\theta_t + i (\omega/c)\gamma }
-			   { n_i \cos\theta_i + n_t\cos\theta_t - i (\omega/c)\gamma },
-	\label{eq:rs} 
+			\qty(\cos\theta_i + ik_\parallel\frac{\beta}{2}\varepsilon_i\sin\theta_i)E^\text{inc} 
+			- \qty(\cos\theta_i - ik_\parallel\frac{\beta}{2}\varepsilon_i\sin\theta_i)E^{(p)}_\text{r}  
+			&= \qty(\cos\theta_t -ik_\parallel\frac{\beta}{2}\varepsilon_t\sin\theta_t) E^{(p)}_\text{t} ,\\
+%	
+			\qty(n_i + ik_\parallel\frac{\gamma}{2}\cos\theta_i)E^\text{inc} 
+			+ \qty(n_i - ik_\parallel\frac{\gamma}{2}\cos\theta_i)E^{(p)}_\text{r}  
+			&= \qty(n_t - ik_\parallel\frac{\gamma}{2}\cos\theta_t) E^{(p)}_\text{t} ,
 \end{align}
+\label{eq:Systemp}
+\end{subequations}
 %
+with $k_\parallel = (\omega/c)n_i\sin\theta_i =(\omega/c)n_t\sin\theta_t$. Thus, the reflection and transmission amplitude coefficients given by the solution to Eqs. \eqref{eq:Systems} for $\xi ^{(s)}_\text{TFT} = E_\xi^{(s)}/E^\text{inc}$ are
+%
+\begin{subequations}%
 \begin{align}
-	r_p &= \frac{ \kappa_-(\omega) - i (\omega/c) \gamma\cos\theta_i\cos\theta_t +
+	r^{(s)}_\text{TFT}(\theta_i) =& 
+				\frac{ n_i \cos\theta_i - n_t\cos\theta_t + i (\omega/c)\gamma }
+			   		 { n_i \cos\theta_i + n_t\cos\theta_t - i (\omega/c)\gamma },
+	\label{eq:rsTFT} \\
+	t^{(s)}_\text{TFT}(\theta_i) =& 
+				\frac{ 2 n_i \cos\theta_i}
+					 { n_i \cos\theta_i + n_t\cos\theta_t - i (\omega/c)\gamma },	
+\end{align}
+\label{eq:rtsTFT}
+\end{subequations}
+%
+while for $\xi ^{(p)}_\text{TFT} = E_\xi^{(p)}/E^\text{inc}$, obtained by solving Eqs. \eqref{eq:Systemp}, are 
+%
+\begin{subequations}%
+\begin{align}
+	r^{(p)}_\text{TFT}(\theta_i) &= 
+		  \frac{ \kappa_-(\omega) - i (\omega/c) \gamma\cos\theta_i\cos\theta_t +
 							i (\omega/c)  n_i n_t \varepsilon_i \beta \sin^2 \theta_i }
 			   { \kappa_+(\omega) - i (\omega/c) \gamma\cos\theta_i\cos\theta_t -
 			   				i (\omega/c)  n_i n_t \varepsilon_i \beta \sin^2 \theta_i },
-	\label{eq:rp}\\
+	\label{eq:rpTFT}\\
+	t^{(p)}_\text{TFT}(\theta_i) &= 
+		  \frac{ n_i \cos\theta_i \qty(1-\qty(\omega/2c)^2\varepsilon_{i}\gamma\beta \sin^{2}\theta_i) }
+				{ \kappa_+(\omega) - i (\omega/c) \gamma\cos\theta_i\cos\theta_t -
+							i (\omega/c)  n_i n_t \varepsilon_i \beta \sin^2 \theta_i },
+				\\	
 	\kappa_{\pm}(\omega) &= \bigg( n_t \cos\theta_i \pm n_i \cos\theta_t \bigg)
-							\qty[1-\qty(\frac{\omega}{2c})^2\varepsilon_{i}\gamma\beta \sin^{2}\theta_i]
+							\qty[1-\qty(\frac{\omega}{2c})^2\varepsilon_{i}\gamma\beta \sin^{2}\theta_i].
+\end{align}%
+\label{eq:rtpTFT}%
+\end{subequations}%
+%
+To completely describe the optical properties of a metasurface of identical plasmonic scatters suported by a substrate with Eqs. \eqref{eq:rtsTFT} and \eqref{eq:rtpTFT}, the film susceptibilities $\gamma$ and $\beta$ must be defined. The film susceptibilities $\gamma$ and $\beta$ relate the structure of the considered metasurface with the total excess polarization $\vb{P}^\text{film}(\vb{r}_\parallel)$ at a linear order to the the total excess electric and displacement film [Eq. \eqref{eq:P-TFT}. For spherical scatterers embedded in the transmission medium and supported in the incidence medium, the suceptibilities are given by
+%
+\begin{align}
+	\gamma = \frac23 \frac{\Theta}{V_\text{sp}} \qty( \frac{\alpha_\text{sp}}{1 + A \alpha_\text{sp}})
+	\qquad\text{and}\qquad
+	 \beta =\frac23 \frac{\Theta}{\varepsilon_i^2 V_\text{sp}} \qty(\frac{\alpha_\text{sp}}{1 + 2 A \alpha_\text{sp}})
 \end{align}
 %
-\noindent where $\theta_{i}$ and $\theta_{t}$ are the angles of incidence and transmission, respectively, $\omega$ is the frequency of the incident light and $c$ is the speed of light. To simplify the notation, the term   is introduced.  Equations (\ref{eq:rs}) and (\ref{eq:rp})  are reduced to the well-known Fresnel coefficients when the surface density of Au NI goes to zero (substrate-ambient interface). 
+where
+%
+\begin{align}
+	\alpha_\text{sp} = 3  \varepsilon_t V_\text{sp} \qty(\frac{\varepsilon_\text{sp} - \varepsilon_t}{\varepsilon_\text{sp} + 2 \varepsilon_t}) 
+	\qquad\text{and}\qquad
+	A = \frac{\varepsilon_i - \varepsilon_t}{\varepsilon_i + \varepsilon_t},
+\end{align}
+%
+with 
+
 
 
 
