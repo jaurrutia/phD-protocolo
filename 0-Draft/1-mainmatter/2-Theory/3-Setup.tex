@@ -1,9 +1,41 @@
 % !TeX root = ../../protocolo.tex
 
-To investigate the spectral response of a metasurface composed of AuNPs immersed in an aqueous environment, an ATR-based setup, as depicted in Fig. \ref{fgr:Setup}, was utilized. The setup incorporates a polydimethylsiloxane (PDMS) microfluidic device positioned atop the AuNP ensemble, which is anchored to a glass substrate. This configuration enables precise control over the water flow surrounding the nanoparticles.
+In order to characterize and analyze the optical response of a metasurface of spherical gold nanoparticles (AuNPs) with a disordered spatial distribution supported on a glass substrate, the extinction and reflectivity spectra of the metasurface are measured. In Fig. \ref{fig:setup-UvVis} the setup used for the extinction measurements is shown, while in Fig. \ref{fig:setup-atr} it is presented the setup for the reflectivity measurements.
 
-For optical coupling, the metasurface’s substrate was index-matched to a BK7 glass prism (P) using immersion oil, ensuring an effective refractive index of. Illumination was provided by a broad-spectrum Xenon lamp (ThorLabs SLS201L), which was first collimated using a lens (L) and subsequently passed through a linear polarizer (LP), allowing the selection of either ss- or pp-polarized light.
 
-The sample was illuminated in an ATR configuration, meaning the angle of incidence exceeded the critical angle of the BK7-water interface. Under these conditions, an evanescent wave is generated at the interface, interacting with the AuNPs of the metasurface and thereby exciting localized surface plasmon resonances (LSPRs) on each nanoparticle.
+\begin{figure}[h!]%
+	\centering
+	\includegraphics[scale = 1]{Fig-Uv-Vis.pdf}
+	\caption{\textbf{a)} Schematic representation and \textbf{b)} photograph of the experimental setup to perform extinction spectra measurements.  The setup consists in a white light source (LS), whose light beam is collimated by a lens (L) before illuminating a metasurface of AuNPs at  normal incidence. The transmitted light through the metasurface is collected into a spectrometer (S).}
+	\label{fig:setup-UvVis}
+\end{figure}
 
-The LSPR response was detected by analyzing the reflection spectra of the light reflected from the metasurface. This reflected beam was collected by a second lens and directed into a spectrometer (S) for spectral analysis. To ensure accurate measurements, the recorded spectra were normalized against the reflection intensity obtained from a pristine glass substrate.
+The extinction measurements, as schematized in Fig. \sfref{fig:setup-UvVis}{a)}, are obtained by illuminating the metasurface with a white light source (LS) at normal incidence at an external configuration, that is, from air into the substrate. The light is collimated with a lens (L)  before the AuNPs metasurface and then transmitted light is collected with a glass fiber connected to an spectrometer (S). An image of the experimental setup is presented in Fig. \sfref{fig:setup-UvVis}{b)} where each component of the setup is signalized. To perform the extinction measurements, it was employed a halogen lamp (Mikropack HL-2000) as the white light source and a StellarNet(R) BLUE-Wave Spectrometer with spectral range between 350 nm and 1150 nm.
+
+\begin{figure}[h!]%
+	\centering
+	\includegraphics[scale = 1]{Fig-Setup-ATR.pdf}
+	\caption{\textbf{a)} Schematic representation and \textbf{b)} photograph of the experimental setup to perform reflectivity spectra measurements. The setup consists in a white light source (LS), whose light beam passes through a lens (L) and linear polarizer (LP) before incising a glass prism (P). The metasurface of AuNPs are coupled with an immersion oil so the AuNPs are illumited from inside the prism at the desired angle of incidence. The reflected light passes through a second lens (L) into a spectrometer (S).}
+	\label{fig:setup-atr}
+\end{figure}
+
+The reflectivity spectra is measured in an internal illumination configuration with a white light beam from a Xenon lamp (ThorLabs SLS201L) as a light source (LS). In Fig. \sfref{fig:setup-atr}{a)} it is shown the schematic representation of the experimental setup  presented in Fig. \sfref{fig:setup-atr}{b)}, where it can be seen that the light beam passes through a lens (L) and a linear polarizer (LP) before incising into a planar face of a right-angle prism (P) supporting the metasurface. The reflected beam from the metasurface is then collected by a second lens (L) and directed into a spectrometer (S): Ocean Optics HR4000 Spectrometer. To perform the reflectivity measurements, the prism (BK7 glass) and the substrate of the metasurface (Corning glass) were optically coupled by index-matching their materials with a microscope immersion oil with a refractive index of $n = 1.518$.
+
+\begin{figure}[b!]%
+	\centering
+	\includegraphics[scale = 1]{Fig-Coupling.pdf}
+	\caption{\textbf{a)} Schematic representation of the right-angle prism (P) mounted in the reflectivity measurement setup described in Fig. \ref{fig:setup-atr} and \textbf{b)} photograph of the prism attached to a goniometer used to control the angle of incidence $\theta_i$ of a light beam on the metasurface of AuNPs (not shown in the photograph). A light beam (red line) entering the prism at an angle $\theta_g$, measured with the goniometer scale, is refracted inside the prism according to Snell's law. This refraction determines $\theta_i$ at the interface between the prism and the metasurface's substrate, which is optically coupled using an immersion oil layer (cyan line). The dashed gray lines corresponds to the normal direction to any of the planar faces of the prism.}
+	\label{fig:Prism}
+\end{figure}
+
+A scheme of the optically coupled prism and the metasurface is shown in Fig. \sfref{fig:Prism}{a)} where the red line corresponds to the optical path of the light beam through the prism into the AuNPs, the cyan line to the immersion oil index matching the metasurface and the prism, and where the dashed gray lines represent the normal direction to the planar faces of the prism. The light beam passes incises into the prism at an angle $\theta_g$, experimentally determined by a goniometer holding the prism as shown in  Fig. \sfref{fig:Prism}{b)}, which determines the angle of incidence $\theta_i$ at which the AuNPs are illuminated. It can be proofed with Snell's Law that  $\theta_g$ and  $\theta_i$ follow the relations
+%
+\begin{align*}
+	\theta_i = \frac{\pi}{4} + \sin^{-1}\left(\frac{n_\text{Air}}{n_\text{Prism}}\sin\theta_g\right)
+	\qquad\text{and}
+	\qquad
+	\theta_g = \sin^{-1}\left[\frac{n_\text{Prism}}{n_\text{Air}}\sin\left(\theta_i-\frac{\pi}{4}\right)\right],
+\end{align*}
+%
+where $n_\text{Air}$ is the refractive index of the air (typically considered equal the unity) and $n_\text{Prism}$ that of the prism. Due to the index matching, the refraction between the prism and the matasurfaces's substrate are neglected.
+

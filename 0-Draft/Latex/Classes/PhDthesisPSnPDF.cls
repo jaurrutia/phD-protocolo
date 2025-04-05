@@ -74,15 +74,25 @@
 			%UNAM color palette
 			\definecolor{UNAMblue}{RGB}{0,60,113}		% Blue pantone  541 (C)
 			\definecolor{UNAMgold}{RGB}{234,221,150}		% Gold pantone  460  (C) ??
+%			Identidad gráfica de Ciencias
+			\definecolor{pblueFC}{RGB}{11,61,98}
+			\definecolor{pgrayFC}{RGB}{234, 237, 239} % Degradado de pgrayFC -> pblueFC
+				\definecolor{sblueFC}{RGB}{6, 151, 213}
+				\definecolor{sredFC}{RGB}{232, 68, 42}
+				\definecolor{sdgrayFC}{RGB}{127, 146, 151}
+				\definecolor{slgrayFC}{RGB}{246, 247, 247}
+%			Otros
+			\definecolor{bianchigreen}{RGB}{61, 207, 194}
 			\newcommand\myshade{85}
 			\colorlet{mylinkcolor}{violet}
 			\colorlet{mycitecolor}{YellowOrange}
 			\colorlet{myurlcolor}{Aquamarine}
 		\usepackage{empheq}
 		\usepackage[most]{tcolorbox}
-			\tcbset{colback=orange,   colbacktitle = lgray, frame hidden , % colframe= lgray,
-			fonttitle=\bfseries , boxrule = 0pt, standard jigsaw,  opacityback=.5, opacitybacktitle =1}% sharp corners = downhill, boxrule = .75mm }
-
+%			\tcbset{colback=orange,   colbacktitle = lgray, frame hidden , % colframe= lgray,
+%			fonttitle=\bfseries , boxrule = 0pt, standard jigsaw,  opacityback=.5, opacitybacktitle =1}% sharp corners = downhill, boxrule = .75mm }
+			\tcbset{colback=pgrayFC,   colbacktitle = pblueFC, colframe= pblueFC, coltitle=pgrayFC, colupper=pblueFC,
+					fonttitle=\bfseries , boxrule = 1pt, standard jigsaw,  opacityback=1, opacitybacktitle =1}
 
 	%----------------------- Language and references ------------------------------
 %		\usepackage[spanish,mexico]{babel}			% Comment for english
@@ -214,9 +224,9 @@
                  breaklinks = true,
                  linktocpage,
                  colorlinks = true,
-                 linkcolor =  blue,
-                 urlcolor  = magenta,
-                 citecolor = red,
+                 linkcolor =  sblueFC, %blue,
+                 urlcolor  = sredFC, %magenta,
+                 citecolor = red,% red,
                  anchorcolor = green,
 				hyperfootnotes = true, % false/true
                  hyperindex = true,

@@ -1,9 +1,10 @@
 %--------------------Cambiar captio de las subfiguras -------------------
 \renewcommand*{\thesubfigure}{\alph{subfigure})}   %Cambia caption y también el \ref{   }  
+\newcommand{\sfref}[2]{\ref{#1}\hyperref[#1]{#2}}
 
-	\newcommand{\beqhalf}{\noindent \begin{minipage}[c]{.5\linewidth} \begin{equation}}
-	\newcommand{\eeqhalf}{\end{equation} \end{minipage} }
-	\newcommand{\eqhalf}[1]{\beqhalf #1 \eeqhalf}	
+%	\newcommand{\beqhalf}{\noindent \begin{minipage}[c]{.5\linewidth} \begin{equation}}
+%	\newcommand{\eeqhalf}{\end{equation} \end{minipage} }
+%	\newcommand{\eqhalf}[1]{\beqhalf #1 \eeqhalf}	
 
 
 \usepackage{animate}  %pARA EL GIF
