@@ -25,7 +25,7 @@ with $\delta(z)$ the Dirac delta function and
 	\label{eq:EFilm}
 \end{align}
 %
-where $\vb{r}_\parallel$ is a vector evaluated at the plane $z=0$, and where it is explicitly shown that $	\vb{E}^\text{film}(\vb{r}_\parallel)$ equals the Fourier transform of the excess electric field in the $z$ variable evaluated at $k_z = 0$. The same decomposition employed in Eqs. \eqref{eq:excessDef}--\eqref{eq:EFilm} for $\vb{E}(\vb{r})$ applies to the magnetic field $\vb{B}(\vb{r})$, as well as any other scalar or vector field relevant to the system, for example, the electric displacement field $\vb{D}(\vb{r})$, the $\vb{H}(\vb{r})$ field, and the external charge $\rho_\text{ext}(\vb{r})$ and current $\vb{J}_\text{ext}(\vb{r})$ densities. By substituting such definitions of the fields into Maxwell's equations, it follows that the excess quantities obey the following expressions
+where $\vb{r}_\parallel$ is a vector evaluated at the plane $z=0$, and where it is explicitly shown that $	\vb{E}^\text{film}(\vb{r}_\parallel)$ equals the Fourier transform of the excess electric field in the $z$ variable evaluated at $k_z = 0$. The same decomposition employed in Eqs. \eqref{eq:excessDef}--\eqref{eq:EFilm} for $\vb{E}(\vb{r})$ applies to the magnetic field $\vb{B}(\vb{r})$, as well as any other scalar or vector field relevant to the system, for example, the electric displacement field $\vb{D}(\vb{r})$, the $\vb{H}(\vb{r})$ field, and the external charge $\rho_\text{ext}(\vb{r})$ and current $\vb{J}_\text{ext}(\vb{r})$ densities. By substituting such definitions of the fields into Maxwell's equations, the following expressions for the excess quantities are obtained
 %
 \begin{subequations}%
 \begin{align}
@@ -39,7 +39,7 @@ where $\vb{r}_\parallel$ is a vector evaluated at the plane $z=0$, and where it 
 \end{align}\label{eq:MaxwellExcess}%
 \end{subequations}
 %
-which are obtained by considering that the fields in the semi-infinite media are solution to Maxwell's equations each and that the step and delta functions are related by the relation $\dv*{\Theta(\pm z)}{z} = \pm \delta(z)$. The subscript ($\parallel$) correspond to the parallel components of the fields relative to the thin film, ($\perp$) to their normal components to the film; $\vu{e}_\perp$ is the unitary vector in this direction. The terms in between brackets in Eqs. \eqref{eq:MaxwellExcess} are the boundary conditions of the electromagnetic fields evaluated at the thin film and they are modified from the known case of a sharp interface ---which yield Fresnel's equations--- by the excess quantities.
+where it was considered that the fields in the semi-infinite media are solution to Maxwell's equations and that the step and delta functions are related as $\dv*{\Theta(\pm z)}{z} = \pm \delta(z)$. The subscript ($\parallel$) correspond to the parallel components of the fields relative to the thin film, ($\perp$) to their normal components to the film; $\vu{e}_\perp$ is the unitary vector in this direction. The terms in between brackets in Eqs. \eqref{eq:MaxwellExcess} are the boundary conditions of the electromagnetic fields evaluated at the thin film and they are modified from the known case of a sharp interface ---which yield Fresnel's equations--- by the excess quantities.
 
 The boundary conditions of the electromagnetic field in the TFT formalism can be determined by calculating the Fourier transform  of Eqs. \eqref{eq:MaxwellExcess}  in the $z$ variable and then considering the particular case of $k_z = 0$ so that all excess quantities are interchanged for their total contribution according to Eq. \eqref{eq:EFilm}. Additionally,  total excess polarization $\vb{P}^\text{film}(\vb{r}_\parallel)$ and magnetization $\vb{M}^\text{film}(\vb{r}_\parallel)$ are defined in terms of the total excess electromagnetic fields, thus the boundary conditions in the absence of external sources ---$\vb{J}_\text{ext}(\vb{r})=\vb{0}$ and $\rho_\text{ext}(\vb{r})=0$--- can be written as
 %
@@ -78,9 +78,15 @@ The boundary conditions of the electromagnetic fields shown in Eq. \eqref{eq:gen
 \label{eq:P-TFT}
 \end{align}
 %
-where $\gamma$ and $\beta$ are known as the film susceptibilities, which encodes the physical properties of the ensamble of scatteres, and where the operator $\langle\cdot\rangle$ is the average on the film given as $\big\langle a^\text{film} (\vb{r}_\parallel)\big\rangle~=~(1/2)[a^>(\vb{r}_\parallel) + a^<(\vb{r}_\parallel)]$, for either a scalar or vector quantity $a^\gtrless(\vb{r})$.
+where $\gamma$ and $\beta$ are known as the film susceptibilities, which encodes the physical properties of the ensemble of scatteres, and where the operator $\langle\cdot\rangle$ is the average on the film given as $\big\langle a^\text{film} (\vb{r}_\parallel)\big\rangle~=~(1/2)[a^>(\vb{r}_\parallel) + a^<(\vb{r}_\parallel)]$, for either a scalar or vector quantity $a^\gtrless(\vb{r})$.
 
-The TFT employs the excess field formalism to determine the optical response of a metasurface embedded in a matrix and supported on a substrate, as shown in Fig. \ref{fig:esquema2}, both non-absorbing nor magnetic ($\mu^\gtrless=\mu_0$), by calculating amplitude reflection $r_\text{TFT}$ and transmission $t_\text{TFT}$ coefficients from Eqs. \eqref{eq:generalBC} and \eqref{eq:P-TFT}, considering that the thin film consists in a disordered ensemble of identical plasmonic spherical NPs. In an schema of internal illumination, the electric field below the thin film is the superposition of an incident and a reflected electromagnetic plane waves $\vb{E}^\text{inc}(\vb{r})$ and $\vb{E}_\text{r}(\vb{r})$ traveling in the $\vb{k}^\text{inc}$ and $\vb{k}^\text{r}$, respectively, within the substrate characterized by the dielectric function $\varepsilon^< = \varepsilon_i = n_i^2$, while above the electric field is given by the plane wave $\vb{E}^\text{t}(\vb{r})$ traveling in  the $\vb{k}^\text{t}$ direction within the matrix with $\varepsilon^> = \varepsilon_t = n_t^2$. To determine the amplitude coefficients under the TFT the cases of an $s$ and a $p$ polarized incident electromagnetic wave are treated separately.
+The TFT employs the excess field formalism to determine the optical response of a metasurface embedded in a matrix and supported on a substrate, as shown in Fig. \ref{fig:esquemaTFT}, both non-absorbing nor magnetic ($\mu^\gtrless=\mu_0$), by calculating amplitude reflection $r_\text{TFT}$ and transmission $t_\text{TFT}$ coefficients from Eqs. \eqref{eq:generalBC} and \eqref{eq:P-TFT}, considering that the thin film consists in a disordered ensemble of identical plasmonic spherical NPs. For a configuration of internal illumination, the electric field below the thin film is the superposition of an incident and a reflected electromagnetic plane waves $\vb{E}^\text{inc}(\vb{r})$ and $\vb{E}_\text{r}(\vb{r})$ traveling in the $\vb{k}^\text{inc}$ and $\vb{k}^\text{r}$, respectively, within the substrate characterized by the dielectric function $\varepsilon^< = \varepsilon_i = n_i^2$, while above the electric field is given by the plane wave $\vb{E}^\text{t}(\vb{r})$ traveling in  the $\vb{k}^\text{t}$ direction within the matrix with $\varepsilon^> = \varepsilon_t = n_t^2$. To determine the amplitude coefficients under the TFT the cases of an $s$ and a $p$ polarized incident electromagnetic wave are treated separately.
+
+\begin{figure}[t!]\centering
+	\includegraphics[scale = 1]{Fig-TFT.pdf}
+	\caption{Diagram of the reflection of transmission of  \textbf{a)} an $s$ polarized and \textbf{b)} a $p$ polarized electromagnetic plane wave $\vb{E}^\text{inc}$ traveling in the $\vu{k}^\text{inc}$ direction at an angle of incidence $\theta_i$ that illuminated a collection of identical spherical particles from a media characterized by the dielectric function $\varepsilon^< = \varepsilon_i$ (blue region) into another characterized by $\varepsilon^> = \varepsilon_t$ (grey region), where the particles are embedded. The thin film (dashed line) models the electromagnetic response of the ensemble of particles through the total excess polarization $\vb{P}^\text{film}(\vb{r}_\parallel)$ (represented by the red blurred area) at $z=0$. The reflected  $\vb{E}^{(j)}_\text{r}$ and transmitted electric field $\vb{E}^{(j)}_\text{t}$ for a $j$ polarization state travel at the $\vu{k}_\text{r}$ and $\vu{k}_\text{t}$ direction, respectively, that is, at the reflection $\theta_r$ and transmission angle $\theta_t$.}
+	\label{fig:esquemaTFT}
+\end{figure}
 
 In general, when an electromagnetic plane wave with an angular frequency $\omega$ travels from a substrate to a thin film in the direction $\vb{k}^\text{inc}$ at an angle $\theta_i$, relative to the normal direction to the thin film, the reflected (transmitted) plane wave does it in the direction of $\vb{k}^\text{r}$ ($\vb{k}^\text{t}$) at the angle $\theta_r$ ($\theta_t$). Thus, the wave vectors of the electromagnetic plane waves are
 %
@@ -91,11 +97,11 @@ In general, when an electromagnetic plane wave with an angular frequency $\omega
 	\vb{k}^\text{r} &= n_i \frac{\omega}{c} (\sin\theta_r \vu{e}_x- \cos\theta_r \vu{e}_\perp),\\
 %	
 	\vb{k}^\text{t} &= n_t \frac{\omega}{c} (\sin\theta_t \vu{e}_x+ \cos\theta_t \vu{e}_\perp),
-\end{align}
-\label{eq:Wavevectors}
-\end{subequations}
+\end{align}%
+\label{eq:Wavevectors}%
+\end{subequations}%
 %
-where $\vu{e}_\perp = \vu{e}_z$  and $c$ is the speed of light. For an $s$ polarized electromagnetic plane wave [see Fig. \ref{sfig:sPol}], the electric field above and below the thin film is
+where $\vu{e}_\perp = \vu{e}_z$  and $c$ is the speed of light. For an $s$ polarized electromagnetic plane wave [see Fig. \sfref{fig:esquemaTFT}{a)}], the electric field above and below the thin film is
 %
 \begin{subequations}%
 \begin{align}
@@ -104,8 +110,8 @@ where $\vu{e}_\perp = \vu{e}_z$  and $c$ is the speed of light. For an $s$ polar
 	%	
 	\vb{E}^>(\vb{r}) &= E_\text{t}^{(s)}\exp(i\vb{k}^\text{t}\cdot\vb{r})
 	\vu{e}_y						     
-\end{align}\label{eq:EsTFT}
-\end{subequations}
+\end{align}\label{eq:EsTFT}%
+\end{subequations}%
 %
 while for a $p$ polarized plane wave, the electric field is given by
 %
@@ -123,10 +129,10 @@ while for a $p$ polarized plane wave, the electric field is given by
 	] \vu{e}_x +
 	\qty[-E^{(p)}_\text{t}\sin\theta_t\exp(i\vb{k}^\text{t}\cdot\vb{r})
 	] \vu{e}_\perp 				    
-\end{align}\label{eq:EpTFT}
-\end{subequations}
+\end{align}\label{eq:EpTFT}%
+\end{subequations}%
 %
-where $E_\xi^{(j)}$ is the magnitude of either the reflected ($\xi\to$r) or transmitted ($\xi\to$t) electric field considering the $j$ polarization state; for either case $E^\text{inc}$ is the magnitude of the incident electric field. Additionally, the incident $\vb{B}^\text{inc}(\vb{r})$ and reflected and transmitted magnetic fields $\vb{B}_\alpha^{(j)}(\vb{r})$ for both polarizations can be determined by substituing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Faraday-Lenz's Law, while the displacement field and the $H$ field are calculated via the general relations $\vb{D}=\varepsilon\vb{E}(\vb{r})$ and $\vb{H}(\vb{r})=\vb{B}(\vb{r})/\mu_0$ considered for each media. Prior calculation of the total polarization in the film $\vb{P}^\text{film}(\vb{r}_\parallel)$ it is noteworthy to show that forcing the the proposed electric fields in Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} to follow the boundary conditions in Eqs. \eqref{eq:generalBC} yields the continuity of the parallel component of the wave vector $\vb{k}_\parallel = (\omega/c)n_i\sin\theta_i \vu{e}_x= (\omega/c)n_t\sin\theta_t\vu{e}_x$, therefore stating that even with the presence of the thin film, the reflection and Snell's law are valid. Under this consideration, $\vb{P}^\text{film}(\vb{r}_\parallel)$ is obtained by introducing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Eq. \eqref{eq:P-TFT} yielding
+as it can be seen in Fig. \sfref{fig:esquemaTFT}{b)}. In Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT}, the term $E_\xi^{(j)}$ is the magnitude of either the reflected ($\xi\to$r) or transmitted ($\xi\to$t) electric field considering the $j$ polarization state; for either case $E^\text{inc}$ is the magnitude of the incident electric field. Additionally, the incident $\vb{B}^\text{inc}(\vb{r})$ and reflected and transmitted magnetic fields $\vb{B}_\xi^{(j)}(\vb{r})$ for both polarizations can be determined by substituing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Faraday-Lenz's Law, while the displacement field and the $H$ field are calculated via the general relations $\vb{D}=\varepsilon\vb{E}(\vb{r})$ and $\vb{H}(\vb{r})=\vb{B}(\vb{r})/\mu_0$ considered for each media. Prior calculation of the total polarization in the film $\vb{P}^\text{film}(\vb{r}_\parallel)$ it is noteworthy to show that forcing the the proposed electric fields in Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} to follow the boundary conditions in Eqs. \eqref{eq:generalBC} yields the continuity of the parallel component of the wave vector $\vb{k}_\parallel = (\omega/c)n_i\sin\theta_i \vu{e}_x= (\omega/c)n_t\sin\theta_t\vu{e}_x$, therefore stating that even with the presence of the thin film, the reflection and Snell's law are valid. Under this consideration, $\vb{P}^\text{film}(\vb{r}_\parallel)$ is obtained by introducing Eqs. \eqref{eq:EsTFT} and \eqref{eq:EpTFT} into Eq. \eqref{eq:P-TFT} yielding
 %
 \begin{subequations}%
 \begin{align}
@@ -134,9 +140,9 @@ where $E_\xi^{(j)}$ is the magnitude of either the reflected ($\xi\to$r) or tran
 				 \frac{\gamma}{2}\qty(E^\text{inc} + E_\text{r}^{(s)} + E_\text{t}^{(s)})\exp(\vb{k}_\parallel\cdot\vb{r}) \vu{e}_x,
 	\\
 	P_\perp^{(s),\text{film}}(\vb{r}_\parallel) &= 0,
-\end{align}
-\label{eq:Pfilms}
-\end{subequations}
+\end{align}%
+\label{eq:Pfilms}%
+\end{subequations}%
 %
 for $s$ polarization and
 %
@@ -151,9 +157,9 @@ for $s$ polarization and
 	P_\perp^{(p),\text{film}}(\vb{r}_\parallel)  &= \frac{\beta}{2}\qty[			
 				\varepsilon_i\qty(E^\text{inc}+E_\text{r}^{(p)})\sin\theta_i 
 				+ \varepsilon_t E_\text{t}^{(p)} \sin\theta_t ] \exp(\vb{k}_\parallel\cdot\vb{r}),
-\end{align}
-\label{eq:Pfilmp}
-\end{subequations}
+\end{align}%
+\label{eq:Pfilmp}%
+\end{subequations}%
 %
 for $p$ polarization.
 
@@ -165,23 +171,23 @@ As stated above, the TFT returns expressions for reflection and transmission amp
 	\qty(n_i\cos\theta_i+ \frac{i}{2}\frac{\omega}{c}\gamma)E^\text{inc}
 	- \qty(n_i\cos\theta_i- \frac{i}{2}\frac{\omega}{c}\gamma)E^{(s)}_\text{r}
 	&= \qty(n_t\cos\theta_t- \frac{i}{2}\frac{\omega}{c}\gamma)E^{(s)}_\text{t}.
-\end{align}
-\label{eq:Systems}
-\end{subequations}
+\end{align}%
+\label{eq:Systems}%
+\end{subequations}%
 %
 Analogously, the system of equations for a $p$ polarized incident plane wave obtained from Eqs. \eqref{eq:generalBC}, \eqref{eq:Wavevectors} \eqref{eq:EpTFT} and \eqref{eq:Pfilmp} is
 %
 \begin{subequations}%
 \begin{align}
-			\qty(\cos\theta_i + ik_\parallel\frac{\beta}{2}\varepsilon_i\sin\theta_i)E^\text{inc} 
-			- \qty(\cos\theta_i - ik_\parallel\frac{\beta}{2}\varepsilon_i\sin\theta_i)E^{(p)}_\text{r}  
+			\hspace*{-1em}\qty(\cos\theta_i + ik_\parallel\frac{\beta}{2}\varepsilon_i\sin\theta_i)E^\text{inc} 
+			- \qty(\cos\theta_i - ik_\parallel\frac{\beta}{2}\varepsilon_i\sin\theta_i)E^{(p)}_\text{r}
 			&= \qty(\cos\theta_t -ik_\parallel\frac{\beta}{2}\varepsilon_t\sin\theta_t) E^{(p)}_\text{t} ,\\
 %	
 			\qty(n_i + ik_\parallel\frac{\gamma}{2}\cos\theta_i)E^\text{inc} 
 			+ \qty(n_i - ik_\parallel\frac{\gamma}{2}\cos\theta_i)E^{(p)}_\text{r}  
 			&= \qty(n_t - ik_\parallel\frac{\gamma}{2}\cos\theta_t) E^{(p)}_\text{t} ,
-\end{align}
-\label{eq:Systemp}
+\end{align}%
+\label{eq:Systemp}%
 \end{subequations}
 %
 with $k_\parallel = (\omega/c)n_i\sin\theta_i =(\omega/c)n_t\sin\theta_t$. Thus, the reflection and transmission amplitude coefficients given by the solution to Eqs. \eqref{eq:Systems} for $\xi ^{(s)}_\text{TFT} = E_\xi^{(s)}/E^\text{inc}$ are
@@ -194,12 +200,12 @@ with $k_\parallel = (\omega/c)n_i\sin\theta_i =(\omega/c)n_t\sin\theta_t$. Thus,
 	\label{eq:rsTFT} \\
 	t^{(s)}_\text{TFT}(\theta_i) =& 
 				\frac{ 2 n_i \cos\theta_i}
-					 { n_i \cos\theta_i + n_t\cos\theta_t - i (\omega/c)\gamma },	
-\end{align}
-\label{eq:rtsTFT}
+					 { n_i \cos\theta_i + n_t\cos\theta_t - i (\omega/c)\gamma },
+\end{align}%
+\label{eq:rtsTFT}%
 \end{subequations}
 %
-while for $\xi ^{(p)}_\text{TFT} = E_\xi^{(p)}/E^\text{inc}$, obtained by solving Eqs. \eqref{eq:Systemp}, are 
+while for $\xi ^{(p)}_\text{TFT} = E_\xi^{(p)}/E^\text{inc}$, obtained by solving Eqs. \eqref{eq:Systemp}, the amplitude coefficients are
 %
 \begin{subequations}%
 \begin{align}
@@ -219,8 +225,8 @@ while for $\xi ^{(p)}_\text{TFT} = E_\xi^{(p)}/E^\text{inc}$, obtained by solvin
 \end{align}%
 \label{eq:rtpTFT}%
 \end{subequations}%
-%
-To completely describe the optical properties of a metasurface of identical plasmonic scatters suported by a substrate with Eqs. \eqref{eq:rtsTFT} and \eqref{eq:rtpTFT}, the film susceptibilities $\gamma$ and $\beta$ defined in Eq. \eqref{eq:P-TFT} must be specified. When considering spherical scatterers of radii $a$ embedded in the transmission medium and supported on a planner interface with the incidence medium, the electromagnetic response of the ensemble can be modeled by electric point dipoles and their images if the condition $n_ta\omega/c \ll 1$ is met. Under this considerations in addition to setting the thickness of the thin film modeling the ensamble of particles as $2a$, the film susceptibilities are given by
+
+To completely describe the optical properties of a metasurface of identical plasmonic scatters suported by a substrate with Eqs. \eqref{eq:rtsTFT} and \eqref{eq:rtpTFT}, the film susceptibilities $\gamma$ and $\beta$ defined in Eq. \eqref{eq:P-TFT} must be specified. When considering spherical scatterers of radii $a$ embedded in the transmission medium and supported on a planner interface with the incidence medium, the electromagnetic response of the ensemble can be modeled by electric point dipoles and their images if the condition $n_ta\omega/c \ll 1$ is met. Under this considerations in addition to setting the thickness of the thin film modeling the ensemble of particles as $2a$, the film susceptibilities are given by
 %
 \begin{align}
 	\gamma = \frac23 \frac{\Theta}{V_\text{sp}} \qty( \frac{\alpha_\text{sp}}{1 + A \alpha_\text{sp}})
