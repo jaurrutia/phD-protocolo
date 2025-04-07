@@ -20,5 +20,5 @@ In the [Diagrams directory](01-Diagrams) the schematic representations of the CS
 
 | Figure | Description | Raw data | Image |
 |--------|-------------|----------|-------|
-| 2.1    | Sample charact | [All](../1-Calculos-Subtrate/1-Sample Chracterization/2-SEM) | ![CSM  FSM](03-NonIntrusive/Fig-Sample.png)|
+| 2.1    | Sample charact | [All](../1-Calculos-Subtrate/1-Sample%Chracterization/2-SEM) | ![CSM  FSM](03-NonIntrusive/Fig-Sample.png)|
 | 2.2    | Extinction for ensemble and single particle| [Ensemble](../1-Calculos-Subtrate/2-ImagesEffect/3-UV-Vis) and [Single](../1-Calculos-Subtrate/4-Sustrato-Comsol) | ![CSM  FSM](03-NonIntrusive/Fig-Extinction.png)|
