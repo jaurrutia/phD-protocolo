@@ -7157,7 +7157,7 @@ Cell[BoxData["\<\"Mie-vs-Comsol-Embedded.svg\"\>"], "Output",
 }, Open  ]]
 },
 WindowSize->{1440, 768},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules-><|
  "DevTools" -> <|"MenuMethod" -> "Cell"|>, "TryRealOnly" -> False, 
   "CodeFormatter" -> <|"ToolbarState" -> False|>|>,
