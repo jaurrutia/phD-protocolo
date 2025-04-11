@@ -86,8 +86,8 @@
 \chapter*{Background and Motivation}
 	\addcontentsline{toc}{chapter}{\protect\numberline{}Introduction}
 	\label{chapter:intro}
-	\input{1-mainmatter/1-Introduccion/1-Background}
-	\input{1-mainmatter/1-Introduccion/2-Development}	
+%	\input{1-mainmatter/1-Introduccion/1-Background}
+%	\input{1-mainmatter/1-Introduccion/2-Development}	
 
 
 \chapter{Theoretical frameworks and techniques}
@@ -113,76 +113,36 @@
 	\section{Substrate effects on a plasmonic metasurface}
 		\label{s:substratep}
 		\input{1-mainmatter/3-Results/01-SubstrateEffects}
+		
+	\section{Partial embedding: First measurements}
+		\label{s:pembedding}
+		\input{1-mainmatter/3-Results/02-PartialEmb}
 	
-\chapter{Progress in sensing mechanisms}
-		\label{s:CSM}
+\chapter{Progress in optical response of metasurfaces and their sensing mechanisms}
+		\label{s:OptRes}
 		\input{1-mainmatter/3-Results/10-TopoDarkness}
 		
-		\section{Firsts Measurements}
-			\label{s:Setup}
+		\section{Experimental motivation}
+			\label{s:ExpBS}
 			\input{1-mainmatter/3-Results/11-Measurements}
 
-		\section{Expected results: Topological Darkness}
-			\label{s:Setup}
+		\section{Expected theoretical results: Topological Darkness}
+			\label{s:TDarkness}
 			\input{1-mainmatter/3-Results/12-CNF}
 			
 \chapter{Work plan (proposed activities to complete the project)}
-	\label{s:CSM}
+	\label{s:WorkPlan}
 	\input{1-mainmatter/4-Conclusions/0-Workplan}			
 
 \chapter*{List of Publications}
 	\addcontentsline{toc}{chapter}{\protect\numberline{}List of Publications}
-	\label{chapter:intro}
+	\label{chapter:Publications}
 	\input{1-mainmatter/4-Conclusions/0-List}
-
-
-%     In the previous Section, it was concluded that the extinction of light due to the interaction between a particle and a monochromatic plane wave can be determined through the amplitude of the scattered field in the forward direction. This is stated in the Optical Theorem, which is an exact relation, but inaccuracies may arise when either the scattering amplitude matrix or the extinction cross section are approximated\footnote{See for example Section 2.4 from Ref. \cite{tsang_scattering_2000} on the Rayleigh Scattering, and Section 21.7 from Ref. \cite{zangwill_modern_2013} on Thompson scattering.}. A particular case in which the scattering amplitude matrix can be exactly calculated is when the scatterer has spherical symmetry. In order to address this special case, it will be introduced a vectorial basis with spherical symmetry, known as the Vector Spherical Harmonics (VSH). Once the VSH are defined, they will be used to write a monochromatic plane wave in terms of the VSH. By imposing the continuity of the tangential components of the electric and magnetic fields, the scattered field can be also written in terms of the VSH. As a particular example of interest, shown in the last Section, the optical properties of a gold nanoparticle with radius of $12.5$ nm are calculated.
-%
-%     % ------------------------------- index entries --------
-%     \index{Scattering!Thompson}%
-%     \index{Scattering!Mie}%
-%     \index{Scattering!Rayleigh}%
-%     \index{Vector!Spherical Harmonics}%
-
-%\chapter{Results and Discussion}
-%	\label{ch:Results}
-%
-%    \section{Supported and Totally Embedded Spherical Particles}
-%     \label{s:Totally}
-%        \input{1-mainmatter/3-Results/0-Intro}
-%
-%        \subsection{Normal Incidence}
-%        \input{1-mainmatter/3-Results/1-Totally}
-%         \label{s:Totally:Normal}
-%       
-%
-%\chapter*{Conclusions}
-%\addcontentsline{toc}{chapter}{\protect\numberline{}Conclusions}
-%	\label{ch:Conclusions}
-%	\input{1-mainmatter/4-Conclusions/1-Conclusions}	
-%	
-
-
-
-%%-------------------------------------------------------------------------------
-%%                               References                                   |
-%%-------------------------------------------------------------------------------
-%
-%\appendix
-%\input{5-Apendices/1-Something_extra.tex}
 
 \setlength\bibitemsep{.1\itemsep}
 \printbibliography
 
-\newpage
-%: ----------------------- list of figures/tables ------------------------
-%\listoffigures              % Genera el ínidce de figuras, comentar línea si no se usa
-%\listoftables               % Genera índice de tablas, comentar línea si no se usa
-%\printindex
-%-------------------------------------------------------------------------------
-%                              Appendix                                   |
-%-------------------------------------------------------------------------------
-
+%\newpage
 
 
 \end{document}

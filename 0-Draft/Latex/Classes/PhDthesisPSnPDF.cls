@@ -41,11 +41,11 @@
 \usepackage{titlesec}
 \usepackage{imakeidx}%for indexes
 \makeindex[intoc]
-\usepackage{tocloft}
+%\usepackage{tocloft}
 
-
-\setlength\cftparskip{.11em} %0.6 em
-\setlength\cftbeforechapskip{0pt}
+%
+%\setlength\cftparskip{.11em} %0.6 em
+%\setlength\cftbeforechapskip{0pt}
 	%---------------------- Figurbackref change legend latex bibtexes ----------------------------
 		\usepackage[margin=10pt,font=small,labelfont={normal,bf} ]{caption}
 		\usepackage[labelformat=simple, labelfont ={normal,bf}]{subcaption} % labelformat=simple   O brace

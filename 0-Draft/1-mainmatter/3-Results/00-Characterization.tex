@@ -1,52 +1,13 @@
 % !TeX root = ../../protocolo.tex
 
-Una iontroducción a esta sección
+In this chapter the advances on the substrate effects in the optical properties of metasurfaces are presented. This results consist in the comparison between experimental results  measured at the Instituto Nacional de Astrofísica, Óptica y Fotónica (INAOE), where our collaborators have the capacity to synthesize metasurfaces of spherical gold nanoparticles (AuNP) on a Corning glass substrate by dewetting a gold continuous film. In addition, the experimental  setups presented in Section \ref{s:Setup} are mounted at INAOE, where the measurements of extinction and  reflectivity spectra  were performed for two samples of metasurfaces. The obtained experimental spectra are discussed in the following  section with an analysis considering the Coherent Scattering Model discussed in Section \ref{s:CSM} and Finite Elment Method (FEM) simulations performed in  COMSOL Multiphysics$^\text{TM}$ version 6.1, from which each contribution of the substrate effects  on the optical response of the metasurfaces are estimated. 
+
+The metasurfaces analyzed in this chapter were synthesized from films with  an initial thicknesses $d = (3.0\pm 0.1)$~nm and $d = (5.0\pm 0.2)$~nm which were held inside a Caisa DTT434 oven at $550^\circ$C for 3 hours.  Images of Scanning  Electron Microscopy (SEM) of each  metasurface are shown in the background of Figs. \sfref{fig:morpho}{a)} and \sfref{fig:morpho}{b)} for the $d=3$~nm and $d=5$~nm samples, respectively. The orange curves in the foreground correspond to the histograms of the AuNPs classified by their equivalent radius, while the red and green curves correspond to the Gaussian-fitted distributions of the histograms, from which the mean radius $\mu$ and the standard deviation $\sigma$ of the size distribution of each sample were determined. The sample with initial thickness of $d=3$ nm, shown in Fig. \sfref{fig:morpho}{a)}, is characterized with parameters $\mu = (5.78 \pm 0.06)$~nm, $\sigma = (1.89\pm 0.06)$~nm, and a surface coverage $\Theta = 0.20~\pm~0.01$. In contrast, the sample with initial thickness of $d=5$ nm, shown in Fig. \sfref{fig:morpho}{b)}, is characterized with $\mu = (7.30 \pm 0.05)$~nm, $\sigma = (2.30\pm 0.05)$~nm, and $\Theta = 0.22~\pm~0.01$. 
 
 \begin{figure}[h]\centering
 	\includegraphics[scale = 1]{non-int/Fig-Sample.pdf}
 	\caption{%
 		SEM image and histogram of the equivalent radius of the AuNPs in a metasurface fabricated from a gold film with an initial thickness \textbf{a)}  $d = (3.00\pm 0.02)$~nm and  \textbf{b)} $d = (5.00\pm 0.02)$~nm, both showing a normal distribution of the equivalent radius of the AuNPs with a mean $\mu$, standard deviation $\sigma$, and surface coverage $\Theta$.}
 	\label{fig:morpho}
-\end{figure}
-
-
-\begin{figure}[h]\centering
-	\includegraphics[width = \textwidth]{non-int/Fig-Extinction.pdf}
-	\caption{%
-	\textbf{a)} Experimental extinction efficiency of the metasurfaces (continuous orange lines) when illuminated at normal incidence, and extinction efficiency of a single AuNP of radius $a = 5.78$~nm (red lines) and $a = 7.30$~nm (green lines) embedded in air (long dashed lines) and in glass (short dashed lines), as given by Mie Theory, as a function of the incident light wavelength. \textbf{b)} Extinction efficiencies as a function of the incidence wavelength, at normal incidence, of a single AuNP embedded in an infinite air matrix (continuous lines) calculated by means of Mie Theory, and in a semiinfinite air matrix supported on a semiinfinte glass substrate (markers) using FEM simulations. The red lines correspond to the calculations of a AuNP with radius $a = 5.78$~nm and the green lines to $a=7.30$~nm. The magenta markers show the excitation of the LSPR for each case.}
-	\label{fig:extinction}
-\end{figure}
-
-
-
-\begin{figure}[h]\centering
-	\includegraphics[width=\textwidth]{non-int/Fig-Fit.pdf}
-	\caption{Reflectivity at ATR configuration of a AuNPs metasurface as a function of the incident wavelength considering an angle of incidence $\theta_i = 64.9^\circ$ (left column) and $\theta_i = 72.9^\circ$  (right column), for $s$ (upper row) and $p$ (lower row) polarization state. The metasurface is embedded in a water matrix and supported onto a glass substrate with refractive indices $n_\text{m} = 1.33$  and $n_\text{s} = 1.5 $, respectively. The experimental  reflectivity (continuous translucent lines) of the metasurface is shown for the fabricated samples characterized by the mean radius $\mu$ of their size distribution and by its surface coverage $\Theta$. The red lines correspond to the metasurface shown in Fig. \ref{fig:morpho}\textbf{a)} while the green lines to the sample shown in Fig. \ref{fig:morpho}\textbf{b)}. The theoretical curves (opaque continuous and dashed lines) were calculated by the CSM considering the nominal values of the metasurface, and a mean radius $a^\text{CSM}$ for the size distribution and a surface coverage $\Theta^\text{CSM}$, respectively; these last values were obtained by fitting  the CSM to the experimental data through the descent gradient method.}
-	\label{fig:Rspectra}
-\end{figure}
-
-
-
-
-
-\begin{figure}[h!]\centering
-	\includegraphics[scale = 1]{non-int/Fig-MieEmb.pdf}
-	\caption{\textbf{a)} Schematics of a AuNP of radius $a$ partially embedded in a substrate, illuminated by an electromagnetic plane wave with an incident wave vector $\mathbf{k}_i$ perpendicular to the matrix-substrate interface. The distance between the center of the AuNP and the interface is defined as $h$ while $r$ is the aparent radius of the AuNP as seen from above. \textbf{b)} Plot of function $\eta(h/a)$ defined in Eq. \eqref{eq:volume} for a metasuface characterized for the most probable radius in its size distribution $a=5.78$ nm and the average of the best fittig radius to the CSM $\langle a_\text{Fit}^\text{CSM}\rangle = 3.3$ nm (red lines) and for a metasurfae with $a=7.30$ nm and $\langle a_\text{Fit}^\text{CSM}\rangle = 4.5$ nm (green lines). The roots of $\eta(h/a)$ are signilized with the blue markers for each case.}
-	\label{fig:roots}
-\end{figure}
-
-
-
-\begin{figure}[h!]\centering
-	\includegraphics[scale = 1]{non-int/Fig-CextMieEmb.pdf}
-	\caption{Extinction efficiencies as function of the incident wavelength of a single AuNP, partially embedded in a glass substrate and an air matrix, of radius \textbf{a)} $a = 5.78$ (red lines) nm and \textbf{b)} $a = 7.30$ nm (green lines) when illuminated at normal incidence relative to the air-glass interface. The partial embedding of the AuNPs is characterized by the quantity $h/a$ whose nominal value is specified for each AuNP according to Fig. \ref{fig:roots}. For a more complete analysis, three values of partial embedding where considered: when the AuNP is mostly embedded in air (disk), in glass (diamond) and when it is equally embedded in both media (square). }
-	\label{fig:embedding}
-\end{figure}
-
-
-\begin{figure}[h!]\centering
-	\includegraphics[scale = 1]{non-int/Fig-Dimmer.pdf}
-		\caption{Magnitude of the total electric field $||\mathbf{E}_\text{Tot}||$ of a AuNP dimmer of radius $a=7.30$ nm separaeted by a gap between particles of \textbf{a)} 4 nm and \textbf{b)} 14 nm, illuminated by an incident electromagnetic plane wave traveling normal to a glass-air interface (white dashed line). The AuNP is partially embedded in the glass substrate and in the air matrix and its embedding degree is characterized by the quantity $h/a = 0$.\textbf{c)}xtinction cross section of a dimmer composed of two indentical AuNP of radius $a=7.30$ nm. The extinction cross section is presented as function of the incident wavelength of an electromagnetic plane polarized along the symmetry axis of the dimmer. The AuNPs are partially embedded in an air a matrix and a glass substrate considering $h/a = 0$, and the dimmer is illuminated at normal incidence relative to the air-glass interface. The color of each curve corresponds to different values of the in between the AuNPs of the dimmer.} 
-	\label{fig:dimmer}
 \end{figure}
 
