@@ -19,49 +19,49 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: protocolo-blx.bib
 Database file #2: 1-mainmatter/5-References/references.bib
-Warning--I didn't find a database entry for "cuanalo_sensitivity_2022"
+Warning--I didn't find a database entry for "meng2015anisotropic"
 Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-You've used 30 entries,
+You've used 11 entries,
             6402 wiz_defined-function locations,
-            1487 strings with 18157 characters,
-and the built_in function-call counts, 405155 in all, are:
-= -- 30545
-> -- 15787
-< -- 1478
-+ -- 20042
-- -- 12127
-* -- 27951
-:= -- 52573
+            1298 strings with 12085 characters,
+and the built_in function-call counts, 127781 in all, are:
+= -- 10426
+> -- 3267
+< -- 422
++ -- 4629
+- -- 2223
+* -- 9527
+:= -- 15671
 add.period$ -- 0
-call.type$ -- 30
-change.case$ -- 378
-chr.to.int$ -- 932
-cite$ -- 58
-duplicate$ -- 34049
-empty$ -- 31604
-format.name$ -- 3126
-if$ -- 72890
+call.type$ -- 11
+change.case$ -- 156
+chr.to.int$ -- 200
+cite$ -- 20
+duplicate$ -- 10308
+empty$ -- 10840
+format.name$ -- 968
+if$ -- 24654
 int.to.chr$ -- 0
-int.to.str$ -- 66
+int.to.str$ -- 24
 missing$ -- 0
-newline$ -- 1323
-num.names$ -- 1285
-pop$ -- 11397
+newline$ -- 430
+num.names$ -- 466
+pop$ -- 3840
 preamble$ -- 1
-purify$ -- 682
+purify$ -- 241
 quote$ -- 0
-skip$ -- 6949
+skip$ -- 2268
 stack$ -- 0
-substring$ -- 65021
-swap$ -- 6274
-text.length$ -- 1277
+substring$ -- 22650
+swap$ -- 1904
+text.length$ -- 366
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1008
+type$ -- 362
 warning$ -- 0
-while$ -- 5007
+while$ -- 1486
 width$ -- 0
-write$ -- 1294
+write$ -- 420
 (There was 1 warning)
