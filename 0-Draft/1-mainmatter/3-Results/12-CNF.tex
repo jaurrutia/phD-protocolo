@@ -1,15 +1,46 @@
 % !TeX root = ../../protocolo.tex
 
-The figure presents a comparison between two theoretical approaches for modeling optical reflectivity in nanostructured films: the Coherent Scattering Model (CSM) and Thin Film Theory (TFT). Panel a) shows reflectivity spectra as a function of wavelength for two different systems: the upper plots correspond to CSM with a structural parameter $a = 30$~nm, and the lower plots to TFT with an equivalent film thickness of $a = 17.5$~nm. Solid lines indicate reflectivity for $p$ polarized light, and dashed lines for $s$ polarized light. Each curve corresponds to a different refractive index $n_\text{m}$ of the surrounding medium, as specified by the color map.
+The choice of a plasmonic metasurface of disordered spherical AuNPs for biosensing was made due to its cheaper and faster fabrication process compared to its counterparts of ordered ensembles or of AuNPs with more complex geometries. To design the biosensing-aimed metasurface with the desired morphological characteristics, the mean radii $a$ of the AuNPs and the surface coverage $\Theta$ of the metasurface have to be determined. This parameters are require to present a spectral response of the metasurface within the visible spectra since the probes in biosensing can be harmed under ultraviolet light and since they are typically found in an aqueous medium, which leads to high absorption in the infrared region.
 
-Panel b) presents magnified views of the shaded spectral regions from panel a, emphasizing the position and shape of the reflectivity minima across refractive index values. These detailed insets enable better visualization of the sensitivity and spectral shifts induced by variations in the matrix refractive index.
+Two different designs of plasmonic metasurfaces are proposed based on the previous considerations, and on the avilable fabrication and measurement capabilities. The chosen values of $a$ and $\Theta$ were  determined by a parametric variation process performed with reflectivity spectra calculations with the CSM and the TFT formalisms exploiting their modeling features. Calculations with the CSM yielded $a = 30$~nm and $\Theta = 0.12$~nm, that is, AuNPs beyond the dipolar approximation in ensembles with low surfaces coverage, while with the TFT the parameter variatino process lead to $a=17.5$~nm and $\Theta=0.275$, so small AuNPs in denser ensembles for the metasurface is proposed. 
+
+In Fig. \sfref{fig:TD-R}{a)} the reflectivity  at an angle of incidence $\theta_i = 72^\circ$ of the proposed metasurfaces is presented as function of the incident wavelength $\lambda$ within the visible spectra for $p$ (continuous lines)  and $s$ polarized (dashed lines) light. The upper and lower panels in Fig. \ref{fig:TD-R} correspond to calculations with the CSM and the TFT with their corresponding parameters for the proposed metasurfaces, respectively, employing a substrate with a refractive index $n_\text{s} = 1.5$. Each curve in Fig. \ref{fig:TD-R} corresponds to a different refractive index $n_\text{m}$ of the matrix, as specified by the color map, considering  water as the reference matrix ---with a refractive index of $n_\text{m} = 1.33$--- and changing up to $n_\text{m} = 1.36$. The shaded regions in Fig. \sfref{fig:TD-R}{a)} highlights the spectral window of $500$~nm $\leq \lambda \leq 590$~nm and their manifications are shown in Fig.  \sfref{fig:TD-R}{b)}, enabling a better visualization of spectral shifts induced by variations in the matrix refractive index.
 
 \begin{figure}[h]\centering
 	\includegraphics[scale = 1]{topo/Fig-Refl.pdf}
 	\caption{%
-		SComparison of reflectivity spectra computed using the Coherent Scattering Model (CSM, upper panels) with a structural scale of $a = 30$~nm, and the Thin Film Theory (TFT, lower panels) with a thickness of $a = 17.5$~nm. In all spectra, solid lines represent $p$ polarized light and dashed lines represent $s$ polarized light. The curves correspond to varying matrix refractive indices $n_\text{m}$ , as indicated by the color legend. (a) Full reflectivity spectra as a function of wavelength. (b) Enlarged view of the shaded regions in (a), highlighting the reflectivity minima and their spectral shift with $n_\text{m}$ .}
+	Theoretical reflectivity spectra was function of the incidence wavelength \textbf{a)} in the visible spectra and \textbf{b)} in the spectral window between $500$~nm and $590$~nm of a metasurface characterized by a mean radius $a=30$~nm and surface coverage $\Theta = 0.12$ (upper panels, calculated with the CSM) and one characterize by  $a=17.5$~nm and $\Theta=0.275$, (lower panels, calculated with the TFT). A glass substrate with refractive index $n_\text{s} = 1.5$ and an angle of incidence $\theta_i = 72^\circ$ were considered. The continuous (dashed) lines correspond to $p$ ($s$) polarized light and each curves corresponds to varying matrix refractive indices $n_\text{m}$, as indicated by the color legend. The shaded region highlights the window between $500$~nm and $590$~nm.}
 	\label{fig:TD-R}
 \end{figure}
+
+From its theoretical design, the proposed metasurfaces meet the conditions on the spectral behavior suited for biosensing. In particular, the CSM-based metasurface (upper panels) exhibit a resonances for all considered values of $n_\text{m}$ at wavelengths near $580$~nm for $p$ polarization and near $570$~nm for $s$ polarization, while the TFT-based metasurfaces present the resonances in the neigbourhood of $520$~nm and $525$~nm for $p$ and $s$ polarization respectively. In all considered cases a track on the minima spectral shift can be done, thus modeling an intensity sensing scheme for either polarization. However, the width of the calculated resonances in Fig.  \sfref{fig:TD-R}{b)} diminishes the quality factor of the simulated sensing process, meaning possible hindering for the sensing measurments. An alternative that improves the quality factor in the intensity scheme is the phase sensing scheme based in the  Topological Darkness (TD) phenomenon and in elliposometric technics. 
+
+It is understand under TD the occurrence of zero-reflection at specific spectral points in metasurfaces where destructive interference or mode coupling conditions are achived by their building nanostructures. The term TD is coined after the robustness of the  light suppression condition against perturbations from topological constraints present in reciprocal space of the metasurface's optical response, therefore making them stable and attractive for sensing technics. While this phenomenon has been mainly studied for ordered systems, it has been proved that TD conditions can be met in disordered systems as well. Moreover, the TD phenomenon is related to abrupt phase changes in the reflected light spectra  at the zero-reflection wavelength, which shifts as the probe matrix on the metasurface changes as seen in Fig.  \sfref{fig:TD-R}{b)}. 
+
+The phase change of the light reflected by a metasurface can be determine by analyzing the spectra of the  elliposometric parameters $\psi$ and $\Delta\phi$ defined as
+%
+\begin{align}
+	{r^{(p)}}/{r^{(s)}} = \tan\psi \exp(i \Delta\phi)
+\end{align}
+%
+where $r^{(j)}$ are the reflection amplitude coefficient for the $j$ polarization state. In particular, term $\Delta\phi$ corresponds to the phase difference between the reflected $p$ polarized and $s$ polarized light and its measurement is performed with the experimental setup  described in Section \ref{s:Setup} in Fig. \ref{fig:setup-atr} by placing a birefringent crystal in between the first lineal polarizer and the prism supporting the metasurface with its optical axis oriented at $45^\circ$ with respect to polarizer axis.
+
+
+
+
+
+
+ where interference conditions or mode coupling lead to perfect destructive interference. Their topological nature ensures that such features persist under small variations in material or structural parameters, making them highly stable and reproducible.
+
+
+
+
+
+
+
+
+
+
 
 
 The figure presents a comparative analysis of the ellipsometric parameter $\Delta$, calculated for two different metasurfaces using distinct theoretical models. Panel a) displays two density plots of $\Delta$ as a function of both the incident wavelength and the angle of incidence. The left map corresponds to calculations performed using the Coherent Scattering Model (CSM) with a structural parameter of $a = 30$~nm, while the right map shows results obtained from Thin Film Theory (TFT) with an equivalent optical thickness of $a = 17.5$~nm. White solid and dashed lines indicate selected angular cuts at fixed angles of incidence.

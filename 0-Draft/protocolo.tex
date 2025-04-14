@@ -1,13 +1,15 @@
 % !TeX root = protocolo.tex
 
 \documentclass[11pt]{Latex/Classes/PhDthesisPSnPDF}
-\usepackage{blindtext}
+
 \usepackage{enumitem}
 \input{Latex/Comands}           % Special commands written by the author
 
 
-\svgpath{{1-mainmatter/2-Theory/figs},{1-mainmatter/3-Results/figs}}
-\graphicspath{{1-mainmatter/1-Introduccion/figs},{1-mainmatter/2-Theory/figs},{1-mainmatter/3-Results/figs}}
+%\svgpath{{1-mainmatter/2-Theory/figs},{1-mainmatter/3-Results/figs}}
+\graphicspath{{1-mainmatter/1-Introduccion/figs},
+			  {1-mainmatter/2-Theory/figs},
+			  {1-mainmatter/3-Results/figs}}
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
 
 %\usepackage{Latex/mmacells}
@@ -90,10 +92,13 @@
 	\input{1-mainmatter/1-Introduccion/2-Development}	
 
 
-\chapter{Theoretical frameworks and measurement techniques}
+\chapter{Theoretical Frameworks and Measurement Techniques}
  	\label{ch:Theory}
-	\input{1-mainmatter/2-Theory/0-MultipleScattering}
 %	
+	The study of wave propagation in complex media has long been a central topic in optics, acoustics, and condensed matter physics. In particular, understanding the optical response of ensembles of nanoparticles (NPs) has garnered significant attention due to its relevance in fields such as nanophotonics, plasmonics, and metamaterials. The Multiple Scattering Theories (MSTs)  are consists of theoretical frameworks  employed to model these systems. The MSTs explicitly accounts for the interactions between individual scatterers and provides an accurate description of wave propagation in structured and disordered media \cite{loiko_monolayers_1998,barrera1991optical,reyes2018analytical}. The Foldy-Lax equations, formulated in the mid-20th century, offer a rigorous way to model the self-consistent field scattered by a collection of particles. Another approach to solve the Maxwell's equation approximately is the formalism of excess current and charge densities, and fields ---most commonly found in the context of thermodynamics---, which is suited specifically when the particles are located in an ambient and supported on a substrate.
+	
+	In the following sections, two MSTs are presented in addition to experimental setups to determine the optical response of ensembles of NPs supported on a substrate. In Section \ref{s:CSM} the Coherent Scattering Model (CSM), based on the Foldy-Lax approach, is derived, while in Section \ref{s:TFT} the Thin Film Theory is presented, which is founded on the excess quantities formalism. Both MTSs are suited to model the optical response of metasurfaces conformed by ensembles of spherical nanoparticles, whose centers are randomly located but contained within a a plane parallel to a substrate supporting each element of the ensemble. Lastly, in Section \ref{s:Setup} a setup for extinction spectra and one for reflectivity spectra  measurements are described.
+	
 	\section{Coherent Scattering Model}
 		\label{s:CSM}
 		\input{1-mainmatter/2-Theory/1-CSM}
@@ -106,38 +111,41 @@
 		\label{s:Setup}
 		\input{1-mainmatter/2-Theory/3-Setup}
 		
-\chapter{Progress in non-intrusive characterization}
+\chapter{Progress in Non-intrusive Characterization}
 	\label{ch:Non-int}
-	\input{1-mainmatter/3-Results/00-Characterization}		
+%
+	In this chapter the advances on the identification of substrate effects in the optical properties of metasurfaces are presented. These results consist in the comparison between measurements performed at the Instituto Nacional de Astrofísica, Óptica y Fotónica (INAOE) of extinction and reflectivity spectra ---with the setups presented  in Section \ref{s:Setup}--- of metasurfaces  with theoretical and numerical results. The analyzed metasurfaces were fabricated aembeddingt INAOE  by dewetting gold thin films yielding disordered ensembles of spherical gold nanoparticles (AuNP) supported on a Corning glass substrate. In Section \ref{s:substratep} the  experimental extinction and reflectivity spectra of two metasurfaces were contrasted  with theoretical results obtained with the Coherent Scattering Model (CSM) alongside Finite Elment Method (FEM) simulations performed in  COMSOL Multiphysics$^\text{TM}$ ver. 6.1 in order to quantify independently the effect of the multiple scattering,  the particle-substrate interaction and a possible partial embedding of the AuNPs into the substrate. To further characterize the partial embedding in metasurfaces, in Section \ref{s:pembedding} there are presented the first performed measurements for two sets of metasurfaces expected to have a different a different incrustation degree into the substrate. While an analysis of the samples with Scanning Electron Microscopy (SEM) or Atomic Force Microscopy (AFM) images are needed to deepen into this topic, an analysis supported by the results in Section \ref{s:substratep} is performed.	
 	
-	\section{Substrate effects on a plasmonic metasurface}
+	\section{Substrate Effects on a Plasmonic Metasurface}
 		\label{s:substratep}
 		\input{1-mainmatter/3-Results/01-SubstrateEffects}
 		
-	\section{Partial embedding: First measurements}
+	\section{Partial Embedding: First Measurements}
 		\label{s:pembedding}
 		\input{1-mainmatter/3-Results/02-PartialEmb}
 	
-\chapter{Progress in optical response of metasurfaces and their sensing mechanisms}
-		\label{s:OptRes}
-		\input{1-mainmatter/3-Results/10-TopoDarkness}
+\chapter{Progress in Optical Response and Sensing Mechanisms of Metasurfaces}
+	\label{s:OptRes}
+%	
+	This chapter presents advances in the study of the optical response of plasmonic metasurfaces composed of disordered ensembles of spherical gold nanoparticles (AuNPs), as well as the physical mechanisms that enable these systems to be used in biosensing applications. The results include both theoretical calculations aimed at the design of metasurfaces based on a specific spectral response and experimental data supporting the presence of a resonance identified in the theoretical spectra. In Section \ref{s:TDarkness}, two metasurface designs are proposed, along with their expected spectral behavior as predicted by the Coherent Scattering Model (CSM) and the Thin Film Theory (TFT). Additionally, the use of ellipsometric parameters ---instead of conventional reflectivity spectra--- is discussed, motivated by the phenomenon of topological darkness and the ease of performing such measurements.  Lastly, the expected spectral shift in the optical response of the metasurface due to variations on a probe medium were determined, which predict a blueshift of the identified resonance of the metasurface. To verify this phenomenon experimentally, in Section \ref{s:ExpBS} the reflectivity spectra was measured for a metasurface exposed to a probe medium, whose refractive index is artificially varied.
 		
-	\section{Expected theoretical results: Topological Darkness}
+	\section{Design of Metasurfaces and Use of Topological Darkness for Biosensing}
 		\label{s:TDarkness}
 		\input{1-mainmatter/3-Results/12-CNF}		
 		
-	\section{Experimental observation of spectral blueshift}
+	\section{Experimental Observation of Spectral Blueshift}
 		\label{s:ExpBS}
 		\input{1-mainmatter/3-Results/11-Measurements}
+		
+\chapter{Published and In-preparation Articles}
+%	\addcontentsline{toc}{chapter}{\protect\numberline{}List of Publications}
+\label{chapter:Publications}
+\input{1-mainmatter/4-Conclusions/0-List}
 			
 \chapter{Work plan (proposed activities to complete the project)}
 	\label{s:WorkPlan}
 	\input{1-mainmatter/4-Conclusions/0-Workplan}			
 
-\chapter*{List of Publications}
-	\addcontentsline{toc}{chapter}{\protect\numberline{}List of Publications}
-	\label{chapter:Publications}
-	\input{1-mainmatter/4-Conclusions/0-List}
 
 \setlength\bibitemsep{.1\itemsep}
 \printbibliography
