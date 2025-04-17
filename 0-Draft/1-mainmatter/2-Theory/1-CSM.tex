@@ -79,7 +79,7 @@ Once the approximation orders have been determined to truncate the Foldy-Lax hie
 %
 \begin{figure}[t!]\centering
 	\includegraphics[scale = 1]{Fig-CSM.pdf}
-	\caption{Diagram of the particle ensemble considered in the CSM, consisting of a collection of $N$ identical spherical particles of radius $a$ whose centers are randomly located within the integration volume $V$: an infinite film centered at the plane $z=0$ and of thickness $d$, which tends to zero to reproduce the case of a two-dimensional array. The system, embedded in a dielectric matrix (blue background), is illuminated by an incident monochromatic plane wave  with traveling in the $\vu{k}^\text{inc}$ direction into the film at an angle $\theta$. the red region represents the induced electric field due to the spherical particles.}
+	\caption{Diagram of the particle ensemble considered in the CSM, consisting of a collection of $N$ identical spherical particles of radius $a$ whose centers are randomly located within the integration volume $V$: an infinite film centered at the plane $z=0$ and of thickness $d$, which tends to zero to reproduce the case of a two-dimensional array. The system, embedded in a dielectric matrix (blue background), is illuminated by an incident monochromatic plane wave  with traveling in the $\vu{k}^\text{inc}$ direction into the film at an angle $\theta$. The red region represents the induced electric field due to the spherical particles.}
 	\label{fig:esquemaCSM}
 \end{figure}
 %
@@ -140,7 +140,8 @@ where $j=1$ for $s$-polarization and $j=2$ for $p$-polarization. The assumption 
 	\begin{align}%
 		r_\text{CSM}^{(j)}(\theta) &= \frac{-\beta_{+}^{(j)}(\theta)}
 		{1+\beta_F + \frac{1}{4} \qty[\beta_F^2-\beta_{+}^{(j)}(\theta) \beta_{-}^{(j)}(\theta)]},%
-		\\
+\end{align}%
+\begin{align}%
 		t_\text{CSM}^{(j)}(\theta) &= \frac{1 - \frac{1}{4}\qty[\beta_F^2- \beta_{+}^{(j)}(\theta)\beta_{-}^{(j)}(\theta)]}
 		{1+\beta_F + \frac{1}{4} \qty[\beta_F^2-\beta_{+}^{(j)}(\theta) \beta_{-}^{(j)}(\theta)]},
 	\end{align}%

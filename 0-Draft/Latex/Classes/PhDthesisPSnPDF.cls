@@ -18,7 +18,11 @@
 \else
    \LoadClass[pdftex, letterpaper]{book}
 \fi
-
+%\ifx\pdfoutput\undefined
+%\LoadClass[dvips, a4paper]{book}  %
+%\else
+%\LoadClass[pdftex, a4paper]{book}
+%\fi
 %-------------------------------------------------------------------------------
 %                                   PACKAGES 		                                    |
 %-------------------------------------------------------------------------------
@@ -111,6 +115,7 @@
 		\AtEveryBibitem{\clearfield{month}}
 		\AtEveryBibitem{\clearfield{day}}
 		\AtEveryBibitem{\clearfield{issn}}
+		\AtEveryBibitem{\clearfield{isbn}}
 		\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
 
 %		\DefineBibliographyStrings{spanish}{%
@@ -226,7 +231,7 @@
                  colorlinks = true,
                  linkcolor =  sblueFC, %blue,
                  urlcolor  = sredFC, %magenta,
-                 citecolor = red,% red,
+                 citecolor = sredFC,% red,
                  anchorcolor = green,
 				hyperfootnotes = true, % false/true
                  hyperindex = true,
@@ -328,7 +333,7 @@
               %\cofeAm{1}{1}{90}{5.5cm}{5.5cm}   % ------------------------------------------------------ Coffee Stain
                }
 
-		\setlength{\skip\footins}{.5cm} 			% gap between text and footer
+		\setlength{\skip\footins}{5mm} 			% gap between text and footer
 
 
 

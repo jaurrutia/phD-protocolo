@@ -19,47 +19,49 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: protocolo-blx.bib
 Database file #2: 1-mainmatter/5-References/references.bib
+Warning--I didn't find a database entry for "Briseno2024AMTgithub"
 Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 You've used 33 entries,
             6402 wiz_defined-function locations,
-            1515 strings with 19084 characters,
-and the built_in function-call counts, 449281 in all, are:
-= -- 34360
-> -- 16410
-< -- 1598
-+ -- 21424
-- -- 12426
-* -- 31471
-:= -- 58037
+            1520 strings with 19357 characters,
+and the built_in function-call counts, 455794 in all, are:
+= -- 35102
+> -- 16255
+< -- 1583
++ -- 21549
+- -- 12268
+* -- 32095
+:= -- 58976
 add.period$ -- 0
 call.type$ -- 33
-change.case$ -- 399
-chr.to.int$ -- 968
+change.case$ -- 381
+chr.to.int$ -- 944
 cite$ -- 64
-duplicate$ -- 38228
-empty$ -- 35274
-format.name$ -- 3546
-if$ -- 81554
+duplicate$ -- 38945
+empty$ -- 35775
+format.name$ -- 3637
+if$ -- 82882
 int.to.chr$ -- 0
-int.to.str$ -- 72
+int.to.str$ -- 71
 missing$ -- 0
-newline$ -- 1484
-num.names$ -- 1399
-pop$ -- 12651
+newline$ -- 1502
+num.names$ -- 1380
+pop$ -- 12748
 preamble$ -- 1
-purify$ -- 748
+purify$ -- 742
 quote$ -- 0
-skip$ -- 7611
+skip$ -- 7637
 stack$ -- 0
-substring$ -- 73028
-swap$ -- 6925
-text.length$ -- 1400
+substring$ -- 74569
+swap$ -- 6932
+text.length$ -- 1410
 text.prefix$ -- 0
 top$ -- 1
 type$ -- 1110
 warning$ -- 0
-while$ -- 5607
+while$ -- 5732
 width$ -- 0
-write$ -- 1452
+write$ -- 1470
+(There was 1 warning)
