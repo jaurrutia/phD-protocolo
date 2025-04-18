@@ -813,6 +813,31 @@
     \field{year}{2023}
   \endentry
 
+  \entry{chen_nanofabrication_2015}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=CY}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Yifang},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CY1}
+    \strng{fullhash}{CY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.mee.2015.02.042
+    \endverb
+    \field{issn}{0167-9317}
+    \field{pages}{57–72}
+    \field{title}{Nanofabrication by electron beam lithography and its
+  applications: A review}
+    \field{volume}{135}
+    \field{journaltitle}{Microelectron. Eng.}
+    \field{year}{2015}
+  \endentry
+
   \entry{borah_plasmon_2022}{article}{}{}
     \name{author}{4}{}{%
       {{hash=BR}{%
@@ -1190,6 +1215,149 @@
     \field{year}{2015}
   \endentry
 
+  \entry{lerme_optical_2013}{article}{}{}
+    \name{author}{6}{}{%
+      {{hash=LJ}{%
+         family={Lermé},
+         familyi={L\bibinitperiod},
+         given={Jean},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Bonnet},
+         familyi={B\bibinitperiod},
+         given={Christophe},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Broyer},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CE}{%
+         family={Cottancin},
+         familyi={C\bibinitperiod},
+         given={Emmanuel},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Manchon},
+         familyi={M\bibinitperiod},
+         given={Delphine},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pellarin},
+         familyi={P\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LJBCBMCEMDPM1}
+    \strng{fullhash}{LJBCBMCEMDPM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1021/jp3121963
+    \endverb
+    \field{issn}{1932-7447, 1932-7455}
+    \field{number}{12}
+    \field{pages}{6383–6398}
+    \field{shortjournal}{J. Phys. Chem. C}
+    \field{shorttitle}{Optical Properties of a Particle above a Dielectric
+  Interface}
+    \field{title}{Optical Properties of a Particle above a Dielectric
+  Interface: Cross Sections, Benchmark Calculations, and Analysis of the
+  Intrinsic Substrate Effects}
+    \verb{url}
+    \verb https://pubs.acs.org/doi/10.1021/jp3121963
+    \endverb
+    \field{volume}{117}
+    \field{journaltitle}{The Journal of Physical Chemistry C}
+    \field{day}{28}
+    \field{month}{03}
+    \field{year}{2013}
+  \endentry
+
+  \entry{bosi_optical_1996}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=BG}{%
+         family={Bosi},
+         familyi={B\bibinitperiod},
+         given={Giulio},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BG1}
+    \strng{fullhash}{BG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1364/JOSAB.13.001691
+    \endverb
+    \field{issn}{0740-3224, 1520-8540}
+    \field{number}{8}
+    \field{pages}{1691}
+    \field{shortjournal}{J. Opt. Soc. Am. B}
+    \field{shorttitle}{Optical response of a thin film of spherical particles
+  upon a dielectric substrate}
+    \field{title}{Optical response of a thin film of spherical particles upon a
+  dielectric substrate: retarded multipolar treatment including multiple
+  reflections}
+    \verb{url}
+    \verb https://www.osapublishing.org/abstract.cfm?URI=josab-13-8-1691
+    \endverb
+    \field{volume}{13}
+    \field{journaltitle}{Journal of the Optical Society of America B}
+    \field{day}{01}
+    \field{month}{08}
+    \field{year}{1996}
+  \endentry
+
+  \entry{zhang_multiple-reflection_2020}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=ZXX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xiao-Xuan},
+         giveni={X\bibinithyphendelim X\bibinitperiod},
+      }}%
+      {{hash=GYL}{%
+         family={Geng},
+         familyi={G\bibinitperiod},
+         given={You-Lin},
+         giveni={Y\bibinithyphendelim L\bibinitperiod},
+      }}%
+      {{hash=CZQ}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Zhi-Qun},
+         giveni={Z\bibinithyphendelim Q\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZXXGYLCZQ1}
+    \strng{fullhash}{ZXXGYLCZQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TAP.2020.2971620
+    \endverb
+    \field{issn}{0018-926X, 1558-2221}
+    \field{number}{4}
+    \field{pages}{3313–3317}
+    \field{shortjournal}{{IEEE} Trans. Antennas Propagat.}
+    \field{title}{A Multiple-Reflection Solution to Electromagnetic Scattering
+  by a Buried Sphere}
+    \verb{url}
+    \verb https://ieeexplore.ieee.org/document/8989971/
+    \endverb
+    \field{volume}{68}
+    \field{journaltitle}{{IEEE} Transactions on Antennas and Propagation}
+    \field{month}{04}
+    \field{year}{2020}
+  \endentry
+
   \entry{barzilai_two-point_1988}{article}{}{}
     \name{author}{2}{}{%
       {{hash=BJ}{%
@@ -1224,6 +1392,140 @@
     \field{volume}{8}
     \field{journaltitle}{{IMA} Journal of Numerical Analysis}
     \field{year}{1988}
+  \endentry
+
+  \entry{ermolaev_topological_2022}{article}{}{}
+    \name{author}{18}{}{%
+      {{hash=EG}{%
+         family={Ermolaev},
+         familyi={E\bibinitperiod},
+         given={Georgy},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=VK}{%
+         family={Voronin},
+         familyi={V\bibinitperiod},
+         given={Kirill},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BDG}{%
+         family={Baranov},
+         familyi={B\bibinitperiod},
+         given={Denis\bibnamedelima G.},
+         giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Kravets},
+         familyi={K\bibinitperiod},
+         given={Vasyl},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=TG}{%
+         family={Tselikov},
+         familyi={T\bibinitperiod},
+         given={Gleb},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Stebunov},
+         familyi={S\bibinitperiod},
+         given={Yury},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YD}{%
+         family={Yakubovsky},
+         familyi={Y\bibinitperiod},
+         given={Dmitry},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=NS}{%
+         family={Novikov},
+         familyi={N\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Vyshnevyy},
+         familyi={V\bibinitperiod},
+         given={Andrey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mazitov},
+         familyi={M\bibinitperiod},
+         given={Arslan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KI}{%
+         family={Kruglov},
+         familyi={K\bibinitperiod},
+         given={Ivan},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhukov},
+         familyi={Z\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Romanov},
+         familyi={R\bibinitperiod},
+         given={Roman},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MAM}{%
+         family={Markeev},
+         familyi={M\bibinitperiod},
+         given={Andrey\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Arsenin},
+         familyi={A\bibinitperiod},
+         given={Aleksey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=NKS}{%
+         family={Novoselov},
+         familyi={N\bibinitperiod},
+         given={Kostya\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GAN}{%
+         family={Grigorenko},
+         familyi={G\bibinitperiod},
+         given={Alexander\bibnamedelima N.},
+         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Volkov},
+         familyi={V\bibinitperiod},
+         given={Valentyn},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EGVKBDGKVTGSYYDNSVAMAKIZSRRMAMAANKSGANVV1}
+    \strng{fullhash}{EGVKBDGKVTGSYYDNSVAMAKIZSRRMAMAANKSGANVV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/s41467-022-29716-4
+    \endverb
+    \field{issn}{2041-1723}
+    \field{number}{1}
+    \field{pages}{2049}
+    \field{shortjournal}{Nat. Commun.}
+    \field{title}{Topological phase singularities in atomically thin
+  high-refractive-index materials}
+    \verb{url}
+    \verb https://www.nature.com/articles/s41467-022-29716-4
+    \endverb
+    \field{volume}{13}
+    \field{journaltitle}{Nature Communications}
+    \field{day}{19}
+    \field{month}{04}
+    \field{year}{2022}
   \endentry
 
   \entry{barrera1991optical}{article}{}{}
@@ -1276,6 +1578,42 @@
     \field{volume}{43}
     \field{journaltitle}{Physical Review B}
     \field{year}{1991}
+  \endentry
+
+  \entry{foldy_multiple_1945}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=FLL}{%
+         family={Foldy},
+         familyi={F\bibinitperiod},
+         given={Leslie\bibnamedelima L.},
+         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FLL1}
+    \strng{fullhash}{FLL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRev.67.107
+    \endverb
+    \field{issn}{0031-899X}
+    \field{number}{3}
+    \field{pages}{107–119}
+    \field{shortjournal}{Phys. Rev.}
+    \field{title}{The Multiple Scattering of Waves. I. General Theory of
+  Isotropic Scattering by Randomly Distributed Scatterers}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRev.67.107
+    \endverb
+    \field{volume}{67}
+    \field{langid}{english}
+    \field{journaltitle}{Physical Review}
+    \field{day}{01}
+    \field{month}{02}
+    \field{year}{1945}
+    \field{urlday}{18}
+    \field{urlmonth}{04}
+    \field{urlyear}{2025}
   \endentry
 
   \entry{barrera_coherent_2003}{article}{}{}
@@ -1430,6 +1768,119 @@
     \field{title}{Absorption and {Scattering} of {Light} by {Small}
   {Particles}}
     \field{year}{1983}
+  \endentry
+
+  \entry{svedendahl_fano_2012}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=SM}{%
+         family={Svedendahl},
+         familyi={S\bibinitperiod},
+         given={Mikael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Käll},
+         familyi={K\bibinitperiod},
+         given={Mikael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SMKM1}
+    \strng{fullhash}{SMKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1021/nn302879j
+    \endverb
+    \field{issn}{1936-0851, 1936-086X}
+    \field{number}{8}
+    \field{pages}{7533–7539}
+    \field{shortjournal}{{ACS} Nano}
+    \field{title}{Fano Interference between Localized Plasmons and Interface
+  Reflections}
+    \verb{url}
+    \verb https://pubs.acs.org/doi/10.1021/nn302879j
+    \endverb
+    \field{volume}{6}
+    \field{journaltitle}{{ACS} Nano}
+    \field{day}{28}
+    \field{month}{08}
+    \field{year}{2012}
+  \endentry
+
+  \entry{haarmans_optical_1995}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=HM}{%
+         family={Haarmans},
+         familyi={H\bibinitperiod},
+         given={M.T.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bedeaux},
+         familyi={B\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HMBD1}
+    \strng{fullhash}{HMBD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/0040-6090(94)06395-8
+    \endverb
+    \field{issn}{00406090}
+    \field{number}{1}
+    \field{pages}{213–223}
+    \field{shortjournal}{Thin Solid Films}
+    \field{title}{Optical properties of thin films up to second order in the
+  thickness}
+    \verb{url}
+    \verb https://linkinghub.elsevier.com/retrieve/pii/0040609094063958
+    \endverb
+    \field{volume}{258}
+    \field{journaltitle}{Thin Solid Films}
+    \field{month}{03}
+    \field{year}{1995}
+  \endentry
+
+  \entry{lazzari_granfilm_2002}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=LR}{%
+         family={Lazzari},
+         familyi={L\bibinitperiod},
+         given={Rémi},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Simonsen},
+         familyi={S\bibinitperiod},
+         given={Ingve},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRSI1}
+    \strng{fullhash}{LRSI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1016/S0040-6090(02)00679-X
+    \endverb
+    \field{issn}{00406090}
+    \field{number}{1}
+    \field{pages}{124–136}
+    \field{shortjournal}{Thin Solid Films}
+    \field{shorttitle}{{GranFilm}}
+    \field{title}{{GranFilm}: a software for calculating thin-layer dielectric
+  properties and Fresnel coefficients}
+    \verb{url}
+    \verb https://linkinghub.elsevier.com/retrieve/pii/S004060900200679X
+    \endverb
+    \field{volume}{419}
+    \field{journaltitle}{Thin Solid Films}
+    \field{month}{11}
+    \field{year}{2002}
   \endentry
 
   \entry{johnson_optical_1972}{article}{}{}
