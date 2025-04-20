@@ -10,7 +10,7 @@ In order to characterize and analyze the optical response of a metasurface of sp
 	\label{fig:setup-UvVis}
 \end{figure}
 
-The extinction measurements, as schematized in Fig. \sfref{fig:setup-UvVis}{a)}, are obtained by illuminating the metasurface with a white light source (LS) at normal incidence at an external configuration, that is, from air into the substrate. The light is collimated with a lens (L)  before the AuNPs metasurface and then transmitted light is collected with a glass fiber connected to an spectrometer (S). An image of the experimental setup is presented in Fig. \sfref{fig:setup-UvVis}{b)} where each component of the setup is signalized. To perform the extinction measurements, it was employed a halogen lamp (Mikropack HL-2000) as the white light source and a StellarNet(R) BLUE-Wave Spectrometer with spectral range between 350 nm and 1150 nm.
+The extinction measurements, as schematized in Fig. \sfref{fig:setup-UvVis}{a)}, are obtained by illuminating the metasurface with a white light source (LS) at normal incidence at an external configuration, that is, from air into the substrate. The light is collimated with a lens (L)  before the AuNPs metasurface and then transmitted light is collected with a glass fiber and sent to an spectrometer (S). An image of the experimental setup is presented in Fig. \sfref{fig:setup-UvVis}{b)} where each component of the setup is signalized. To perform the extinction measurements, it was employed a halogen lamp (Mikropack HL-2000) as the white light source and a StellarNet(R) BLUE-Wave Spectrometer with spectral range between 350 nm and 1150 nm.
 
 \begin{figure}[b!]%
 	\centering
@@ -21,23 +21,23 @@ The extinction measurements, as schematized in Fig. \sfref{fig:setup-UvVis}{a)},
 
 The reflectivity spectra is measured in an internal illumination configuration with a white light beam from a Xenon lamp (ThorLabs SLS201L) as a light source (LS). In Fig. \sfref{fig:setup-atr}{a)} it is shown the schematic representation of the experimental setup  presented in Fig. \sfref{fig:setup-atr}{b)}, where it can be seen that the light beam passes through a lens (L) and a linear polarizer (LP) before incising into a planar face of a right-angle prism (P) supporting the metasurface. The reflected beam from the metasurface is then collected by a second lens (L) and directed into a spectrometer (S): Ocean Optics HR4000 Spectrometer. To perform the reflectivity measurements, the prism (BK7 glass) and the substrate of the metasurface (Corning glass) were optically coupled by index-matching their materials with a microscope immersion oil with a refractive index of $n = 1.518$.
 
-\begin{figure}[b!]%
+A scheme of the optically coupled prism and the metasurface is shown in Fig. \sfref{fig:Prism}{a)} and an overlap of the scheme and the actual system in \sfref{fig:Prism}{b)}. The red arrows correspond to the optical path of the light beam through the prism into the AuNPs, the gray line to the immersion oil index-matching the metasurface and the prism, and the dashed lines represent the normal direction to the planar faces of the prism. The light beam travels into the prism at an angle $\theta_g$, experimentally set on a goniometer holding the prism as shown in  Fig. \sfref{fig:Prism}{b)}, which determines the angle of incidence $\theta_i$ at which the AuNPs are illuminated. The relation between $\theta_g$ and  $\theta_i$ is given by
+%
+\begin{align*}
+%	\theta_i = \frac{\pi}{4} + \sin^{-1}\left(\frac{n_\text{Air}}{n_\text{Prism}}\sin\theta_g\right)
+%	\qquad\text{and}
+%	\qquad
+	\theta_g (\theta_i)= \sin^{-1}\left[\frac{n_\text{Prism}}{n_\text{Air}}\sin\left(\theta_i-\frac{\pi}{4}\right)\right],
+\end{align*}
+%
+where $n_\text{Air}$ is the refractive index of the air (typically set equal to the unity) and $n_\text{Prism}$ that of the prism (typically set equal to 1.5). Due to the index matching, the refraction between the prism and the matasurfaces's substrate are neglected.
+
+\begin{figure}[h!]%
 	\centering
 	\includegraphics[scale = 1]{Fig-Coupling.pdf}
 	\caption{\textbf{a)} Schematic representation of the right-angle prism (P) mounted in the reflectivity measurement setup described in Fig. \ref{fig:setup-atr} and \textbf{b)} photograph of the prism attached to a goniometer used to control the angle of incidence $\theta_i$ of a light beam on the metasurface of AuNPs (not shown in the photograph). A light beam (red line) entering the prism at an angle $\theta_g$, measured with the goniometer scale, is refracted inside the prism according to Snell's law. This refraction determines $\theta_i$ at the interface between the prism and the metasurface's substrate, which are optically coupled with an immersion oil layer (cyan line). The dashed gray lines corresponds to the normal direction to any of the planar faces of the prism.}
 	\label{fig:Prism}
 \end{figure}
-
-A scheme of the optically coupled prism and the metasurface is shown in Fig. \sfref{fig:Prism}{a)} where the red line corresponds to the optical path of the light beam through the prism into the AuNPs, the cyan line to the immersion oil index matching the metasurface and the prism, and where the dashed gray lines represent the normal direction to the planar faces of the prism. The light beam travels into the prism at an angle $\theta_g$, experimentally determined by a goniometer holding the prism as shown in  Fig. \sfref{fig:Prism}{b)}, which determines the angle of incidence $\theta_i$ at which the AuNPs are illuminated. The relations between $\theta_g$ and  $\theta_i$ are
-%
-\begin{align*}
-	\theta_i = \frac{\pi}{4} + \sin^{-1}\left(\frac{n_\text{Air}}{n_\text{Prism}}\sin\theta_g\right)
-	\qquad\text{and}
-	\qquad
-	\theta_g = \sin^{-1}\left[\frac{n_\text{Prism}}{n_\text{Air}}\sin\left(\theta_i-\frac{\pi}{4}\right)\right],
-\end{align*}
-%
-where $n_\text{Air}$ is the refractive index of the air (typically considered equal the unity) and $n_\text{Prism}$ that of the prism. Due to the index matching, the refraction between the prism and the matasurfaces's substrate are neglected.
 
 In addition to reflectivity measurmentes, ellipsometric technics can be achived  with the setup in Fig. \ref{fig:setup-atr} after the introduction of a single optical element in the optical path of the incident light. In particular, the phase change of the reflected light by a AuNPs metasurface can be determine with the spectra of the  ellipsometric parameters $\psi$ and $\Delta\phi$ defined as
 %

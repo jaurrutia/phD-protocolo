@@ -1,6 +1,6 @@
 % !TeX root = ../../protocolo.tex
 
-Multiple Scattering Theories (MSTs) provide approximate solutions to Maxwell's equations when considering the problem of light scattered by an ensemble of particles illuminated by a monochromatic plane wave \cite{loiko_monolayers_1998,reyes2018analytical}. In particular, the Coherent Scattering Model (CSM) is a MST that provides an expression for the amplitude coefficients of reflection and transmission of light scattered in the coherent direction for a disordered ensemble of spherical particles with are coplanar centers \cite{barrera_coherent_2003,garcia2012multiple,reyes2018analytical}. 
+Multiple Scattering Theories (MSTs) provide approximate solutions to Maxwell's equations when considering the problem of light scattered by an ensemble of particles illuminated by a monochromatic plane wave \cite{loiko_monolayers_1998,reyes2018analytical}. In particular, the Coherent Scattering Model (CSM) is a MST that provides analytical expressions for the amplitude coefficients of reflection and transmission of light scattered in the coherent direction for a disordered ensemble of spherical particles with are coplanar centers \cite{barrera_coherent_2003,garcia2012multiple,reyes2018analytical}. 
 
 Within the MST framework, the optical response of a disordered array of arbitrary particles, illuminated by an incident monochromatic plane wave $\vb{E}^\text{inc}(\vb{r},\omega)$ with angular frequency $\omega$ and propagation direction $\vu{k}^\text{inc}$, is determined by the excitation field $\vb{E}^\text{exc}(\vb{r},\omega)$ acting on the $k$-th particle in a collection of $N$ particles. This field is equal to the sum of the incident electric field and the induced electric field $\vb{E}^\text{ind}_\ell(\vb{r},\omega)$ ---which includes both the field inside the particle and the scattered field outside of it--- due to the other elements of the ensemble but not itself \cite{garcia2012multiple,barrera_coherent_2003}, that is
 %
@@ -44,7 +44,7 @@ with $\rho(\vb{R})$ is the probability density that the ensemble is in a specifi
 	\label{eq:EexcSSA}%
 \end{subequations}%
 %
-where $\rho(\vb{r}_\ell)$ is the probability density of finding the center of the $\ell$-th particle in $V$, and Eq.~\eqref{eq:EexcAve} represents the configurational average of the excitation electric field $\vb{E}_\ell^\text{exc}$ for the $\ell$-th particle, considering that its position in $V$ is fixed; the conditional probability density $\rho(\vb{R}|\vb{r}_\ell)$ describes such constriction. This expression can be further analyzed by substituting Eq.~\eqref{eq:Eexc} into Eq.~\eqref{eq:EexcAve} and following an analogous procedure to that of Eqs. \eqref{eq:EexcSSA} with the indices exchanges $k\to\ell$ and $\ell \to m$, yielding
+where $\rho(\vb{r}_\ell)$ is the probability density of finding the center of the $\ell$-th particle in $V$, and Eq.~\eqref{eq:EexcAve} represents the configurational average of the excitation electric field $\vb{E}_\ell^\text{exc}$ for the $\ell$-th particle, considering that its position in $V$ is fixed, constriction described by the conditional probability density $\rho(\vb{R}|\vb{r}_\ell)$. This expression can be further analyzed by substituting Eq.~\eqref{eq:Eexc} into Eq.~\eqref{eq:EexcAve} and following an analogous procedure to that of Eqs. \eqref{eq:EexcSSA} with the indices exchanges $k\to\ell$ and $\ell \to m$, yielding
 %
 \begin{subequations}%
 	\begin{align}%
@@ -79,7 +79,7 @@ Once the approximation orders have been determined to truncate the Foldy-Lax hie
 %
 \begin{figure}[t!]\centering
 	\includegraphics[scale = 1]{Fig-CSM.pdf}
-	\caption{Diagram of the particle ensemble considered in the CSM, consisting of a collection of $N$ identical spherical particles of radius $a$ whose centers are randomly located within the integration volume $V$: an infinite film centered at the plane $z=0$ and of thickness $d$, which tends to zero to reproduce the case of a two-dimensional array. The system, embedded in a dielectric matrix (blue background), is illuminated by an incident monochromatic plane wave  with traveling in the $\vu{k}^\text{inc}$ direction into the film at an angle $\theta$. The red region represents the induced electric field due to the spherical particles.}
+	\caption{Diagram of the particle ensemble considered in the CSM, consisting of a collection of $N$ identical spherical particles of radius $a$ whose centers are randomly located within the integration volume $V$: an infinite film centered at the plane $z=0$ and of thickness $d$, which tends to zero to reproduce the case of a two-dimensional array. The system, embedded in a dielectric matrix (gray background), is illuminated by an incident monochromatic plane wave  with traveling in the $\vu{k}^\text{inc}$ direction into the film at an angle $\theta$. The red region represents the induced electric field due to the spherical particles.}
 	\label{fig:esquemaCSM}
 \end{figure}%
 %

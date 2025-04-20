@@ -1964,5 +1964,151 @@
     \field{journaltitle}{Journal of Applied Physics}
     \field{year}{2014}
   \endentry
+
+  \entry{toudert_advanced_2012}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=TJ}{%
+         family={Toudert},
+         familyi={T\bibinitperiod},
+         given={Johann},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Simonot},
+         familyi={S\bibinitperiod},
+         given={Lionel},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Camelio},
+         familyi={C\bibinitperiod},
+         given={Sophie},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Babonneau},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TJSLCSBD1}
+    \strng{fullhash}{TJSLCSBD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1103/PhysRevB.86.045415
+    \endverb
+    \field{issn}{1098-0121, 1550-235X}
+    \field{number}{4}
+    \field{pages}{045415}
+    \field{shortjournal}{Phys. Rev. B}
+    \field{shorttitle}{Advanced optical effective medium modeling for a single
+  layer of polydisperse ellipsoidal nanoparticles embedded in a homogeneous
+  dielectric medium}
+    \field{title}{Advanced optical effective medium modeling for a single layer
+  of polydisperse ellipsoidal nanoparticles embedded in a homogeneous
+  dielectric medium: Surface plasmon resonances}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevB.86.045415
+    \endverb
+    \field{volume}{86}
+    \field{journaltitle}{Physical Review B}
+    \field{day}{10}
+    \field{month}{07}
+    \field{year}{2012}
+  \endentry
+
+  \entry{krasnok_nonlinear_2018}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=KA}{%
+         family={Krasnok},
+         familyi={K\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tymchenko},
+         familyi={T\bibinitperiod},
+         given={Mykhailo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Alù},
+         familyi={A\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KATMAA1}
+    \strng{fullhash}{KATMAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1016/j.mattod.2017.06.007
+    \endverb
+    \field{issn}{13697021}
+    \field{number}{1}
+    \field{pages}{8–21}
+    \field{shortjournal}{Materials Today}
+    \field{shorttitle}{Nonlinear metasurfaces}
+    \field{title}{Nonlinear metasurfaces: a paradigm shift in nonlinear optics}
+    \verb{url}
+    \verb https://linkinghub.elsevier.com/retrieve/pii/S136970211730233X
+    \endverb
+    \field{volume}{21}
+    \field{journaltitle}{Materials Today}
+    \field{month}{01}
+    \field{year}{2018}
+  \endentry
+
+  \entry{chen_investigating_2021}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=CM}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Meijie},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PD}{%
+         family={Pang},
+         familyi={P\bibinitperiod},
+         given={Dan},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CX}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Xingyu},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Hongjie},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CMPDCXYH1}
+    \strng{fullhash}{CMPDCXYH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.ijheatmasstransfer.2021.121263
+    \endverb
+    \field{issn}{00179310}
+    \field{pages}{121263}
+    \field{shortjournal}{International Journal of Heat and Mass Transfer}
+    \field{title}{Investigating the effective radiative cooling performance of
+  random dielectric microsphere coatings}
+    \verb{url}
+    \verb https://linkinghub.elsevier.com/retrieve/pii/S0017931021003665
+    \endverb
+    \field{volume}{173}
+    \field{langid}{english}
+    \field{journaltitle}{International Journal of Heat and Mass Transfer}
+    \field{month}{07}
+    \field{year}{2021}
+  \endentry
 \enddatalist
 \endinput
