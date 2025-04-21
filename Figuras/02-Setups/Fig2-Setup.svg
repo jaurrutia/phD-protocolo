@@ -10,6 +10,9 @@
    inkscape:version="1.4.1 (93de688d07, 2025-03-30)"
    sodipodi:docname="Fig2-Setup.svg"
    xml:space="preserve"
+   inkscape:export-filename="Fig2-Setup.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.2348757"
-     inkscape:cx="351.45237"
-     inkscape:cy="489.11804"
+     inkscape:cx="351.45238"
+     inkscape:cy="489.11805"
      inkscape:window-width="1920"
      inkscape:window-height="1024"
      inkscape:window-x="0"
@@ -35,7 +38,8 @@
      inkscape:current-layer="svg5"
      inkscape:showpageshadow="0"
      inkscape:deskcolor="#d1d1d1"
-     showguides="true"><inkscape:grid
+     showguides="true"
+     inkscape:export-bgcolor="#ffffffff"><inkscape:grid
        type="xygrid"
        id="grid9"
        originx="0"
@@ -3543,7 +3547,7 @@
          cy="15.735869"
          r="0.76197559" /></g></g><g
      id="g86"
-     inkscape:export-filename="Fig-Coupling.pdf"
+     inkscape:export-filename="Fig-Coupling.png"
      inkscape:export-xdpi="300"
      inkscape:export-ydpi="300"><g
        id="g87"
@@ -4006,7 +4010,7 @@
          id="path26"
          sodipodi:nodetypes="cc" /></g></g><g
      id="g10"
-     inkscape:export-filename="Fig-UV-Vis.pdf"
+     inkscape:export-filename="Fig-UV-Vis.png"
      inkscape:export-xdpi="300"
      inkscape:export-ydpi="300"><image
        width="91.72551"
