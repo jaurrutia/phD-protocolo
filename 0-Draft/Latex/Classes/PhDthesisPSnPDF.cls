@@ -14,9 +14,9 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \ifx\pdfoutput\undefined
-   \LoadClass[dvips, letterpaper]{book}  %
+   \LoadClass[dvips, letterpaper,oneside]{book}  %
 \else
-   \LoadClass[pdftex, letterpaper]{book}
+   \LoadClass[pdftex, letterpaper,oneside]{book}
 \fi
 %\ifx\pdfoutput\undefined
 %\LoadClass[dvips, a4paper]{book}  %

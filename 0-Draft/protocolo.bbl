@@ -321,6 +321,48 @@
     \field{year}{2008}
   \endentry
 
+  \entry{kabashin_label-free_2023}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=KAV}{%
+         family={Kabashin},
+         familyi={K\bibinitperiod},
+         given={Andrei\bibnamedelima V.},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=KVG}{%
+         family={Kravets},
+         familyi={K\bibinitperiod},
+         given={Vasyl\bibnamedelima G.},
+         giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=GAN}{%
+         family={Grigorenko},
+         familyi={G\bibinitperiod},
+         given={Alexander\bibnamedelima N.},
+         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KAVKVGGAN1}
+    \strng{fullhash}{KAVKVGGAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1039/D3CS00155E
+    \endverb
+    \field{issn}{0306-0012, 1460-4744}
+    \field{number}{18}
+    \field{pages}{6554–6585}
+    \field{shortjournal}{Chem. Soc. Rev.}
+    \field{shorttitle}{Label-free optical biosensing}
+    \field{title}{Label-free optical biosensing: going beyond the limits}
+    \verb{url}
+    \verb https://xlink.rsc.org/?DOI=D3CS00155E
+    \endverb
+    \field{volume}{52}
+    \field{journaltitle}{Chemical Society Reviews}
+    \field{year}{2023}
+  \endentry
+
   \entry{kabashin_plasmonic_2009}{article}{}{}
     \name{author}{9}{}{%
       {{hash=KAV}{%
@@ -397,110 +439,6 @@
     \field{journaltitle}{Nature Materials}
     \field{month}{11}
     \field{year}{2009}
-  \endentry
-
-  \entry{qiu_dual_2020}{article}{}{}
-    \name{author}{6}{}{%
-      {{hash=QG}{%
-         family={Qiu},
-         familyi={Q\bibinitperiod},
-         given={Guangyu},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=GZ}{%
-         family={Gai},
-         familyi={G\bibinitperiod},
-         given={Zhibo},
-         giveni={Z\bibinitperiod},
-      }}%
-      {{hash=TY}{%
-         family={Tao},
-         familyi={T\bibinitperiod},
-         given={Yile},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=SJ}{%
-         family={Schmitt},
-         familyi={S\bibinitperiod},
-         given={Jean},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=KUGA}{%
-         family={Kullak-Ublick},
-         familyi={K\bibinithyphendelim U\bibinitperiod},
-         given={Gerd\bibnamedelima A.},
-         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=WJ}{%
-         family={Wang},
-         familyi={W\bibinitperiod},
-         given={Jing},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{QGGZTYSJKUGAWJ1}
-    \strng{fullhash}{QGGZTYSJKUGAWJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.1021/acsnano.0c02439
-    \endverb
-    \field{issn}{1936-0851, 1936-086X}
-    \field{number}{5}
-    \field{pages}{5268–5277}
-    \field{shortjournal}{{ACS} Nano}
-    \field{title}{Dual-Functional Plasmonic Photothermal Biosensors for Highly
-  Accurate Severe Acute Respiratory Syndrome Coronavirus 2 Detection}
-    \verb{url}
-    \verb https://pubs.acs.org/doi/10.1021/acsnano.0c02439
-    \endverb
-    \field{volume}{14}
-    \field{journaltitle}{{ACS} Nano}
-    \field{day}{26}
-    \field{month}{05}
-    \field{year}{2020}
-  \endentry
-
-  \entry{kabashin_label-free_2023}{article}{}{}
-    \name{author}{3}{}{%
-      {{hash=KAV}{%
-         family={Kabashin},
-         familyi={K\bibinitperiod},
-         given={Andrei\bibnamedelima V.},
-         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-      {{hash=KVG}{%
-         family={Kravets},
-         familyi={K\bibinitperiod},
-         given={Vasyl\bibnamedelima G.},
-         giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-      {{hash=GAN}{%
-         family={Grigorenko},
-         familyi={G\bibinitperiod},
-         given={Alexander\bibnamedelima N.},
-         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KAVKVGGAN1}
-    \strng{fullhash}{KAVKVGGAN1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{shorttitle}
-    \verb{doi}
-    \verb 10.1039/D3CS00155E
-    \endverb
-    \field{issn}{0306-0012, 1460-4744}
-    \field{number}{18}
-    \field{pages}{6554–6585}
-    \field{shortjournal}{Chem. Soc. Rev.}
-    \field{shorttitle}{Label-free optical biosensing}
-    \field{title}{Label-free optical biosensing: going beyond the limits}
-    \verb{url}
-    \verb https://xlink.rsc.org/?DOI=D3CS00155E
-    \endverb
-    \field{volume}{52}
-    \field{journaltitle}{Chemical Society Reviews}
-    \field{year}{2023}
   \endentry
 
   \entry{cuanalo_phase_2024}{article}{}{}
@@ -724,6 +662,68 @@
     \field{journaltitle}{Light: Science \& Applications}
     \field{month}{11}
     \field{year}{2014}
+  \endentry
+
+  \entry{qiu_dual_2020}{article}{}{}
+    \name{author}{6}{}{%
+      {{hash=QG}{%
+         family={Qiu},
+         familyi={Q\bibinitperiod},
+         given={Guangyu},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GZ}{%
+         family={Gai},
+         familyi={G\bibinitperiod},
+         given={Zhibo},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=TY}{%
+         family={Tao},
+         familyi={T\bibinitperiod},
+         given={Yile},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Schmitt},
+         familyi={S\bibinitperiod},
+         given={Jean},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KUGA}{%
+         family={Kullak-Ublick},
+         familyi={K\bibinithyphendelim U\bibinitperiod},
+         given={Gerd\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QGGZTYSJKUGAWJ1}
+    \strng{fullhash}{QGGZTYSJKUGAWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1021/acsnano.0c02439
+    \endverb
+    \field{issn}{1936-0851, 1936-086X}
+    \field{number}{5}
+    \field{pages}{5268–5277}
+    \field{shortjournal}{{ACS} Nano}
+    \field{title}{Dual-Functional Plasmonic Photothermal Biosensors for Highly
+  Accurate Severe Acute Respiratory Syndrome Coronavirus 2 Detection}
+    \verb{url}
+    \verb https://pubs.acs.org/doi/10.1021/acsnano.0c02439
+    \endverb
+    \field{volume}{14}
+    \field{journaltitle}{{ACS} Nano}
+    \field{day}{26}
+    \field{month}{05}
+    \field{year}{2020}
   \endentry
 
   \entry{wang_formation_2011}{article}{}{}
@@ -1873,7 +1873,7 @@
     \field{shortjournal}{Thin Solid Films}
     \field{shorttitle}{{GranFilm}}
     \field{title}{{GranFilm}: a software for calculating thin-layer dielectric
-  properties and Fresnel coefficients}
+  properties and {F}resnel coefficients}
     \verb{url}
     \verb https://linkinghub.elsevier.com/retrieve/pii/S004060900200679X
     \endverb
@@ -1965,6 +1965,125 @@
     \field{year}{2014}
   \endentry
 
+  \entry{thompson_solid-state_2012}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=TCV}{%
+         family={Thompson},
+         familyi={T\bibinitperiod},
+         given={Carl\bibnamedelima V.},
+         giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TCV1}
+    \strng{fullhash}{TCV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1146/annurev-matsci-070511-155048
+    \endverb
+    \field{issn}{1531-7331, 1545-4118}
+    \field{number}{1}
+    \field{pages}{399–434}
+    \field{shortjournal}{Annu. Rev. Mater. Res.}
+    \field{title}{Solid-State Dewetting of Thin Films}
+    \verb{url}
+    \verb https://www.annualreviews.org/doi/10.1146/annurev-matsci-070511-15504
+    \verb 8
+    \endverb
+    \field{volume}{42}
+    \field{journaltitle}{Annual Review of Materials Research}
+    \field{day}{04}
+    \field{month}{08}
+    \field{year}{2012}
+  \endentry
+
+  \entry{mohapatra_theoretical_2018}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=MS}{%
+         family={Mohapatra},
+         familyi={M\bibinitperiod},
+         given={Saswat},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MRS}{%
+         family={Moirangthem},
+         familyi={M\bibinitperiod},
+         given={Rakesh\bibnamedelima S.},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MSMRS1}
+    \strng{fullhash}{MSMRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1088/1757-899X/310/1/012017
+    \endverb
+    \field{issn}{1757-8981, 1757-899X}
+    \field{pages}{012017}
+    \field{shortjournal}{{IOP} Conf. Ser.: Mater. Sci. Eng.}
+    \field{title}{Theoretical study of modulated multi-layer {SPR} device for
+  improved refractive index sensing}
+    \verb{url}
+    \verb https://iopscience.iop.org/article/10.1088/1757-899X/310/1/012017
+    \endverb
+    \field{volume}{310}
+    \field{journaltitle}{{IOP} Conference Series: Materials Science and
+  Engineering}
+    \field{month}{02}
+    \field{year}{2018}
+  \endentry
+
+  \entry{lopez_recent_2017}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=LGA}{%
+         family={Lopez},
+         familyi={L\bibinitperiod},
+         given={Gerardo\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=EMC}{%
+         family={Estevez},
+         familyi={E\bibinitperiod},
+         given={M.-Carmen},
+         giveni={M\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Soler},
+         familyi={S\bibinitperiod},
+         given={Maria},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LLM}{%
+         family={Lechuga},
+         familyi={L\bibinitperiod},
+         given={Laura\bibnamedelima M.},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LGAEMCSMLLM1}
+    \strng{fullhash}{LGAEMCSMLLM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1515/nanoph-2016-0101
+    \endverb
+    \field{issn}{2192-8614, 2192-8606}
+    \field{number}{1}
+    \field{pages}{123–136}
+    \field{shorttitle}{Recent advances in nanoplasmonic biosensors}
+    \field{title}{Recent advances in nanoplasmonic biosensors: applications and
+  lab-on-a-chip integration}
+    \verb{url}
+    \verb https://www.degruyter.com/view/journals/nanoph/6/1/article-p123.xml
+    \endverb
+    \field{volume}{6}
+    \field{journaltitle}{Nanophotonics}
+    \field{day}{06}
+    \field{month}{01}
+    \field{year}{2017}
+  \endentry
+
   \entry{toudert_advanced_2012}{article}{}{}
     \name{author}{4}{}{%
       {{hash=TJ}{%
@@ -2017,6 +2136,102 @@
     \field{day}{10}
     \field{month}{07}
     \field{year}{2012}
+  \endentry
+
+  \entry{moroz_depolarization_2009}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=MA}{%
+         family={Moroz},
+         familyi={M\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MA1}
+    \strng{fullhash}{MA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{issn}{0740-3224, 1520-8540}
+    \field{number}{3}
+    \field{pages}{517}
+    \field{shortjournal}{J. Opt. Soc. Am. B}
+    \field{title}{Depolarization field of spheroidal particles}
+    \verb{url}
+    \verb https://opg.optica.org/abstract.cfm?URI=josab-26-3-517
+    \endverb
+    \field{volume}{26}
+    \field{journaltitle}{Journal of the Optical Society of America B}
+    \field{day}{01}
+    \field{month}{03}
+    \field{year}{2009}
+  \endentry
+
+  \entry{januar_role_2020}{article}{}{}
+    \name{author}{7}{}{%
+      {{hash=JM}{%
+         family={Januar},
+         familyi={J\bibinitperiod},
+         given={Mochamad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Bei},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CJC}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Jui-Ching},
+         giveni={J\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={Hatanaka},
+         familyi={H\bibinitperiod},
+         given={Koji},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Misawa},
+         familyi={M\bibinitperiod},
+         given={Hiroaki},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HHH}{%
+         family={Hsiao},
+         familyi={H\bibinitperiod},
+         given={Hui-Hsin},
+         giveni={H\bibinithyphendelim H\bibinitperiod},
+      }}%
+      {{hash=LKC}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Kou-Chen},
+         giveni={K\bibinithyphendelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JMLBCJCHKMHHHHLKC1}
+    \strng{fullhash}{JMLBCJCHKMHHHHLKC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1021/acs.jpcc.9b10485
+    \endverb
+    \field{issn}{1932-7447, 1932-7455}
+    \field{number}{5}
+    \field{pages}{3250–3259}
+    \field{shortjournal}{J. Phys. Chem. C}
+    \field{title}{Role of Depolarization Factors in the Evolution of a Dipolar
+  Plasmonic Spectral Line in the Far- and Near-Field Regimes}
+    \verb{url}
+    \verb https://pubs.acs.org/doi/10.1021/acs.jpcc.9b10485
+    \endverb
+    \field{volume}{124}
+    \field{journaltitle}{The Journal of Physical Chemistry C}
+    \field{day}{06}
+    \field{month}{02}
+    \field{year}{2020}
   \endentry
 
   \entry{krasnok_nonlinear_2018}{article}{}{}
