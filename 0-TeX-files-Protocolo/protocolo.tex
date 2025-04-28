@@ -4,7 +4,8 @@
 
 \usepackage{enumitem}
 \input{Latex/Comands}           % Special commands written by the author
-
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
 
 %\svgpath{{1-mainmatter/2-Theory/figs},{1-mainmatter/3-Results/figs}}
 \graphicspath{{1-mainmatter/1-Introduccion/figs},
@@ -147,12 +148,11 @@
 	\input{1-mainmatter/4-Conclusions/0-Workplan}			
 
 
-
+\pagebreak
+\phantomsection
 \renewcommand{\bibname}{References}
 \setlength\bibitemsep{.1\itemsep}
+\addcontentsline{toc}{chapter}{\protect\numberline{}\bibname}
 \printbibliography
-\addcontentsline{toc}{chapter}{\protect\numberline{}References}
-%\newpage
-
 
 \end{document}
