@@ -5,8 +5,9 @@
 
 
 % -------------------------------------------------------------------------------------------
-\begin{frame}[c]{Bloques de distintas índoles\footnotemark[1]}
-				{Multicols para controlar tamaño  y otras cosas spongo}
+{\setbeamertemplate{frametitle}[righttitle]{}
+\begin{frame}{Bloques de distintas índoles\footnotemark[1]y righttitle}
+				{\textoverline{Multicols para controlar tamaño  y otras cosas spongo}}
 %
 \centering
 	\begin{columns}
@@ -22,7 +23,7 @@
 			\end{block}
 		\column{1.5\squeezethree}
 		
-			\begin{exampleblock}{exampleblock}
+			\begin{exampleblock}{\centering exampleblock}
 				El de colores más oscuros y letra azul
 			    \begin{align*}
 					\vb{E}^\text{exc}_k(\vb{r}) = & \vb{E}^\text{inc}(\vb{r}) + \sum_{\ell\neq k}^N \vb{E}^\text{ind}_\ell(\vb{r})\\
@@ -35,7 +36,7 @@
 \vskip1em
 	\begin{columns}
 		\column{.9\squeezetwo}
-		\begin{alertblock}{alertblock}
+		\begin{alertblock}{\hfill alertblock}
 			Colores claros y rojo para resaltar cosas
 			\begin{align*}
 				\langle \vb{E}_\ell^\text{exc}(\vb{r}'',\vb{R})\rangle_\ell =& \vb{E}^\text{inc}(\vb{r}'')
@@ -71,5 +72,9 @@
         Esto es un textlock aislado
     \end{flushleft}
      \end{textblock*}
+\end{frame}
+}
 
+\begin{frame}{Título}{\textoverline{Subtítulo}}
+	content...
 \end{frame}

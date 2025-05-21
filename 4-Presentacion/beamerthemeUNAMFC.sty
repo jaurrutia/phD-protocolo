@@ -4,8 +4,6 @@
 \setbeamersize{text margin left=5mm}
 \setbeamersize{text margin right=5mm}
 
-\newcommand{\@email}{} 
-\newcommand{\email}[1]{\renewcommand{\@email}{#1}}
 
 \RequirePackage{tikz}
 
@@ -34,6 +32,10 @@
 \hypersetup{colorlinks=true,linkcolor=,urlcolor=sblueFC}
 \newcommand{\emphb}[1]{\textcolor{sblueFC}{\textbf{#1}}}
 \newcommand{\emphr}[1]{\textcolor{sredFC}{\textbf{#1}}}
+\newcommand{\textoverline}[1]{\rlap{#1}\rule[1.07em]{\widthof{#1}}{.75pt}}
+
+
+
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{blocks}[rounded][shadow=false]  

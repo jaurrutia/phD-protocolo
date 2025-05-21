@@ -14,24 +14,56 @@
 % -------------------------------------------------------------
 % ----------------------------- Frame title --------------------
 % -------------------------------------------------------------
-\setbeamerfont{frametitle}{series=\bfseries,size=\Huge}
+\setbeamerfont{frametitle}{series=\bfseries\titlefont,size=\huge}
 \setbeamertemplate{frametitle}{
 	\vspace{2.5mm}
 	\begin{beamercolorbox}{frametitle}
 						 \insertframetitle
-						\end{beamercolorbox}
+	\end{beamercolorbox}
+%
 	\ifx\insertframesubtitle\@empty%
-	\else\vskip-0.25em%
+%
+	\else\vskip-0.0em%
 		{\begin{beamercolorbox}{structure}
-							{\Large\normalfont\insertframesubtitle}
-							\end{beamercolorbox}
+				\normalfont\titlefont\LARGE\insertframesubtitle
+		 \end{beamercolorbox}
 		}%
 	\fi%  
-
 }
 
+% ------------------------------------------------- centertitle
+\defbeamertemplate{frametitle}{centertitle}[0]{%
+		\vspace{2.5mm}
+		\begin{beamercolorbox}{frametitle}\centering
+			\insertframetitle
+		\end{beamercolorbox}
+		%
+		\ifx\insertframesubtitle\@empty%
+		%
+		\else\vskip-0.0em%
+		{\begin{beamercolorbox}{structure}\centering
+				\normalfont\titlefont\LARGE\insertframesubtitle
+			\end{beamercolorbox}
+		}%
+		\fi%  		
+}
 
-
+% ------------------------------------------------- righttitle
+\defbeamertemplate{frametitle}{righttitle}[0]{%
+		\vspace{2.5mm}
+		\begin{beamercolorbox}{frametitle}\hfill
+			\insertframetitle
+		\end{beamercolorbox}
+		%
+		\ifx\insertframesubtitle\@empty%
+		%
+		\else\vskip-0.0em%
+		{\begin{beamercolorbox}{structure}\hfill
+				\normalfont\titlefont\LARGE\insertframesubtitle
+			\end{beamercolorbox}
+		}%
+		\fi%  		
+}
 
 % -------------------------------------------------------------
 % ----------------------------- Part page --------------------
@@ -99,14 +131,14 @@
 % -----------------------------  Tikz flowboxes--------------------
 % -------------------------------------------------------------
 
-\newcommand{\fbtitle}[1]{\textbf{\textcolor{slgrayFC}{#1}}}
+\newcommand{\fbtitle}[1]{\titlefont\textbf{\textcolor{slgrayFC}{#1}}}
 \tikzset{%
 	flowbox/.style={rectangle split, rectangle split parts=2, 
 					rectangle split part fill={pblueFC,pgrayFC},
 					align=center, rounded corners=5pt, draw=pblueFC, line width= .4mm},
 	conn/.style={draw=sblueFC, -{Latex[length=3mm]},
 				rounded corners=5pt, line width = .6mm},
-	conng/.style={draw=sdgrayFC, -{Latex[length=3mm]}, % Latex[length=2mm]
+	connr/.style={draw=sredFC, -{Latex[length=3mm]}, 
 				rounded corners=5pt, line width = .5mm},
 	hidden/.style={-{Latex[length=3mm]}, draw=sdgrayFC,
 				rounded corners=2pt, densely dotted,line width = .5mm},

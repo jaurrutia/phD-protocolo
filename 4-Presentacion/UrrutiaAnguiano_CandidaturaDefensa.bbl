@@ -1,0 +1,829 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global/global}
+  \entry{ao_analytical_2002}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=ACO}{%
+         family={Ao},
+         familyi={A\bibinitperiod},
+         given={Chi\bibnamedelima O.},
+         giveni={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=KJA}{%
+         family={Kong},
+         familyi={K\bibinitperiod},
+         given={Jin\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ACO+1}
+    \strng{fullhash}{ACOKJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1364/JOSAA.19.001145
+    \endverb
+    \field{issn}{1084-7529, 1520-8532}
+    \field{number}{6}
+    \field{pages}{1145}
+    \field{shortjournal}{J Opt Soc Am A}
+    \field{title}{Analytical approximations in multiple scattering of
+  electromagnetic waves by aligned dielectric spheroids}
+    \verb{url}
+    \verb https://opg.optica.org/abstract.cfm?URI=josaa-19-6-1145
+    \endverb
+    \field{volume}{19}
+    \field{journaltitle}{Journal of the Optical Society of America A}
+    \field{day}{01}
+    \field{month}{06}
+    \field{year}{2002}
+    \field{urlday}{14}
+    \field{urlmonth}{11}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{barzilai_two-point_1988}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=BJ}{%
+         family={Barzilai},
+         familyi={B\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BJM}{%
+         family={Borwein},
+         familyi={B\bibinitperiod},
+         given={Jonathan\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJ+1}
+    \strng{fullhash}{BJBJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1093/imanum/8.1.141
+    \endverb
+    \field{issn}{0272-4979, 1464-3642}
+    \field{number}{1}
+    \field{pages}{141–148}
+    \field{shortjournal}{{IMA} J Numer Anal}
+    \field{title}{Two-Point Step Size Gradient Methods}
+    \verb{url}
+    \verb https://academic.oup.com/imajna/article-lookup/doi/10.1093/imanum/8.1
+    \verb .141
+    \endverb
+    \field{volume}{8}
+    \field{journaltitle}{{IMA} Journal of Numerical Analysis}
+    \field{year}{1988}
+    \field{urlday}{16}
+    \field{urlmonth}{09}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{bedeaux_optical_2004}{book}{}{}
+    \name{author}{2}{}{%
+      {{hash=BD}{%
+         family={Bedeaux},
+         familyi={B\bibinitperiod},
+         given={Dick},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VJ}{%
+         family={Vlieger},
+         familyi={V\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Imperial College Press}%
+    }
+    \strng{namehash}{BD+1}
+    \strng{fullhash}{BDVJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{edition}{2}
+    \field{isbn}{978-1-86094-450-5}
+    \field{title}{Optical properties of surfaces}
+    \list{location}{1}{%
+      {London}%
+    }
+    \field{year}{2004}
+  \endentry
+
+  \entry{borah_plasmon_2022}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=BR}{%
+         family={Borah},
+         familyi={B\bibinitperiod},
+         given={Rituraj},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NR}{%
+         family={Ninakanti},
+         familyi={N\bibinitperiod},
+         given={Rajeshreddy},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bals},
+         familyi={B\bibinitperiod},
+         given={Sara},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VSW}{%
+         family={Verbruggen},
+         familyi={V\bibinitperiod},
+         given={Sammy\bibnamedelima W.},
+         giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRNRBSVSW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1038/s41598-022-20117-7
+    \endverb
+    \field{issn}{2045-2322}
+    \field{number}{1}
+    \field{pages}{15738}
+    \field{shortjournal}{Sci Rep}
+    \field{title}{Plasmon resonance of gold and silver nanoparticle arrays in
+  the Kretschmann (attenuated total reflectance) vs. direct incidence
+  configuration}
+    \verb{url}
+    \verb https://www.nature.com/articles/s41598-022-20117-7
+    \endverb
+    \field{volume}{12}
+    \field{journaltitle}{Scientific Reports}
+    \field{day}{21}
+    \field{month}{09}
+    \field{year}{2022}
+  \endentry
+
+  \entry{cuanalo_sensitivity_2022}{inproceedings}{}{}
+    \name{author}{9}{}{%
+      {{hash=CFJ}{%
+         family={Cuanalo-Fernández},
+         familyi={C\bibinithyphendelim F\bibinitperiod},
+         given={JP},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=UAJ}{%
+         family={Urrutia-Anguiano},
+         familyi={U\bibinithyphendelim A\bibinitperiod},
+         given={JA},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GHS}{%
+         family={Guerra-Hernández},
+         familyi={G\bibinithyphendelim H\bibinitperiod},
+         given={SF},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KN}{%
+         family={Korneev},
+         familyi={K\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=DlMMM}{%
+         prefix={De-la},
+         prefixi={D\bibinithyphendelim l\bibinitperiod},
+         family={Mora-Mojica},
+         familyi={M\bibinithyphendelim M\bibinitperiod},
+         given={MB},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RCA}{%
+         family={Reyes-Coronado},
+         familyi={R\bibinithyphendelim C\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CBI}{%
+         family={Cosme-Bolaños},
+         familyi={C\bibinithyphendelim B\bibinitperiod},
+         given={I.},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Mansurova},
+         familyi={M\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RGR}{%
+         family={Ramos-García},
+         familyi={R\bibinithyphendelim G\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CFJ+1}
+    \strng{fullhash}{CFJUAJGHSKNDlMMMRCACBIMSRGR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{2022 International Conference Laser Optics (ICLO)}
+    \verb{doi}
+    \verb 10.1109/ICLO54117.2022.9840207
+    \endverb
+    \field{pages}{1–1}
+    \field{title}{Sensitivity of random array of gold nano islands for
+  biosensing applications}
+    \field{year}{2022}
+  \endentry
+
+  \entry{garcia2012multiple}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=GVA}{%
+         family={García-Valenzuela},
+         familyi={G\bibinithyphendelim V\bibinitperiod},
+         given={Augusto},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GRE}{%
+         family={Gutiérrez-Reyes},
+         familyi={G\bibinithyphendelim R\bibinitperiod},
+         given={Edahí},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BRG}{%
+         family={Barrera},
+         familyi={B\bibinitperiod},
+         given={Rubén\bibnamedelima G},
+         giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optical Society of America}%
+    }
+    \strng{namehash}{GVA+1}
+    \strng{fullhash}{GVAGREBRG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1364/JOSAA.29.001161
+    \endverb
+    \field{number}{6}
+    \field{pages}{1161–1179}
+    \field{title}{Multiple-scattering model for the coherent reflection and
+  transmission of light from a disordered monolayer of particles}
+    \field{volume}{29}
+    \field{journaltitle}{JOSA A}
+    \field{year}{2012}
+  \endentry
+
+  \entry{gonzalez-alcalde_large_2020}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=GAAK}{%
+         family={González-Alcalde},
+         familyi={G\bibinithyphendelim A\bibinitperiod},
+         given={Alma\bibnamedelima K.},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=RCA}{%
+         family={Reyes-Coronado},
+         familyi={R\bibinithyphendelim C\bibinitperiod},
+         given={Alejandro},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GAAK+1}
+    \strng{fullhash}{GAAKRCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1016/j.optcom.2020.126289
+    \endverb
+    \field{issn}{00304018}
+    \field{pages}{126289}
+    \field{shortjournal}{Opt Commun}
+    \field{title}{Large angle-independent structural colors based on
+  all-dielectric random metasurfaces}
+    \verb{url}
+    \verb https://linkinghub.elsevier.com/retrieve/pii/S0030401820307069
+    \endverb
+    \field{volume}{475}
+    \field{journaltitle}{Optics Communications}
+    \field{month}{11}
+    \field{year}{2020}
+  \endentry
+
+  \entry{kabashin_plasmonic_2009}{article}{}{}
+    \name{author}{9}{}{%
+      {{hash=KAV}{%
+         family={Kabashin},
+         familyi={K\bibinitperiod},
+         given={A.\bibnamedelima V.},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=EP}{%
+         family={Evans},
+         familyi={E\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Pastkovsky},
+         familyi={P\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Hendren},
+         familyi={H\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=WGA}{%
+         family={Wurtz},
+         familyi={W\bibinitperiod},
+         given={G.\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Atkinson},
+         familyi={A\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Pollard},
+         familyi={P\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PVA}{%
+         family={Podolskiy},
+         familyi={P\bibinitperiod},
+         given={V.\bibnamedelima A.},
+         giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=ZAV}{%
+         family={Zayats},
+         familyi={Z\bibinitperiod},
+         given={A.\bibnamedelima V.},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KAV+1}
+    \strng{fullhash}{KAVEPPSHWWGAARPRPVAZAV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1038/nmat2546
+    \endverb
+    \field{issn}{1476-1122, 1476-4660}
+    \field{number}{11}
+    \field{pages}{867–871}
+    \field{shortjournal}{Nat Mater}
+    \field{title}{Plasmonic nanorod metamaterials for biosensing}
+    \verb{url}
+    \verb http://www.nature.com/articles/nmat2546
+    \endverb
+    \field{volume}{8}
+    \field{journaltitle}{Nature Materials}
+    \field{month}{11}
+    \field{year}{2009}
+  \endentry
+
+  \entry{loiko_scattering_2020}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=LNA}{%
+         family={Loiko},
+         familyi={L\bibinitperiod},
+         given={N.\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MAA}{%
+         family={Miskevich},
+         familyi={M\bibinitperiod},
+         given={A.\bibnamedelima A.},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=LVA}{%
+         family={Loiko},
+         familyi={L\bibinitperiod},
+         given={V.\bibnamedelima A.},
+         giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LNA+1}
+    \strng{fullhash}{LNAMAALVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1134/S1063776120060060
+    \endverb
+    \field{issn}{1063-7761, 1090-6509}
+    \field{number}{2}
+    \field{pages}{227–243}
+    \field{shortjournal}{J. Exp. Theor. Phys.}
+    \field{title}{Scattering and Absorption of Light by a Monolayer of
+  Spherical Particles under Oblique Illumination}
+    \verb{url}
+    \verb http://link.springer.com/10.1134/S1063776120060060
+    \endverb
+    \field{volume}{131}
+    \field{journaltitle}{Journal of Experimental and Theoretical Physics}
+    \field{month}{08}
+    \field{year}{2020}
+  \endentry
+
+  \entry{moirangthem_enhanced_2012}{article}{}{}
+    \name{author}{5}{}{%
+      {{hash=MRS}{%
+         family={Moirangthem},
+         familyi={M\bibinitperiod},
+         given={Rakesh\bibnamedelima Singh},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=YMT}{%
+         family={Yaseen},
+         familyi={Y\bibinitperiod},
+         given={Mohammad\bibnamedelima Tariq},
+         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=WPK}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Pei-Kuen},
+         giveni={P\bibinithyphendelim K\bibinitperiod},
+      }}%
+      {{hash=CJY}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Ji-Yen},
+         giveni={J\bibinithyphendelim Y\bibinitperiod},
+      }}%
+      {{hash=CYC}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Yia-Chung},
+         giveni={Y\bibinithyphendelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MRS+1}
+    \strng{fullhash}{MRSYMTWPKCJYCYC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1364/BOE.3.000899
+    \endverb
+    \field{issn}{2156-7085, 2156-7085}
+    \field{number}{5}
+    \field{pages}{899}
+    \field{shortjournal}{Biomed. Opt. Express}
+    \field{title}{Enhanced localized plasmonic detections using
+  partially-embedded gold nanoparticles and ellipsometric measurements}
+    \verb{url}
+    \verb https://www.osapublishing.org/boe/abstract.cfm?uri=boe-3-5-899
+    \endverb
+    \field{volume}{3}
+    \field{journaltitle}{Biomedical Optics Express}
+    \field{day}{01}
+    \field{month}{05}
+    \field{year}{2012}
+  \endentry
+
+  \entry{niklasson_effective_1981}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=NGA}{%
+         family={Niklasson},
+         familyi={N\bibinitperiod},
+         given={G.\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GCG}{%
+         family={Granqvist},
+         familyi={G\bibinitperiod},
+         given={C.\bibnamedelima G.},
+         giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=HO}{%
+         family={Hunderi},
+         familyi={H\bibinitperiod},
+         given={O.},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NGA+1}
+    \strng{fullhash}{NGAGCGHO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \verb{doi}
+    \verb 10.1364/AO.20.000026
+    \endverb
+    \field{issn}{0003-6935, 1539-4522}
+    \field{number}{1}
+    \field{pages}{26}
+    \field{shortjournal}{Appl. Opt.}
+    \field{title}{Effective medium models for the optical properties of
+  inhomogeneous materials}
+    \verb{url}
+    \verb https://opg.optica.org/abstract.cfm?URI=ao-20-1-26
+    \endverb
+    \field{volume}{20}
+    \field{journaltitle}{Applied Optics}
+    \field{day}{01}
+    \field{month}{01}
+    \field{year}{1981}
+  \endentry
+
+  \entry{qiu_dual_2020}{article}{}{}
+    \name{author}{6}{}{%
+      {{hash=QG}{%
+         family={Qiu},
+         familyi={Q\bibinitperiod},
+         given={Guangyu},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GZ}{%
+         family={Gai},
+         familyi={G\bibinitperiod},
+         given={Zhibo},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=TY}{%
+         family={Tao},
+         familyi={T\bibinitperiod},
+         given={Yile},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Schmitt},
+         familyi={S\bibinitperiod},
+         given={Jean},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KUGA}{%
+         family={Kullak-Ublick},
+         familyi={K\bibinithyphendelim U\bibinitperiod},
+         given={Gerd\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QG+1}
+    \strng{fullhash}{QGGZTYSJKUGAWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \verb{doi}
+    \verb 10.1021/acsnano.0c02439
+    \endverb
+    \field{issn}{1936-0851, 1936-086X}
+    \field{number}{5}
+    \field{pages}{5268–5277}
+    \field{shortjournal}{{ACS} Nano}
+    \field{title}{Dual-Functional Plasmonic Photothermal Biosensors for Highly
+  Accurate Severe Acute Respiratory Syndrome Coronavirus 2 Detection}
+    \verb{url}
+    \verb https://pubs.acs.org/doi/10.1021/acsnano.0c02439
+    \endverb
+    \field{volume}{14}
+    \field{journaltitle}{{ACS} Nano}
+    \field{day}{26}
+    \field{month}{05}
+    \field{year}{2020}
+  \endentry
+
+  \entry{qiu_differential_2015}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=QG}{%
+         family={Qiu},
+         familyi={Q\bibinitperiod},
+         given={Guangyu},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=NSP}{%
+         family={Ng},
+         familyi={N\bibinitperiod},
+         given={Siu\bibnamedelima Pang},
+         giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=WCML}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chi Man\bibnamedelima Lawrence},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QG+1}
+    \strng{fullhash}{QGNSPWCML1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \verb{doi}
+    \verb 10.1364/OL.40.001924
+    \endverb
+    \field{issn}{0146-9592, 1539-4794}
+    \field{number}{9}
+    \field{pages}{1924}
+    \field{shortjournal}{Opt. Lett.}
+    \field{title}{Differential phase-detecting localized surface plasmon
+  resonance sensor with self-assembly gold nano-islands}
+    \verb{url}
+    \verb https://www.osapublishing.org/abstract.cfm?URI=ol-40-9-1924
+    \endverb
+    \field{volume}{40}
+    \field{journaltitle}{Optics Letters}
+    \field{day}{01}
+    \field{month}{05}
+    \field{year}{2015}
+  \endentry
+
+  \entry{reyes2018analytical}{article}{}{}
+    \name{author}{5}{}{%
+      {{hash=RCA}{%
+         family={Reyes-Coronado},
+         familyi={R\bibinithyphendelim C\bibinitperiod},
+         given={Alejandro},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MLG}{%
+         family={Morales-Luna},
+         familyi={M\bibinithyphendelim L\bibinitperiod},
+         given={Gesuri},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=VEO}{%
+         family={Vázquez-Estrada},
+         familyi={V\bibinithyphendelim E\bibinitperiod},
+         given={Omar},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=GVA}{%
+         family={García-Valenzuela},
+         familyi={G\bibinithyphendelim V\bibinitperiod},
+         given={Augusto},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BRG}{%
+         family={Barrera},
+         familyi={B\bibinitperiod},
+         given={Rubén\bibnamedelima G.},
+         giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RCA+1}
+    \strng{fullhash}{RCAMLGVEOGVABRG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1364/OE.26.012660
+    \endverb
+    \field{issn}{10944087}
+    \field{pages}{6697–6706}
+    \field{title}{Analytical modeling of optical reflectivity of random
+  plasmonic nano-monolayers}
+    \field{volume}{9594}
+    \field{journaltitle}{Optics Express}
+    \field{year}{2018}
+  \endentry
+
+  \entry{vazquez-estrada_optical_2014}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=VEO}{%
+         family={Vázquez-Estrada},
+         familyi={V\bibinithyphendelim E\bibinitperiod},
+         given={Omar},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=GVA}{%
+         family={García-Valenzuela},
+         familyi={G\bibinithyphendelim V\bibinitperiod},
+         given={Augusto},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VEO+1}
+    \strng{fullhash}{VEOGVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.1364/JOSAA.31.000745
+    \endverb
+    \field{issn}{1084-7529, 1520-8532}
+    \field{number}{4}
+    \field{pages}{745}
+    \field{shortjournal}{J Opt Soc Am A}
+    \field{shorttitle}{Optical reflectivity of a disordered monolayer of highly
+  scattering particles}
+    \field{title}{Optical reflectivity of a disordered monolayer of highly
+  scattering particles: coherent scattering model versus experiment}
+    \verb{url}
+    \verb https://www.osapublishing.org/abstract.cfm?URI=josaa-31-4-745
+    \endverb
+    \field{volume}{31}
+    \field{journaltitle}{Journal of the Optical Society of America A}
+    \field{day}{01}
+    \field{month}{04}
+    \field{year}{2014}
+    \field{urlday}{25}
+    \field{urlmonth}{03}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{wang_formation_2011}{article}{}{}
+    \name{author}{3}{}{%
+      {{hash=WD}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=JR}{%
+         family={Ji},
+         familyi={J\bibinitperiod},
+         given={Ran},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Schaaf},
+         familyi={S\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WD+1}
+    \strng{fullhash}{WDJRSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{doi}
+    \verb 10.3762/bjnano.2.37
+    \endverb
+    \field{issn}{2190-4286}
+    \field{pages}{318–326}
+    \field{shortjournal}{Beilstein J. Nanotechnol.}
+    \field{title}{Formation of precise 2D Au particle arrays via thermally
+  induced dewetting on pre-patterned substrates}
+    \verb{url}
+    \verb https://www.beilstein-journals.org/bjnano/articles/2/37
+    \endverb
+    \field{volume}{2}
+    \field{journaltitle}{Beilstein Journal of Nanotechnology}
+    \field{day}{22}
+    \field{month}{06}
+    \field{year}{2011}
+  \endentry
+\enddatalist
+\endinput

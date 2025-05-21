@@ -1,10 +1,11 @@
 % !TeX root = template-UNAMFC.tex
 
-\section{Tikz y Beamer}
-	\subsection{Tikz}
-		\subsubsection{Flowboxes}
 
-\begin{frame}{Hablamos de nuestro proyecto}{Con metas parciales, referencias y  resaltando  lo que hacemos nosotros}
+
+\begin{frame}{Hablamos de nuestro proyecto}
+	{\textoverline{Con metas parciales, referencias y  resaltando  lo que hacemos nosotros}}
+%		{\rlap{Con metas parciales, referencias y  resaltando  lo que hacemos nosotros}\rule[1em]{\widthof{Con metas parciales, referencias y  resaltando  lo que hacemos nosotros}}{1.3pt}}
+	
     \begin{center}
     \begin{tikzpicture}[node distance=15mm and 15mm,font=\normalfont]
 %        \setlength{\leftmargini}{10pt}
@@ -138,9 +139,9 @@
 \end{frame}
 
 
-
-\begin{frame}{Algo semejante al anterior}
-	{Pero este se muestra más limpio. Vale la pena leer el código de tikz}
+{\setbeamertemplate{frametitle}[centertitle]{}
+\begin{frame}{\underline{Plantilla con título centrado: centertitle}}
+	{Vale la pena leer el código de tikz}
 	
 	\begin{center}
 		\begin{tikzpicture}[node distance=5mm and 60mm,font=\normalsize]
@@ -220,5 +221,5 @@
 	\end{textblock*}
 	
 \end{frame}
-
+}
 

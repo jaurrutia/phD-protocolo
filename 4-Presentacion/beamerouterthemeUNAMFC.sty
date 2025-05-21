@@ -30,8 +30,8 @@
 }
 
 % ------------------------------------------------------------------- Title page
-\setbeamerfont{title}{series=\bfseries, size=\Huge}%\bfseries
-\setbeamerfont{subtitle}{series=\normalfont}
+\setbeamerfont{title}{series=\bfseries\titlefont, size=\Huge}%\bfseries
+\setbeamerfont{subtitle}{series=\normalfont\titlefont, size=\huge}
 \setbeamerfont{author}{size=\Large}
 \setbeamerfont{institute}{size=\large}
 \setbeamerfont{date}{size=\large}
@@ -48,11 +48,12 @@
 		\ifx%
 		\insertsubtitle\@empty%
 		\else%
-		\vskip0.25em%
+		\vskip0em%
 		{\usebeamerfont{subtitle}
-			\usebeamercolor[fg]{subtitle}%
-			{\LARGE\insertsubtitle}%
-		}%
+			\usebeamercolor[fg]{subtitle}
+			{\rule[.75em]{15cm}{1pt}\\[-1em]
+			\insertsubtitle}%
+		}
 		\fi%
 	\end{beamercolorbox}\hspace*{\fill}
     \vskip0.5em\par

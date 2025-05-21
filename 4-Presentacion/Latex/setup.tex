@@ -1,4 +1,4 @@
-
+% !TeX root = ../UrrutiaAnguiano_CandidaturaDefensa.tex
 % ----------------------------------------------------- Font and input related
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
@@ -7,13 +7,16 @@
 
 \usepackage{fontspec}       % XeLaTeX requre: Allow to use installed fonts
 \usepackage{unicode-math}	% Allow to use other fonts in math mode
-	\setsansfont{Gotham}	% Beamer default font is sans: Needs Gotham in system
+%	\setsansfont{Gotham}	% Beamer default font is sans: Needs Gotham in system
+	\setsansfont{Booster Next FY}%{}
 	\setmathfont{Latin Modern Roman} % Needs Lation Modern Roman in system
-%	\newfontfamily{\boosterfont}{Booster Next FY}
+	\newfontfamily{\titlefont}{Gotham}%{Nimbus Sans}
 
 \usepackage[table]{xcolor}
+\usepackage{tasks}
+\settasks{label=\textcolor{pblueFC}{$\blacktriangleright$}}
 % This package 
-%\usepackage[texcoord,grid,gridu	nit=mm,gridcolor=red!20,subgridcolor=green!40]{eso-pic}  
+\usepackage[texcoord,grid,gridu	nit=mm,gridcolor=red!20,subgridcolor=green!40]{eso-pic}  
 
 \usepackage{pdfpages}		
 \geometry{papersize={280mm,157.5mm}}	% Convas is in 16:9 aspect ration 
