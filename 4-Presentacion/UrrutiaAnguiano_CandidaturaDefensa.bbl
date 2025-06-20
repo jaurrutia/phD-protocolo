@@ -17,49 +17,6 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global/global}
-  \entry{ao_analytical_2002}{article}{}{}
-    \name{author}{2}{}{%
-      {{hash=ACO}{%
-         family={Ao},
-         familyi={A\bibinitperiod},
-         given={Chi\bibnamedelima O.},
-         giveni={C\bibinitperiod\bibinitdelim O\bibinitperiod},
-      }}%
-      {{hash=KJA}{%
-         family={Kong},
-         familyi={K\bibinitperiod},
-         given={Jin\bibnamedelima A.},
-         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{ACO+1}
-    \strng{fullhash}{ACOKJA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \verb{doi}
-    \verb 10.1364/JOSAA.19.001145
-    \endverb
-    \field{issn}{1084-7529, 1520-8532}
-    \field{number}{6}
-    \field{pages}{1145}
-    \field{shortjournal}{J Opt Soc Am A}
-    \field{title}{Analytical approximations in multiple scattering of
-  electromagnetic waves by aligned dielectric spheroids}
-    \verb{url}
-    \verb https://opg.optica.org/abstract.cfm?URI=josaa-19-6-1145
-    \endverb
-    \field{volume}{19}
-    \field{journaltitle}{Journal of the Optical Society of America A}
-    \field{day}{01}
-    \field{month}{06}
-    \field{year}{2002}
-    \field{urlday}{14}
-    \field{urlmonth}{11}
-    \field{urlyear}{2023}
-  \endentry
-
   \entry{barzilai_two-point_1988}{article}{}{}
     \name{author}{2}{}{%
       {{hash=BJ}{%
@@ -184,84 +141,6 @@
     \field{journaltitle}{Scientific Reports}
     \field{day}{21}
     \field{month}{09}
-    \field{year}{2022}
-  \endentry
-
-  \entry{cuanalo_sensitivity_2022}{inproceedings}{}{}
-    \name{author}{9}{}{%
-      {{hash=CFJ}{%
-         family={Cuanalo-Fernández},
-         familyi={C\bibinithyphendelim F\bibinitperiod},
-         given={JP},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=UAJ}{%
-         family={Urrutia-Anguiano},
-         familyi={U\bibinithyphendelim A\bibinitperiod},
-         given={JA},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=GHS}{%
-         family={Guerra-Hernández},
-         familyi={G\bibinithyphendelim H\bibinitperiod},
-         given={SF},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=KN}{%
-         family={Korneev},
-         familyi={K\bibinitperiod},
-         given={N.},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=DlMMM}{%
-         prefix={De-la},
-         prefixi={D\bibinithyphendelim l\bibinitperiod},
-         family={Mora-Mojica},
-         familyi={M\bibinithyphendelim M\bibinitperiod},
-         given={MB},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=RCA}{%
-         family={Reyes-Coronado},
-         familyi={R\bibinithyphendelim C\bibinitperiod},
-         given={A.},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=CBI}{%
-         family={Cosme-Bolaños},
-         familyi={C\bibinithyphendelim B\bibinitperiod},
-         given={I.},
-         giveni={I\bibinitperiod},
-      }}%
-      {{hash=MS}{%
-         family={Mansurova},
-         familyi={M\bibinitperiod},
-         given={S.},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=RGR}{%
-         family={Ramos-García},
-         familyi={R\bibinithyphendelim G\bibinitperiod},
-         given={R.},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{CFJ+1}
-    \strng{fullhash}{CFJUAJGHSKNDlMMMRCACBIMSRGR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \field{booktitle}{2022 International Conference Laser Optics (ICLO)}
-    \verb{doi}
-    \verb 10.1109/ICLO54117.2022.9840207
-    \endverb
-    \field{pages}{1–1}
-    \field{title}{Sensitivity of random array of gold nano islands for
-  biosensing applications}
     \field{year}{2022}
   \endentry
 
@@ -734,51 +613,6 @@
     \field{volume}{9594}
     \field{journaltitle}{Optics Express}
     \field{year}{2018}
-  \endentry
-
-  \entry{vazquez-estrada_optical_2014}{article}{}{}
-    \name{author}{2}{}{%
-      {{hash=VEO}{%
-         family={Vázquez-Estrada},
-         familyi={V\bibinithyphendelim E\bibinitperiod},
-         given={Omar},
-         giveni={O\bibinitperiod},
-      }}%
-      {{hash=GVA}{%
-         family={García-Valenzuela},
-         familyi={G\bibinithyphendelim V\bibinitperiod},
-         given={Augusto},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{VEO+1}
-    \strng{fullhash}{VEOGVA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{shorttitle}
-    \field{sortinit}{V}
-    \field{sortinithash}{V}
-    \verb{doi}
-    \verb 10.1364/JOSAA.31.000745
-    \endverb
-    \field{issn}{1084-7529, 1520-8532}
-    \field{number}{4}
-    \field{pages}{745}
-    \field{shortjournal}{J Opt Soc Am A}
-    \field{shorttitle}{Optical reflectivity of a disordered monolayer of highly
-  scattering particles}
-    \field{title}{Optical reflectivity of a disordered monolayer of highly
-  scattering particles: coherent scattering model versus experiment}
-    \verb{url}
-    \verb https://www.osapublishing.org/abstract.cfm?URI=josaa-31-4-745
-    \endverb
-    \field{volume}{31}
-    \field{journaltitle}{Journal of the Optical Society of America A}
-    \field{day}{01}
-    \field{month}{04}
-    \field{year}{2014}
-    \field{urlday}{25}
-    \field{urlmonth}{03}
-    \field{urlyear}{2021}
   \endentry
 
   \entry{wang_formation_2011}{article}{}{}
