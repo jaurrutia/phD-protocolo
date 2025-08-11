@@ -615,6 +615,51 @@
     \field{year}{2018}
   \endentry
 
+  \entry{vazquez-estrada_optical_2014}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=VEO}{%
+         family={Vázquez-Estrada},
+         familyi={V\bibinithyphendelim E\bibinitperiod},
+         given={Omar},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=GVA}{%
+         family={García-Valenzuela},
+         familyi={G\bibinithyphendelim V\bibinitperiod},
+         given={Augusto},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VEO+1}
+    \strng{fullhash}{VEOGVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.1364/JOSAA.31.000745
+    \endverb
+    \field{issn}{1084-7529, 1520-8532}
+    \field{number}{4}
+    \field{pages}{745}
+    \field{shortjournal}{J Opt Soc Am A}
+    \field{shorttitle}{Optical reflectivity of a disordered monolayer of highly
+  scattering particles}
+    \field{title}{Optical reflectivity of a disordered monolayer of highly
+  scattering particles: coherent scattering model versus experiment}
+    \verb{url}
+    \verb https://www.osapublishing.org/abstract.cfm?URI=josaa-31-4-745
+    \endverb
+    \field{volume}{31}
+    \field{journaltitle}{Journal of the Optical Society of America A}
+    \field{day}{01}
+    \field{month}{04}
+    \field{year}{2014}
+    \field{urlday}{25}
+    \field{urlmonth}{03}
+    \field{urlyear}{2021}
+  \endentry
+
   \entry{wang_formation_2011}{article}{}{}
     \name{author}{3}{}{%
       {{hash=WD}{%
