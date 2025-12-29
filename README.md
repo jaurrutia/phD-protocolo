@@ -1,25 +1,16 @@
-# Characterization of Plasmonic Disordered Metasurfaces for Biosensing Applications under Realistic Conditions
-
-**PhD Research Protocol Repository**
-
-This repository contains the working materials for the **PhD research protocol** submitted in partial fulfillment of the requirements to obtain the **Candidacy to the Degree of Doctor in Sciences (Physics)** at the **Faculty of Sciences, UNAM**.
-
-The project focuses on the **theoretical and numerical characterization of plasmonic disordered metasurfaces**, with emphasis on their performance as **optical biosensors under realistic experimental conditions**.
-
----
-
-## 📘 Academic Information
+## PhD Research Protocol
+### Characterization of Plasmonic Disordered Metasurfaces for Biosensing Applications under Realistic Conditions
 
 - **Author:** Jonathan Alexis Urrutia Anguiano  
 - **Advisor:** Dr. Alejandro Reyes Coronado  
 - **Institution:** Facultad de Ciencias, UNAM  
 - **Location & Date:** Mexico City, June 2025  
 
-### Thesis Committee
-- **Dr. Rubén Ramos García**  
-  Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE)  
-- **Dr. Wolf Luis Mochán Backal**  
-  Instituto de Ciencias Físicas, UNAM  
+This repository contains the working materials for the **PhD research protocol** submitted in partial fulfillment of the requirements to obtain the **Candidacy to the Degree of Doctor in Sciences (Physics)** at the **Faculty of Sciences, UNAM**.
+
+The project focuses on the **theoretical and numerical characterization of plasmonic disordered metasurfaces**, with emphasis on their performance as **optical biosensors under realistic experimental conditions**.
+
+![presentation](slides.gif)
 
 ---
 
@@ -33,7 +24,7 @@ This research addresses **realistic conditions**, including:
 - Substrate and environmental influences
 - Experimental limitations in optical measurements
 
-The work builds on **effective medium theories, coherent scattering models, and T-matrix formalisms** to bridge the gap between ideal models and experimentally measurable signals.
+The work builds on **scattering theories formalisms** to bridge the gap between ideal models and experimentally measurable signals.
 
 ---
 
@@ -43,7 +34,7 @@ The work builds on **effective medium theories, coherent scattering models, and 
 To characterize plasmonic disordered metasurfaces for biosensing applications using realistic theoretical and numerical models that account for disorder and experimental conditions.
 
 ### Specific Objectives
-1. Implement **Coherent Scattering Models (CSM)** and **T-Matrix Formalism (TFT)** considering particle size distributions.
+1. Implement **Coherent Scattering Models (CSM)** and **Thin Film Theory (TFT)**  forlmalisms considering particle size distributions.
 2. Develop numerical tools for **optical response calculations** of disordered plasmonic systems.
 3. Implement **parameter-fitting strategies** to compare theoretical predictions with experimental data.
 4. Evaluate different **measurement schemes** and sensing metrics relevant to biosensing applications.
