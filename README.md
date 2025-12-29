@@ -1,26 +1,64 @@
-# PhD Protocol
-## Title pending
+# Characterization of Plasmonic Disordered Metasurfaces for Biosensing Applications under Realistic Conditions
 
-This repository contains the ongoing work for my PhD protocol in Physics, focused on two main Multiple Scattering Theories and its Applications in Biosensing . 
-  
-## Research Objectives
-1. Numerical implementation of the CSM and TFT considering size distribution
-2. Implementation of a parameter fitting method
-3. Comparison and evaluation of measurement schemes with the CSM
+**PhD Research Protocol Repository**
 
-## Current Progress
-- [Current status of your research and key findings]
-- [Notable contributions or changes you've made recently]
-- [Areas for improvement or further research]
+This repository contains the working materials for the **PhD research protocol** submitted in partial fulfillment of the requirements to obtain the **Candidacy to the Degree of Doctor in Sciences (Physics)** at the **Faculty of Sciences, UNAM**.
 
-### Research Progress
-[Progress bar rendered in Markdown with a static or dynamic indicator]
-- **Overall Research Completion**: ![Progress Bar](https://progress-bar.dev/70/?title=Research+Completion)
-- **Current Phase**: [Description of the current phase, e.g., Data Analysis, Modeling, etc.]
+The project focuses on the **theoretical and numerical characterization of plasmonic disordered metasurfaces**, with emphasis on their performance as **optical biosensors under realistic experimental conditions**.
 
-## Work To Do
-- [ ] Finalize theoretical model for [specific subtopic]
-- [ ] Collect experimental data for [specific experiment or simulation]
-- [ ] Refine metasurface design based on [result/feedback]
-- [ ] Document findings from [upcoming phase or experiment]
-- [ ] Prepare for PhD candidacy presentation
+---
+
+## 📘 Academic Information
+
+- **Author:** Jonathan Alexis Urrutia Anguiano  
+- **Advisor:** Dr. Alejandro Reyes Coronado  
+- **Institution:** Facultad de Ciencias, UNAM  
+- **Location & Date:** Mexico City, June 2025  
+
+### Thesis Committee
+- **Dr. Rubén Ramos García**  
+  Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE)  
+- **Dr. Wolf Luis Mochán Backal**  
+  Instituto de Ciencias Físicas, UNAM  
+
+---
+
+## 🧠 Research Context
+
+Plasmonic metasurfaces exhibit strong light–matter interactions that make them promising platforms for **label-free biosensing**. However, most theoretical models assume idealized periodic structures and controlled environments.
+
+This research addresses **realistic conditions**, including:
+- Structural **disorder and size distributions**
+- **Multiple scattering effects**
+- Substrate and environmental influences
+- Experimental limitations in optical measurements
+
+The work builds on **effective medium theories, coherent scattering models, and T-matrix formalisms** to bridge the gap between ideal models and experimentally measurable signals.
+
+---
+
+## 🎯 Research Objectives
+
+### General Objective
+To characterize plasmonic disordered metasurfaces for biosensing applications using realistic theoretical and numerical models that account for disorder and experimental conditions.
+
+### Specific Objectives
+1. Implement **Coherent Scattering Models (CSM)** and **T-Matrix Formalism (TFT)** considering particle size distributions.
+2. Develop numerical tools for **optical response calculations** of disordered plasmonic systems.
+3. Implement **parameter-fitting strategies** to compare theoretical predictions with experimental data.
+4. Evaluate different **measurement schemes** and sensing metrics relevant to biosensing applications.
+
+---
+
+## 📁 Repository Structure
+
+```text
+├── 0-TeX-files-Protocolo/    # Main LaTeX source of the protocol
+├── 1-Carta-Jurado/           # Committee-related documents
+├── 2-Calculos-Subtrate/      # Substrate optical calculations
+├── 3-Calculos-Phase/         # Phase and scattering calculations
+├── 4-Presentacion/           # Defense / presentation slides
+├── Figuras/                  # Figures used in the manuscript
+├── PPT-Summary/              # Summary presentations
+├── References.md             # Bibliographic references
+├── README.md                 # Project overview (this file)
