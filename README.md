@@ -12,7 +12,7 @@ The project focuses on the **theoretical and numerical characterization of plasm
 
 ![presentation](slides.gif)
 
-Preview via [Converting PDF](https://phyletica.org/imagemagick/) slides to animated GIFs and videos with ImageMagick by Jamie Oaks.
+Preview via [Converting PDF slides to animated GIFs and videos with ImageMagick](https://phyletica.org/imagemagick/) by Jamie Oaks.
 
 ---
 
